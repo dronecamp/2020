@@ -1,0 +1,27 @@
+# Participation
+
+## Registration
+
+Registration is a two-part process - you register on UCANR, and then you also have to register for Zoom.
+
+## Setting Up Zoom and Your Workstation
+
+copy from https://ajlyons.github.io/rspatial_bgs20/setup.html#zoom-setup
+
+Double-screens are sttrongly recommended for the hands-on workshop
+
+
+
+## Community Forum 
+
+ - what kind of chat or live feed can we use?
+
+## Principles of Community and Being Safe on Zoom
+
+Mutual Respect. Please treat all instructors and other participants with mutual respect. People learn with different styles and at different paces. Everyone is welcome.
+
+Personal information. Be cautious about sharing any personal information during your live stream, as well as in Live Chat. Admin access for your channel should only be provided to those who you trust. YouTube will not ask you for moderation privileges in the stream.
+
+Reporting Inappropriate Content and Behavior. If you're concerned about chat messages or other inappropriate behavior, first send a private chat message to the session facilitator (co-host). You may also share concerns by sending a message to dronecamp@ucanr.edu.
+
+See also: https://www.youtube.com/about/policies/#community-guidelines

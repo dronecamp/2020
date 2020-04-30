@@ -16,3 +16,14 @@ To install Pix4Dmapper...
 
 To install QGIS...
 
+## Mission Planning Apps (??)
+
+### Pix4Dcapture
+
+### Drone Deploy
+
+### DJI Pilot
+
+### eMotion
+
+

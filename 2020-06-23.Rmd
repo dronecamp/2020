@@ -9,6 +9,8 @@ library(stringr)
 
 # `r format(this_day, "%B %d, %Y")`
 
+*All times are Pacific Daylight Time*
+
 ```{r read_data, child='_read_data.Rmd', include=FALSE}
 ```
 

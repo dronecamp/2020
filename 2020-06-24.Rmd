@@ -8,6 +8,8 @@ library(stringr)
 
 # `r format(this_day, "%B %d, %Y")`
 
+*All times are Pacific Daylight Time*
+
 ```{r list_sessions2, child='_list_sessions.Rmd', results="asis", echo=FALSE}
 ```
 

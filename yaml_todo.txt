@@ -3,6 +3,7 @@ YAML To Do
 ----------------------
 index.Rmd
 
+CREATE A FAVICON
 
 -------------------------
 _output.yml
