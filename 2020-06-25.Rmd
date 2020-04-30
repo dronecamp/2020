@@ -1,0 +1,13 @@
+```{r set_params_d3, include = FALSE}
+this_day <- as.Date("2020-06-25")
+
+library(dplyr)
+library(htmltools)
+library(stringr)
+```
+
+# `r format(this_day, "%B %d, %Y")`
+
+```{r list_sessions2, child='_list_sessions.Rmd', results="asis", echo=FALSE}
+```
+

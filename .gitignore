@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+~*
+*.Rproj
+/stuff_to_hide/*
+/instructors/*
+/images/instructors/*
+/images/instructors_big/*
+*.RData

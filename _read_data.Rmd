@@ -1,0 +1,65 @@
+---
+title: "Read data"
+output: html_document
+---
+
+```{r read_data, include=FALSE}
+if (download_data) {
+ library(googlesheets4)
+ sheets_auth(email = "andlyons@ucdavis.edu")
+ dc20_wkshps_id <- "1A6DdBJH-ZZbMHb9Y7HFCqJBjPXmWy92C0rVEyYqhRqw"
+ dc20_wkshps_tbl <- googlesheets4::read_sheet(ss = dc20_wkshps_id, sheet = "Form Responses 4", range = NULL)
+ save(dc20_wkshps_tbl, file="dc20_wkshps_tbl.RData")
+ 
+} else {
+ load("dc20_wkshps_tbl.RData")
+}
+
+cols_core <- c("title" = "Workshop Title", 
+              "blurb" = "Workshop Short Blurb", 
+              "desc" = "Workshop Description", 
+              "format" = "Workshop Format", 
+              "inst1_name" = "Instructor #1 - Name", 
+              "inst1_email" = "Instructor #1 - Email", 
+              "inst2_name" = "Instructor #2 - Name", 
+              "inst2_email" = "Instructor #2 - Email", 
+              "inst3_name" = "Instructor #3 - Name", 
+              "inst3_email" = "Instructor #3 - Email", 
+              "duration" = "Duration", 
+              "prereqs" = "Prerequisite(s)", 
+              "max_partic" = "Max Number of Participants", 
+              "software" = "Software Needed", 
+              "pc" = "Personal Laptops", 
+              "instructions" = "Additional Instructions to Participants", 
+              "res01_name" = "Resource #1 - Name", 
+              "res01_url" = "Resource #1 - URL", 
+              "res02_name" = "Resource #2 - Name", 
+              "res02_url" = "Resource #2 - URL", 
+              "res03_name" = "Resource #3 - Name", 
+              "res03_url" = "Resource #3 - URL", 
+              "res04_name" = "Resource #4 - Name", 
+              "res04_url" = "Resource #4 - URL", 
+              "prereg" = "Pre-Registration Required", 
+              "inst_initials" = "Instructor Profiles Internal Links", 
+              "eval_url" = "Evaluation Form URL", 
+              "agenda_ok" = "Ready to go on the DroneCamp digital agenda", 
+              "record_url" = "Recorded Video - URL", 
+              "record_release" = "Recorded Video - OK to Release")
+
+cols_wkshp1 <-c("dt_readable" = "Workshop #1 - Date & Time", 
+                "venue" = "Workshop #1 - Venue", 
+                "zoom_url" = "Workshop #1 - Zoom URL", 
+                "facilitator" = "Workshop #1 - Zoom Facilitator", 
+                "dt_fmt" = "SortableTimeSlot1")
+
+cols_wkshp2 <-c("dt_readable" = "Workshop #2 - Date & Time", 
+                "venue" = "Workshop #2 - Venue", 
+                "zoom_url" = "Workshop #2 - Zoom URL", 
+                "facilitator" = "Workshop #2 - Zoom Facilitator", 
+                "dt_fmt" = "SortableTimeSlot2")
+
+
+ws1 <- dc20_wkshps_tbl %>% select(all_of(c(cols_core, cols_wkshp1)))
+ws2 <- dc20_wkshps_tbl %>% select(all_of(c(cols_core, cols_wkshp2))) %>% filter(!is.na(dt_fmt))
+ws_all <- ws1 %>% bind_rows(ws2) %>% mutate(session_date = as.Date(substr(dt_fmt, 1, 10)))
+```

@@ -1,0 +1,40 @@
+indented1 {
+  margin-left:1em;
+}
+indented2 {
+  margin-left:2em;
+}
+indented4 {
+  margin-left:4em;
+}
+td.appicon {
+  vertical-align: top;
+  width: 80px;
+}
+td.appdesc {
+  vertical-align: top;
+  text-align: left;
+  border-style:none;
+}
+.goright {
+  float:right;
+}
+div.gomiddle {
+  float:right;
+  vertical-align: middle;
+  text-align: left;
+  border: 1px solid blue;
+}
+.midline {
+  vertical-align:middle;
+  padding: 2em 2em 1em;
+}
+span.authoremail:before {
+  content: '(andlyons@ucanr.edu)';
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color:DarkBlue;
+  cursor: pointer;  
+}
+
+

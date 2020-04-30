@@ -1,0 +1,25 @@
+bookdown::gitbook: 
+  lib_dir: libs
+  number_sections: False
+  split_by: rmd
+  css: css/dronecamp.css
+  includes:
+    in_header: common/gtag.html
+    before_body: common/page_header.html
+  config:
+    toc:
+      collapse: none
+      before: |
+        <li><a href="https://dronecamp.github.io/2020/" style="font-weight:bold;">
+        DroneCamp 2020</a></li>
+
+#      after: |
+#        <li><a href="https://github.com/rstudio/bookdown">
+#        Proudly published with bookdown</a></li>
+#      after: | <li><a href="http://igis.ucanr.edu/" target="_blank">IGIS </a></li>
+#    download: ["epub"]
+
+#bookdown::epub_book:
+#  dev: svglite
+#  number_sections: False
+    

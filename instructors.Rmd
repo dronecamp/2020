@@ -1,0 +1,26 @@
+# Meet the Instructors
+
+```{r read_instructors, include=FALSE}
+library(googlesheets4)
+sheets_auth(email = "andlyons@ucdavis.edu")
+dc20_instr_id <- "1h7ZY_iuB17Jx238E4_t-4fmGys9Fdn7UlgNFvu8fhnc"
+dc20_instr_tbl <- googlesheets4::read_sheet(ss = dc20_instr_id, sheet = "Instructors", range = NULL)
+save(dc20_instr_tbl, file="instructors.RData")
+```
+
+```{r instructors_print, results="asis", echo=FALSE}
+library(htmltools)
+
+for (i in 1:nrow(dc20_instr_tbl)) {
+  ## cat("## ", dc20_instr_tbl[i, "name", drop = TRUE], "\n")
+  print(h2(dc20_instr_tbl[i, "name", drop = TRUE], 
+           id = dc20_instr_tbl[i, "initials", drop = TRUE], 
+           style="clear: both;"))
+  print(p(
+    if (!is.na(dc20_instr_tbl[i, "photo", drop = TRUE])) {
+      img(src=paste0("images/instructors/", dc20_instr_tbl[i, "photo", drop = TRUE]), style="width:220px; height: 220px; float:right; padding:10px;", .noWS = NULL)},
+    dc20_instr_tbl[i, "bio", drop = TRUE]))
+  
+}
+```
+

@@ -1,0 +1,28 @@
+---
+title: "DroneCamp 2020"
+# author: "by Andy Lyons"
+description: "Online short course from the University of California on using drones for mapping and data collection"
+site: bookdown::bookdown_site
+documentclass: website
+url: 'https\://dronecamp.github.io/2020/'
+github-repo: "dronecamp/2020"
+cover-image: images/dc-logo_og_1200x630x256.png
+apple-touch-icon: images/dc-logo_touch-icon_152x152.png
+apple-touch-icon-size: 152
+# favicon: "favicon.ico"
+---
+
+# About DroneCamp
+
+![](images/dronecamp-logo_v8a_250x182x256.png){style="display:block; margin:1em auto;"}
+
+## Handy Links
+
+## Schedule at a Glance
+
+
+
+
+
+
+

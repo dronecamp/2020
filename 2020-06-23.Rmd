@@ -1,0 +1,17 @@
+```{r set_params_d1, include = FALSE}
+this_day <- as.Date("2020-06-23")
+download_data <- TRUE
+
+library(dplyr)
+library(htmltools)
+library(stringr)
+```
+
+# `r format(this_day, "%B %d, %Y")`
+
+```{r read_data, child='_read_data.Rmd', include=FALSE}
+```
+
+```{r list_sessions1, child='_list_sessions.Rmd', results="asis", echo=FALSE}
+```
+

@@ -1,0 +1,31 @@
+YAML To Do
+
+----------------------
+index.Rmd
+
+
+-------------------------
+_output.yml
+  css: css/style.css
+  includes:
+    before_body: "css/header.html"
+  config:
+    toc:
+      collapse: none
+      after: |
+        <li><a href="http://igis.ucanr.edu/" target="_blank"><img src="images/igis-anr_horiz-stacked_260x65.png" style="margin-left:-1em; margin-top:-1em;"></a></li>
+    download: ["epub"]
+    edit: https://github.com/ucanr-igis/360photos/edit/master/%s
+bookdown::epub_book:
+  dev: svglite
+  
+
+========================================  
+Think about a License
+
+![Creative Commons License](images/by-nc-sa.png)  
+The online version of this book is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+Clipart: https://creativecommons.org/about/downloads
+
+  

@@ -1,0 +1,18 @@
+# Software Setup
+
+## Agisoft Metashape
+
+To install Agisoft Metashape...
+
+## ArcGIS Pro
+
+To install ArcGIS Pro...
+
+## Pix4Dmapper
+
+To install Pix4Dmapper...
+
+## QGIS
+
+To install QGIS...
+
