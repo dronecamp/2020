@@ -1,18 +1,68 @@
-# Software Setup
+# Computer Setup
 
-## Agisoft Metashape
+## Zoom{id='zoom'}
+
+This workshop will be taught entirely online using the Zoom platform (the link will be sent you via email, we'll use the same link for all sessions). 
+
+### Workspace Setup
+
+Try to find a spot which is **comfortable** and **relatively free from distractions** and background noise. A little background noise is not a problem as you can mute yourself, but consider a pair of headphones to minimize distractions. 
+
+**Ergonomics** are important! If you've ever tried to work on a laptop while sitting on a couch for 4 hours, it isn't ideal. We will of course take breaks.
+
+### Setting up Zoom
+
+Please install the **Zoom client** on your laptop, which you can [download here](https://zoom.us/download){target="_blank"}. If you've used Zoom before, and you see Zoom in the Start Menu (Windows) or Finder (Mac), then you already have the client. Please make sure you have the **latest version** (4.6.8), as some of the buttons and features have changed.
+
+A **Zoom account** is *not* required. A **webcam** is nice but not required. 
+
+### Viewing RStudio and Zoom Simultaneously
+
+A **second screen** is helpful but not essential, so you can view the instructor / slides in one window, and work on RStudio in the other. If you have an external monitor for your laptop / computer, you're all set. You can put Zoom on one monitor and RStudio on the other. 
+
+If you don't have a second monitor, a tablet would work fine for watching the slides / presentation. Zoom is also available as an app for phones and tablets. Note however if you watch the slides on a tablet, you should **also** have Zoom running on your laptop so you can share your screen with the instructor, click on links in the chat window, etc. In that scenario, you'll be logged into the Zoom meeting on two different devices, which is totally fine (but only join the audio on one of the devices, otherwise you'll get echo!).
+
+*Single Screen Options*
+
+If a second screen isn't possible, you can also arrange your windows so that you see both RStudio and Zoom (see below for example). You can devote the entire width of the Zoom window to the screen share by going to 'View Options' and making sure side-by-side mode is turned **off**.
+
+<a href="./images/rstudio-zoom_side-by-side_1920x1024x256.png" target="_blank"><img src="./images/rstudio-zoom_side-by-side_600x320x256.png" style="display:block; margin:1em auto; border:1px solid grey;"></a>
+
+<p style="text-align:center; font-style:italic; font-size:90%;">arranging RStudio and Zoom side-by-side on a single monitor on Windows</p>
+
+Zoom unfortunately does not have an 'always on top' mode, but you can keep the Zoom client on top by using a 3rd party utility like [DeskPins](https://efotinis.neocities.org/deskpins/index.html){target="_blank" rel="noopener"}.
+
+
+
+### Sharing Your Screen
+
+You are encouraged to **Share your R application window** (i.e. RStudio or a browser window if you're using RStudio Cloud) during the exercises, so the instructor can see how you're doing and/or answer questions. Click the 'Share Screen' button on Zoom, and select your R window. (Note: please don't share the entire screen to avoid accidentally sharing other windows!)
+
+![](images/zoom_share_screen_900x558.png){style="display:block; margin:1em auto; border:1px solid gray;"}
+
+### Audio
+
+If you find the audio is garbled, you can **dial-in** with a phone. In that case, you should disconnect from the the audio on your laptop or tablet (to prevent echo).
+
+**Muting** and **unmuting** yourself are essential skills for Zoom. It's generally good practice to stay muted until you have something to say.
+
+If you're using the Zoom app on Windows, click the microphone button. If you're using the Zoom app for phones and tablets, tap the middle of the screen to make the controls visible.
+
+If you dial-in on a phone, you can use the 'mute' button on your phone app, or dial `*6` to mute or unmute yourself.
+
+## Agisoft Metashape{id='metashape'}
 
 To install Agisoft Metashape...
 
-## ArcGIS Pro
+## ArcGIS Pro{id='pro'}
 
 To install ArcGIS Pro...
 
-## Pix4Dmapper
+## Pix4Dmapper{id='p4d'}
 
 To install Pix4Dmapper...
 
-## QGIS
+## QGIS{id='qgis'}
 
 To install QGIS...
 

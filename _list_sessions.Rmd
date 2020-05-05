@@ -10,7 +10,7 @@ for (i in 1:nrow(ws_today)) {
   
   time_only <- str_trim(str_split(ws_today$dt_readable[i], pattern = "\\|")[[1]][2])
   cat("## ", time_only, ". ", ws_today$title[i], "\n", sep="")
-  print(p(ws_today$desc[i]))
+  print(HTML(paste0("<p>", ws_today$desc[i], "</p>")))
   print(p(strong("Format: "), ws_today$format[i]))
   
   ## Get the instructor initials which will be used for the internal links
@@ -33,10 +33,18 @@ for (i in 1:nrow(ws_today)) {
   
   print(p(strong("Instructor(s): "), HTML(instr_html)))
   
-  if (!is.na(ws_today$prereqs[i])) print(p(strong("Pre-requisites: "), ws_today$prereqs[i]))
-  if (!is.na(ws_today$instructions[i])) print(p(strong("Additional instructions: "), ws_today$instructions[i]))
-  if (!is.na(ws_today$zoom_url[i])) print(p(strong("Zoom: "), ws_today$zoom_url[i]))
-          
+  if (!is.na(ws_today$prereqs[i])) {
+    print(HTML(paste0("<p><strong>Pre-requisites</strong>: ", ws_today$prereqs[i], "</p>")))
+  }
+  
+  if (!is.na(ws_today$instructions[i])) {
+    print(HTML(paste0("<p><strong>Additional instructions</strong>: ", ws_today$instructions[i], "</p>")))
+  }
+
+  if (!is.na(ws_today$zoom_url[i])) {
+    print(HTML(paste0("<p><strong>Zoom</strong>: ", ws_today$zoom_url[i], "</p>")))
+  }
+
   ## Construct the resources list HTML text
   res_html <- ""
   for (j in 1:4) {
@@ -45,7 +53,7 @@ for (i in 1:nrow(ws_today)) {
                          #ifelse(j==1, "", "\n"),
                          "<li>",
                          ifelse(is.na(ws_today[i, paste0("res0", j, "_url"), drop=TRUE]), "", 
-                                paste0("<a href=\"", ws_today[i, paste0("res0", j, "_url"), drop=TRUE], "\" target=\"_blank\">")),
+                                paste0("<a href=\"", ws_today[i, paste0("res0", j, "_url"), drop=TRUE], "\" target=\"_blank\" rel=\"noopener\">")),
                          ws_today[i, paste0("res0", j, "_name"), drop=TRUE],
                          ifelse(is.na(ws_today[i, paste0("res0", j, "_url"), drop=TRUE]), "", "</a>"), 
                          "</li>")

@@ -8,12 +8,17 @@ if (download_data) {
  library(googlesheets4)
  sheets_auth(email = "andlyons@ucdavis.edu")
  dc20_wkshps_id <- "1A6DdBJH-ZZbMHb9Y7HFCqJBjPXmWy92C0rVEyYqhRqw"
- dc20_wkshps_tbl <- googlesheets4::read_sheet(ss = dc20_wkshps_id, sheet = "Form Responses 4", range = NULL)
+ dc20_wkshps_tbl <- googlesheets4::read_sheet(ss = dc20_wkshps_id, sheet = "Workshops - Responses", range = NULL)
+ subst_tbl <- googlesheets4::read_sheet(ss = dc20_wkshps_id, sheet = "Substitutions", range = NULL)
  save(dc20_wkshps_tbl, file="dc20_wkshps_tbl.RData")
+ save(subst_tbl, file="subst_tbl.RData")
  
 } else {
  load("dc20_wkshps_tbl.RData")
+ load("subst_tbl.RData")
 }
+
+
 
 cols_core <- c("title" = "Workshop Title", 
               "blurb" = "Workshop Short Blurb", 
@@ -62,4 +67,22 @@ cols_wkshp2 <-c("dt_readable" = "Workshop #2 - Date & Time",
 ws1 <- dc20_wkshps_tbl %>% select(all_of(c(cols_core, cols_wkshp1)))
 ws2 <- dc20_wkshps_tbl %>% select(all_of(c(cols_core, cols_wkshp2))) %>% filter(!is.na(dt_fmt))
 ws_all <- ws1 %>% bind_rows(ws2) %>% mutate(session_date = as.Date(substr(dt_fmt, 1, 10)))
+
+## DO THE SUBSTITUTIONS
+
+## Create a function to process one vector of character vals
+subst_col <- function(char_vals, findreplace_tbl) {
+  for (i in 1:nrow(subst_tbl)) {
+    char_vals <- gsub(subst_tbl$LookFor[i], subst_tbl$ReplaceWith[i], char_vals, fixed = TRUE)
+  }
+  char_vals
+}
+
+## Define the columns to process
+flds <- c("title", "blurb", "desc", "prereqs", "software", "instructions", 
+          "prereg", "eval_url", "record_url", "venue", "zoom_url")
+
+ws_all <- ws_all %>% mutate_at(flds, subst_col, findreplace_tbl = subst_tbl)
+
+# save(ws_all, file="ws_all.RData")
 ```
