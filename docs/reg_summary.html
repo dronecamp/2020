@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>DroneCamp 2020 Registrations</title>
+
+<script src="libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<link href="libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+<link href="libs/leaflet-markercluster-1.0.5/MarkerCluster.css" rel="stylesheet" />
+<link href="libs/leaflet-markercluster-1.0.5/MarkerCluster.Default.css" rel="stylesheet" />
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.js"></script>
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.freezable.js"></script>
+<script src="libs/leaflet-markercluster-1.0.5/leaflet.markercluster.layersupport.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">DroneCamp 2020 Registrations</h1>
+<h4 class="date">as of Monday May 11, 10:39</h4>
+
+</div>
+
+
+<style type="text/css">
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #4c4c4c;
+}
+h1.title {
+  color: Black;
+}
+p.total {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  font-style: italic;
+}
+</style>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<p class="total">
+Total : 
+115
+</p>
+</div>
+<div id="map" class="section level1">
+<h1>Map</h1>
+<div id="htmlwidget-acd761f4e8138eceaa18" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-acd761f4e8138eceaa18">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[37.4635519,44.60509,44.6111643,40.039784,38.5449065,32.7764749,40.160138,39.072831,38.5449065,36.9741171,32.704499,40.8020712,35.5005139,32.700018,38.5449065,37.7749295,37.3021632,34.048411,34.063209,34.117047,36.825582,36.6002378,34.4208305,36.681161,37.9829496,36.447533,36.678155,36.678155,36.678155,36.9707,37.523901,38.440111,38.457611,40.867469,37.5629917,40.659753,39.5807452,52.9817372,49.2488091,43.6150186,47.6248791,51.0447331,41.081726,38.549256,38.556576,39.720955,39.720955,40.5852602,39.720955,39.720955,39.720955,35.5496939,40.5852602,34.0966764,33.794028,49.2827291,43.828266,36.9741171,47.899217,41.971044,40.4233142,40.5852602,36.148444,36.6844029,43.0085587,32.557684,37.8715226,39.830936,34.110009,33.571185,49.2488091,33.640302,32.715738,39.7392358,38.3293416,38.3293416,38.3293416,40.0149856,40.4233142,34.268736,34.432896,34.0522342,32.715738,36.358928,38.939926,38.939926,36.722616,36.678155,36.812905,38.480494,36.3302284,40.867469,38.672127,39.9242266,38.7296252,39.720955,32.6926512,32.8328112,49.2710518,39.202725,45.497856,34.1175895,37.4529598,45.5051064,39.767536,49.1344187,39.049377,34.1175895,39.049377,47.899217,40.399281,32.800259,32.853471,39.114138,32.8111612],[-122.4285862,-69.33022,-69.3345032,-105.27938,-121.7405167,-79.9310512,-105.01772,-108.55,-121.7405167,-122.0307963,-114.64644,-124.1636729,-119.2717761,-114.52671,-121.7405167,-122.4194155,-120.4829677,-118.34015,-118.43643,-117.77097,-119.76358,-121.8946761,-119.6981901,-121.61538,-120.3821724,-121.68611,-121.79724,-121.79724,-121.79724,-121.99086,-120.8516,-122.74563,-122.69317,-124.07519,-122.3255254,-124.22153,-104.8771726,-122.4949058,-122.9805104,-116.2023137,-122.5210007,-114.0718831,-124.13112,-121.73655,-121.49285,-121.81888,-121.81888,-105.084423,-121.81888,-121.81888,-121.81888,-120.7060049,-105.084423,-117.7197785,-118.07218,-123.1207375,-84.74219,-122.0307963,-97.05896,-87.75869,-104.7091322,-105.084423,-95.90841,-121.802173,-81.2634983,-94.74353,-122.273042,-105.03736,-117.71973,-117.15362,-122.9805104,-117.769442,-117.1610838,-104.990251,-122.7096666,-122.7096666,-122.7096666,-105.2705456,-104.7091322,-119.2249,-119.837072,-118.2436849,-117.1610838,-119.24027,-119.9771868,-119.9771868,-120.10081,-121.79724,-121.78299,-122.74976,-119.2920585,-124.07519,-121.15783,-83.8088171,-120.798546,-121.81888,-114.6276916,-117.2712717,-123.1588119,-121.02076,-122.76988,-118.188329,-122.1817252,-122.6750261,-105.01973,-123.1163498,-76.49892,-118.188329,-76.49892,-97.05896,-104.70172,-115.35369,-115.58942,-121.6196,-115.3802643],10,null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2},1,null,["CE Advisor (Urban Forestry)<br/>UCCE San Mateo/San Francisco","Human Resources<br/>MPC Student","Professor<br/>Unity College","Professor of Geoscience<br/>Unity College","Executive Director, Sustainable Wine & Food Processing Center<br/>University of California Davis","Graduate Student<br/>College of Charleston","Turfgrass and Environmental Horticulture Advisor<br/>University of California Cooperative Extension","Postdoctoral Scholar<br/>UCLA","Associate Director River Restoration<br/>American Rivers","Senior Restoration Ecologist<br/>River Partners","Graduate Student<br/>UC Davis","Associate Environmental Planner<br/>Caltrans","Consultant/Remote Sensing Engineer<br/>Wonderful","Masters Candidate<br/>University of California Santa Cruz","Postdoc<br/>UC Davis","GIS Manager/Drone Pilot<br/>SFEI","Student<br/>University of California, Merced","Assistant Professor<br/>College of the Redwoods","Sr. GIS Analyst / Drone Ops<br/>Jackson Family Wines","Assistant Professor of Geography<br/>CSU, Stanislaus","Media Specialist and Drone Operator<br/>University of Arizona Yuma Center of Excellence for Desert Agriculture","GIS Technician<br/>CSU Monterey Bay","Master Student<br/>UCSB","Statewide Survey and Trapping Coordinator<br/>UC IPM","Professor<br/>Columbia College","Adjunct Lecturer<br/>Humboldt State University","Student Researcher<br/>California State University Monterey Bay","Graduate PhD student<br/>University of California Davis","Student<br/>College of the redwoods","Department Chair<br/>Santa Rosa Junior College","Professor of Geosciences/UAS<br/>Arizona Western College","Environmental Scientist<br/>California Department of Fish and Wildlife, Office of Spill Prevention and Response","GIS Ana.yst<br/>AGS Inc.","GIS Technician<br/>City of Grand Junction","Student<br/>College of San Mateo","Unemployed<br/>Unemployed","GIS Specialist<br/>ICON Engineering","Student / BC Ministry of Forests Auxiliary<br/>British Columbia Institute of Technology","Student<br/>British Columbia Institute of Technology","Assistant Professor, Human Environment Systems<br/>Boise State University","Sr Wildlife Biologist/Project Manager<br/>ManTech International","Geographer<br/>none","Water Conservation Technician<br/>Chico State University","Professor<br/>Chico State University","Student Assistant<br/>Chico State University","Student Assistant<br/>Chico State University","Student Assistant<br/>Chico State University","Owner<br/>Private Business","Undergraduate<br/>University of California, Berkeley","Graduate student<br/>UC Santa Cruz","Director, Hastings Reserve<br/>UC Berkeley","Program Manager<br/>Upper Salinas Las Tablas Resource Conservation District","Environmental Scientist<br/>Twin Fish Enterprises LLC","Student<br/>Claremont Graduate University","Graduate Student<br/>California State University Monterey Bay","Student<br/>BCIT","Lab/Field Assistant<br/>UCCE Ventura County","Master Student<br/>University of California Santa Cruz","Sr Geographic Analyst<br/>HERE Technologies","Field Agronomist<br/>Bayer","Professor & Chair<br/>University of Northern Colorado","Student Researcher<br/>Colorado State University","Instructor<br/>Butte College","IST II<br/>CSU. Monterey Bay","Teaching assistant<br/>Western University","It<br/>Humboldt State U","Field Research Safety CoE/Health & Safety Advisor<br/>UC Berkeley","Dairy Advisor<br/>University of California Cooperative Extension","Principal IT Auditor<br/>UC Irvine","Graduate student<br/>University of Tulsa","GIS Student<br/>BCIT","Postdoc<br/>UCDavis","Videographer<br/>SDSC","Student<br/>University of Denver","Scientific Programs Manager<br/>Marin/Sonoma Mosquito and Vector Control District","Environmental Biologist<br/>Marin/Sonoma Mosquito and Vector Control District","Assistant Manager<br/>Marin/Sonoma Mosquito and Vector Control District","Field Engineer<br/>UNAVCO","Emeritus Professor<br/>University of Northern Colorado","Digital Media Assistant<br/>Elkhorn Slough Foundation","Community Edication Specialist<br/>UCCE","Graduate Student<br/>California State University, Los Angeles","Teaching Assistant<br/>UCSD","Student<br/>Letourneau University","Adjunct Instructor<br/>LTCC","Citizen Science Program Coordinator<br/>League to Save Lake Tahoe","Owner<br/>UAS for Good LLC","Instructor<br/>Portland Community College","Instructor<br/>Harper College","R & D Engineer<br/>University of California Santa Barbara","Environmental Scientist<br/>CAL FIRE","Forerstry Assistant II<br/>CAL FIRE","Student<br/>CSU Monterey Bay","Associate Professor/Geospatial Technology Coordinator<br/>Clark State Community College","GIS Manager<br/>County of El Dorado","Instructor<br/>Mid Michigan College","Postdoc<br/>University of Arizona","R&D Engineer<br/>UC San Diego/Scripps Oceanography","Biologist<br/>Hemmera","Middle School Science Teacher<br/>Nevada City School of the Arts","Digital Scholarship Librarian<br/>Claremont Colleges","GIS Analyst and Geophysicist<br/>Rio Hondo College","Postdoctoral scholar<br/>UC Berkeley","student<br/>PSU","Retired<br/>None","Student in GIS<br/>BCIT (British Columbia Student of Technology)","Advisor<br/>UCCE Sutter-Yuba","GIS Analyst / Geophysicist / Geologist<br/>Rio Hondo","Instructional Specialist<br/>Anne Arundel Community College","Professor<br/>Anne Arundel Community College","Assistant Professor of Aviation<br/>University of North Dakota","CENTER SUPERINTENDENT<br/>University of California  DREC","SRA<br/>University of California  DREC","Assistant Professor<br/>University of Northern Colorado","lab assistant<br/>UC Cooperative Extension  in Imperial"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[32.557684,52.9817372],"lng":[-124.22153,-69.33022]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="by-email-domain" class="section level1">
+<h1>By Email Domain</h1>
+<table class="table" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+domain
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+edu
+</td>
+<td style="text-align:right;">
+76
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+com
+</td>
+<td style="text-align:right;">
+22
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+org
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+gov
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ca
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+edi
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+us
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="by-affiliation" class="section level1">
+<h1>By Affiliation</h1>
+<table class="table" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+affiliation
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Chico State University
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Marin/Sonoma Mosquito and Vector Control District
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UC Berkeley
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of Northern Colorado
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Anne Arundel Community College
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BCIT
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+British Columbia Institute of Technology
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CAL FIRE
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+California State University Monterey Bay
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CSU Monterey Bay
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UC Davis
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Unity College
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of California DREC
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of California Cooperative Extension
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of California Davis
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of California Santa Cruz
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AGS Inc. 
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+American Rivers
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Arizona Western College
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bayer
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BCIT (British Columbia Student of Technology)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Boise State University
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Butte College
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+California Department of Fish and Wildlife, Office of Spill Prevention and Response
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+California State University, Los Angeles
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Caltrans
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+City of Grand Junction
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Claremont Colleges
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Claremont Graduate University
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Clark State Community College
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+College of Charleston
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+College of San Mateo
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+College of the redwoods
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+College of the Redwoods
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Colorado State University
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Columbia College
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+County of El Dorado
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CSU, Stanislaus
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CSU. Monterey Bay
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Elkhorn Slough Foundation
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Harper College
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hemmera
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HERE Technologies
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Humboldt State U
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Humboldt State University
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICON Engineering
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jackson Family Wines
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+League to Save Lake Tahoe
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Letourneau University
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTCC
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ManTech International
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mid Michigan College
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MPC Student
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nevada City School of the Arts
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+none
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Portland Community College
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Private Business
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PSU
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rio Hondo
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rio Hondo College
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+River Partners
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Santa Rosa Junior College
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SDSC
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SFEI
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Twin Fish Enterprises LLC
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UAS for Good LLC
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UC Cooperative Extension in Imperial
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UC IPM
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UC Irvine
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UC San Diego/Scripps Oceanography
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UC Santa Cruz
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UCCE
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UCCE San Mateo/San Francisco
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UCCE Sutter-Yuba
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UCCE Ventura County
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UCDavis
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UCLA
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UCSB
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UCSD
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UNAVCO
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Unemployed
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of Arizona
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of Arizona Yuma Center of Excellence for Desert Agriculture
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of California Santa Barbara
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of California, Berkeley
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of California, Merced
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of Denver
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of North Dakota
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+University of Tulsa
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Upper Salinas Las Tablas Resource Conservation District
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Western University
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wonderful
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="registrations-per-day" class="section level1">
+<h1>Registrations Per Day</h1>
+<p><img src="reg_summary_files/figure-html/reg_per_day-1.png" width="672" /></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
