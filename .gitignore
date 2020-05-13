@@ -9,3 +9,4 @@
 /images/instructors/*
 /images/instructors_big/*
 *.RData
+*.bak
