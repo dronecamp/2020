@@ -64,7 +64,16 @@ To install Pix4Dmapper...
 
 ## QGIS{id='qgis'}
 
-To install QGIS...
+To install QGIS, start by downloading the installation file for your operating system from:
+
+https://qgis.org/en/site/forusers/download.html
+
+We recommend using **Standalone installer**. Please install the **long-term release (most stable)** version, which is currently QGIS 3.10.5 (A Coruña). 
+
+Installation is usually very straight-forward. For more detailed instructions, please visit https://qgis.org/en/site/forusers/alldownloads.html
+
+QGIS is available on Windows, macOS, Linux and Android. Please note that the workshops in DroneCamp 2020 using QGIS were developed and tested on Windows. The software appearance and behavior may differ based on operating systems. "
+
 
 ## Mission Planning Apps (??)
 
