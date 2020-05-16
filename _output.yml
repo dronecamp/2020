@@ -8,11 +8,12 @@ bookdown::gitbook:
     before_body: common/page_header.html
   config:
     toc:
-      collapse: section
+      collapse: subsection
       before: |
         <li><a href="https://dronecamp.github.io/2020/" style="font-weight:bold;">
         DroneCamp 2020</a></li>
 
+# collapse: subsection | section | none
 #      after: |
 #        <li><a href="https://github.com/rstudio/bookdown">
 #        Proudly published with bookdown</a></li>

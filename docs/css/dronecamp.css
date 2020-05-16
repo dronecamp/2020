@@ -1,10 +1,27 @@
-indented1 {
+h2{
+  padding: 5px 0;
+  display: inline-block;
+  position:relative;
+}
+
+h2:before{
+  content:"";
+  width:250px;
+  height:2px;
+  left:0;
+  top:0;
+  position:absolute;
+  z-index:9;
+  background-color: lightgray;
+}
+
+.indented1 {
   margin-left:1em;
 }
-indented2 {
+.indented2 {
   margin-left:2em;
 }
-indented4 {
+.indented4 {
   margin-left:4em;
 }
 td.appicon {
@@ -36,5 +53,4 @@ span.authoremail:before {
   color:DarkBlue;
   cursor: pointer;  
 }
-
 

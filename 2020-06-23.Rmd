@@ -1,6 +1,6 @@
 ```{r set_params_d1, include = FALSE}
 this_day <- as.Date("2020-06-23")
-download_data <- TRUE
+download_data <- FALSE
 
 library(dplyr)
 library(htmltools)

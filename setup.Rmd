@@ -1,26 +1,24 @@
 # Computer Setup
 
-## Zoom{id='zoom'}
-
-This workshop will be taught entirely online using the Zoom platform (the link will be sent you via email, we'll use the same link for all sessions). 
-
-### Workspace Setup
+## Setting Up Your Workspace 
 
 Try to find a spot which is **comfortable** and **relatively free from distractions** and background noise. A little background noise is not a problem as you can mute yourself, but consider a pair of headphones to minimize distractions. 
 
 **Ergonomics** are important! If you've ever tried to work on a laptop while sitting on a couch for 4 hours, it isn't ideal. We will of course take breaks.
 
-### Setting up Zoom
+A **second screen** is very helpful, especially for hands-on workshops where you'll be working through a software tutorial. With a second screen, you can view the instructor / slides in one window, and work on RStudio in the other. 
 
-Please install the **Zoom client** on your laptop, which you can [download here](https://zoom.us/download){target="_blank"}. If you've used Zoom before, and you see Zoom in the Start Menu (Windows) or Finder (Mac), then you already have the client. Please make sure you have the **latest version** (4.6.8), as some of the buttons and features have changed.
+If you have an **external monitor** for your laptop / computer, you're all set. You can put Zoom on one monitor and RStudio on the other. If you don't have a second monitor, a **tablet** can be used to watch the slides / presentation as you work through the exercise on your laptop. Zoom is  available as an app for all major tablets and phones. 
 
-A **Zoom account** is *not* required. A **webcam** is nice but not required. 
+## Zoom{id='zoom'}
+
+This workshop will be taught entirely online using the Zoom platform (the link will be sent you via email, we'll use the same link for all sessions). 
+
+Please install the **Zoom client** on your laptop, which you can [download here](https://zoom.us/download){target="_blank" rel="noopener"}. If you've used Zoom before, and you see Zoom in the Start Menu (Windows) or Finder (Mac), then you already have the client. Please make sure you have the **latest version**, as some of the buttons and features have changed.
+
+A **Zoom account** is *not* required. A **webcam** is not required. 
 
 ### Viewing RStudio and Zoom Simultaneously
-
-A **second screen** is helpful but not essential, so you can view the instructor / slides in one window, and work on RStudio in the other. If you have an external monitor for your laptop / computer, you're all set. You can put Zoom on one monitor and RStudio on the other. 
-
-If you don't have a second monitor, a tablet would work fine for watching the slides / presentation. Zoom is also available as an app for phones and tablets. Note however if you watch the slides on a tablet, you should **also** have Zoom running on your laptop so you can share your screen with the instructor, click on links in the chat window, etc. In that scenario, you'll be logged into the Zoom meeting on two different devices, which is totally fine (but only join the audio on one of the devices, otherwise you'll get echo!).
 
 *Single Screen Options*
 
@@ -31,8 +29,6 @@ If a second screen isn't possible, you can also arrange your windows so that you
 <p style="text-align:center; font-style:italic; font-size:90%;">arranging RStudio and Zoom side-by-side on a single monitor on Windows</p>
 
 Zoom unfortunately does not have an 'always on top' mode, but you can keep the Zoom client on top by using a 3rd party utility like [DeskPins](https://efotinis.neocities.org/deskpins/index.html){target="_blank" rel="noopener"}.
-
-
 
 ### Sharing Your Screen
 
@@ -64,15 +60,19 @@ To install Pix4Dmapper...
 
 ## QGIS{id='qgis'}
 
+![](images/qgis-logo_196x60.png){style="display:block; margin-top:-70px; width:196px; height:60px; float:right;"}
+
 To install QGIS, start by downloading the installation file for your operating system from:
 
-https://qgis.org/en/site/forusers/download.html
+<p class="indented2">https://qgis.org/en/site/forusers/download.html</p> 
 
-We recommend using **Standalone installer**. Please install the **long-term release (most stable)** version, which is currently QGIS 3.10.5 (A Coruña). 
+Please install the **long-term release (most stable)** version, which is currently QGIS 3.10.5 (*A Coruña*). We recommend using a **Standalone installer**. 
 
-Installation is usually very straight-forward. For more detailed instructions, please visit https://qgis.org/en/site/forusers/alldownloads.html
+Installation is usually very straight-forward. For more detailed instructions, please visit:
 
-QGIS is available on Windows, macOS, Linux and Android. Please note that the workshops in DroneCamp 2020 using QGIS were developed and tested on Windows. The software appearance and behavior may differ based on operating systems. "
+<p class="indented2">https://qgis.org/en/site/forusers/alldownloads.html</p>
+
+QGIS is available on Windows, macOS, Linux and Android. Please note that the workshops in DroneCamp 2020 using QGIS were developed and tested on **Windows**. The software appearance or behavior may differ slightly on other operating systems.
 
 
 ## Mission Planning Apps (??)
