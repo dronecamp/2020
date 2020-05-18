@@ -1,6 +1,8 @@
 output_dir: docs
-rmd_files: ["index.Rmd", "2020-06-23.Rmd", "2020-06-24.Rmd", "2020-06-25.Rmd", 
-             "instructors.Rmd", "setup.Rmd", "participation.Rmd"]
+rmd_files: ["index.Rmd", "2020-06-22.Rmd", "2020-06-23.Rmd", "2020-06-24.Rmd", "2020-06-25.Rmd", 
+"instructors.Rmd", "setup.Rmd", "participation.Rmd"]
 book_filename: dronecamp2020
-delete_merged_file: True             
+delete_merged_file: True
 
+#rmd_files: ["index.Rmd", "2020-06-22.Rmd", "2020-06-23.Rmd", "2020-06-24.Rmd", "2020-06-25.Rmd", 
+#             "instructors.Rmd", "setup.Rmd", "participation.Rmd"]

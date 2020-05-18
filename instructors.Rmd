@@ -1,11 +1,17 @@
 # Meet the Instructors
 
 ```{r read_instructors, include=FALSE}
-library(googlesheets4)
-sheets_auth(email = "andlyons@ucdavis.edu")
-dc20_instr_id <- "1h7ZY_iuB17Jx238E4_t-4fmGys9Fdn7UlgNFvu8fhnc"
-dc20_instr_tbl <- googlesheets4::read_sheet(ss = dc20_instr_id, sheet = "Instructors", range = NULL)
-save(dc20_instr_tbl, file="instructors.RData")
+if (params$download_instr) {
+  library(googlesheets4)
+  gs4_auth(email = "andlyons@ucdavis.edu")
+  dc20_instr_id <- "1h7ZY_iuB17Jx238E4_t-4fmGys9Fdn7UlgNFvu8fhnc"
+  dc20_instr_tbl <- googlesheets4::range_read(ss = dc20_instr_id, 
+                                              sheet = "Instructors", range = NULL)
+  save(dc20_instr_tbl, file="instructors.RData")
+  
+} else {
+  load("instructors.RData")
+}
 ```
 
 ```{r instructors_print, results="asis", echo=FALSE}

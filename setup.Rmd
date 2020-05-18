@@ -52,9 +52,13 @@ To install Agisoft Metashape...
 
 ## ArcGIS Pro{id='pro'}
 
+![](images/arcgis-logo_188x60.png){style="display:block; margin-top:-70px; width:188px; height:60px; float:right;"}
+
 To install ArcGIS Pro...
 
 ## Pix4Dmapper{id='p4d'}
+
+![](images/pix4d-logo_82x60.png){style="display:block; margin-top:-70px; width:82px; height:60px; float:right;"}
 
 To install Pix4Dmapper...
 

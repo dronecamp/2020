@@ -10,9 +10,22 @@ cover-image: images/dc-logo_og_1200x630x256.png
 apple-touch-icon: images/dc-logo_touch-icon_152x152.png
 apple-touch-icon-size: 152
 # favicon: "favicon.ico"
+params:
+  download_wrkshp: FALSE
+  download_instr: FALSE
+  render_links: FALSE
 ---
 
 <div style="float:right; padding:10px; width:260px; text-align:center;"><img src="images/dc-logo_250x182.png" /><br/><span style="letter-spacing: 0.1em; font-weight:800; font-size:110%; color:#836758; font-family:OCR A Std, Andale Mono, monospace;">ONLINE</span></div>
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(htmltools)
+library(stringr)
+```
+
+```{r read_data, child='_read_data.Rmd', include=FALSE}
+```
 
 # DroneCamp 2020 Online
 

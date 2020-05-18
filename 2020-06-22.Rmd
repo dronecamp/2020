@@ -1,5 +1,5 @@
-```{r set_params_d1, include = FALSE}
-this_day <- as.Date("2020-06-23")
+```{r set_params_d0, include = FALSE}
+this_day <- as.Date("2020-06-22")
 ```
 
 # `r format(this_day, "%a. %B %d, %Y")`

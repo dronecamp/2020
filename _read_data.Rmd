@@ -4,18 +4,27 @@ output: html_document
 ---
 
 ```{r read_data, include=FALSE}
-if (download_data) {
- library(googlesheets4)
- sheets_auth(email = "andlyons@ucdavis.edu")
- dc20_wkshps_id <- "1A6DdBJH-ZZbMHb9Y7HFCqJBjPXmWy92C0rVEyYqhRqw"
- dc20_wkshps_tbl <- googlesheets4::read_sheet(ss = dc20_wkshps_id, sheet = "Workshops - Responses", range = NULL)
- subst_tbl <- googlesheets4::read_sheet(ss = dc20_wkshps_id, sheet = "Substitutions", range = NULL)
- save(dc20_wkshps_tbl, file="dc20_wkshps_tbl.RData")
- save(subst_tbl, file="subst_tbl.RData")
+if (params$download_wrkshp) {
+  ## (re)Downloading workshop data from Google Sheets
+  
+  library(googlesheets4)
+  sheets_auth(email = "andlyons@ucdavis.edu")
+  dc20_wkshps_id <- "1A6DdBJH-ZZbMHb9Y7HFCqJBjPXmWy92C0rVEyYqhRqw"
+  dc20_wkshps_tbl <- googlesheets4::range_read(ss = dc20_wkshps_id, 
+                                               sheet = "Workshops - Responses", range = NULL)
+  subst_tbl <- googlesheets4::range_read(ss = dc20_wkshps_id, sheet = "Substitutions", range = NULL)
+ 
+  ## Record the time of this download in the Google Sheet
+  googlesheets4::range_write(ss = dc20_wkshps_id, data = data.frame(val = Sys.time()),
+                           sheet = "Options", range = "B2", col_names = FALSE, reformat = FALSE)
+
+  save(dc20_wkshps_tbl, file="dc20_wkshps_tbl.RData")
+  save(subst_tbl, file="subst_tbl.RData")
  
 } else {
- load("dc20_wkshps_tbl.RData")
- load("subst_tbl.RData")
+  ## Using cached workshop data
+  load("dc20_wkshps_tbl.RData")
+  load("subst_tbl.RData")
 }
 
 

@@ -1,9 +1,5 @@
-```{r set_param_d2, include = FALSE}
+```{r set_params_d2, include = FALSE}
 this_day <- as.Date("2020-06-24")
-
-library(dplyr)
-library(htmltools)
-library(stringr)
 ```
 
 # `r format(this_day, "%a. %B %d, %Y")`

@@ -1,6 +1,17 @@
-# Participation
+---
+output:
+  bookdown::gitbook
+params:
+  chapter_subject: "Chapter title missing"
+  chapter_strapline: "Chapter strap line missing"
+  chapter_body: "Chapter body missing"
+---
 
-## Registration
+# Participating
+
+## Zoom Registration
+
+DroneCamp registration 
 
 Registration is a two-part process - you register on UCANR, and then you also have to register for Zoom.
 
