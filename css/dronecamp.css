@@ -1,23 +1,41 @@
-h2{
-  padding: 5px 0;
-  display: inline-block;
-  position:relative;
-  font-size: 1.1em;
+span.glance-blurb {
+  color: dimgray;
+  font-size: 90%;
+  font-style: italic;
+  font-weight: normal;
+}
+td.glance-date {
+  font-weight: bold;
+  background-color: LightGray;
+}
+td.glance-title {
+  font-weight: bold;
+}
+td.glance-time {
+  width: 8em;
+}
+img.sponsor-logo {
+  margin: 10px 20px;
 }
 
-h2:before{
-  content:"";
-  width:250px;
-  height:2px;
-  left:0;
-  top:0;
-  position:absolute;
-  z-index:9;
-  background-color: lightgray;
+h2 {
+  clear: both;
 }
+
 h2 > span.time {
   color: dimgray;
   font-size:80%;
+}
+hr.full {
+  clear: both;
+  border-top: 1px solid lightgray;
+}
+
+hr.quarter {
+  clear: both;
+  border-top: 1px solid gray;
+  width: 300px;
+  margin: 0;
 }
 
 .indented1 {
@@ -38,6 +56,9 @@ td.appdesc {
   text-align: left;
   border-style:none;
 }
+
+/* NOT USED BUT GENERALLY USEFUL */
+
 .goright {
   float:right;
 }
@@ -58,4 +79,27 @@ span.authoremail:before {
   color:DarkBlue;
   cursor: pointer;  
 }
+
+
+/* ARCHIVED 
+
+div.workshop {
+  padding: 5px 0;
+  display: inline-block;
+  position:relative;
+  font-size: 1.1em;
+}
+
+div.workshop:before{
+  content:"";
+  width:250px;
+  height:2px;
+  left:0;
+  top:0;
+  position:absolute;
+  z-index:9;
+  background-color: lightgray;
+}
+
+*/
 

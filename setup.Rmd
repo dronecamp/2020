@@ -46,25 +46,57 @@ If you're using the Zoom app on Windows, click the microphone button. If you're 
 
 If you dial-in on a phone, you can use the 'mute' button on your phone app, or dial `*6` to mute or unmute yourself.
 
-## Agisoft Metashape{id='metashape'}
+## GIS and Photogrammetry Software
+
+Please see installation instructions below for the different GIS and photogrammetry programs that will be used at DroneCamp. Note **you probably don't need (or want) to install all these programs**. 
+
+Agisoft Metashape and Pix4Dmapper are both professional quality drone photogrammetry programs. They're both big programs to install, and they both offer trial licenses. You're welcome to install them both if you want to compare them. Pix4Dmapper is slightly easier to use but also more expensive after the trial period.
+
+ArcGIS Pro and QGIS are both good desktop GIS software. QGIS is open source and hence free. ArcGIS Pro is expensive unless you have access to it through your organization (many colleges and universities provide it to their students and staff). ArcGIS Pro also has the ability to stitch drone images.
+
+<hr class="full" style=\"height:2px;\"/>
+
+![](images/metashape-logo_350x60.png){style="display:block; width:198px; padding:5px; float:right;"}
+
+### Agisoft Metashape{id='metashape'}
 
 To install Agisoft Metashape...
 
-## ArcGIS Pro{id='pro'}
 
-![](images/arcgis-logo_188x60.png){style="display:block; margin-top:-70px; width:188px; height:60px; float:right;"}
+
+<hr class="full"/>
+
+![](images/arcgis-logo_188x60.png){style="display:block; width:198px; padding:5px; float:right;"}
+
+### ArcGIS Pro{id='pro'}
 
 To install ArcGIS Pro...
 
-## Pix4Dmapper{id='p4d'}
 
-![](images/pix4d-logo_82x60.png){style="display:block; margin-top:-70px; width:82px; height:60px; float:right;"}
+
+<hr class="full" style=\"height:2px;\"/>
+
+![](images/odm-logo_244x60.png){style="display:block; width:198px; padding:5px; float:right;"}
+
+### OpenDroneMap{id='odm'}
+
+To install OpenDroneMap...
+
+<hr class="full"/>
+
+![](images/pix4d-logo_82x60.png){style="display:block; width:92px; padding:5px; float:right;"}
+
+### Pix4Dmapper{id='p4d'}
+
 
 To install Pix4Dmapper...
 
-## QGIS{id='qgis'}
+<hr class="full"/>
 
-![](images/qgis-logo_196x60.png){style="display:block; margin-top:-70px; width:196px; height:60px; float:right;"}
+![](images/qgis-logo_196x60.png){style="display:block; width:164px; padding:5px; float:right;"}
+
+### QGIS{id='qgis'}
+
 
 To install QGIS, start by downloading the installation file for your operating system from:
 

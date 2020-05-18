@@ -16,7 +16,7 @@ params:
   render_links: FALSE
 ---
 
-<div style="float:right; padding:10px; width:260px; text-align:center;"><img src="images/dc-logo_250x182.png" /><br/><span style="letter-spacing: 0.1em; font-weight:800; font-size:110%; color:#836758; font-family:OCR A Std, Andale Mono, monospace;">ONLINE</span></div>
+<div style="float:right; padding:5px; width:220px; text-align:center;"><img src="images/dc-logo_250x182.png" style="width:200px; height:146px;"/><br/><span style="letter-spacing: 0.1em; font-weight:800; font-size:110%; color:#836758; font-family:OCR A Std, Andale Mono, monospace;">ONLINE</span></div>
 
 ```{r setup, include=FALSE}
 library(dplyr)
@@ -29,9 +29,53 @@ library(stringr)
 
 # DroneCamp 2020 Online
 
-DroneCamp is a collaborative short course on using drones for mapping and data collection.
+**Welcome to DroneCamp!**
 
-## Handy Links
+DroneCamp is a short course on using drones for mapping and data collection. Now in its 4th year, the program is designed to cover a broad suite of knowledge and skills needed to use drones for mapping.
+
+DroneCamp is a collaborative effort by several [campuses and research programs](#collaborators) within the University of California and California State University systems. Normally an in-person event at [CSU Monterey Bay](https://csumb.edu/){target="_blank" rel="noopener"}, DroneCamp 2020 is being held online due to the COVID-19 pandemic. For additional info, see [http://ucanr.edu/dronecamp](http://ucanr.edu/dronecamp){target="_blank" rel="noopener"}. 
 
 ## Schedule at a Glance
 
+*All times are Pacific Daylight Time!*
+
+```{r results="asis", echo=FALSE}
+print(HTML("<table>"))
+      
+dc_dates <- as.Date(paste0("2020-06-", 22:25))
+for (j in 1:length(dc_dates)) {
+  dc_dt <- dc_dates[j]
+  
+  ## Print the date row
+  print(HTML(paste0("<tr><td colspan=\"2\" class=\"glance-date\">", format(dc_dt, "%A %B %d"), "</td></tr>")))
+  
+  ws_today <- ws_all %>% filter(session_date == dc_dt) %>% arrange(dt_fmt)
+
+  for (i in 1:nrow(ws_today)) {
+    time_only <- str_trim(str_split(ws_today$dt_readable[i], pattern = "\\|")[[1]][2])
+    workshop_blurb <- ifelse(is.na(ws_today$blurb[i]), "",
+                             paste("<br/><span class=\"glance-blurb\">", 
+                                   ws_today$blurb[i], "</span>"))
+    print(HTML(paste0("<tr><td class=\"glance-time\">", time_only, 
+                      "</td><td class=\"glance-title\">", ws_today$title[i], 
+                      workshop_blurb, "</td></tr>")))
+  }
+  
+}
+
+print(HTML("</table>"))
+```
+
+## Collaborators
+
+*DroneCamp 2020 is brought to you by:*
+
+<div style="text-align:center;">
+<a href="https://ucanr.edu/" target="_blank" rel="noopener" style="text-decoration: none;"><img src="images/ucanr-logo_355x46.png" class="sponsor-logo"/>
+<a href="http://igis.ucanr.edu/" target="_blank" rel="noopener" style="text-decoration:none;"><img src="images/igis-logo_60x60.png" class="sponsor-logo"/>
+<a href="https://csumb.edu/" target="_blank" rel="noopener" style="text-decoration:none;"><img src="images/csumb-logo_210x60.png" class="sponsor-logo"/>
+<a href="https://www.ucop.edu/safety-and-loss-prevention/environmental/program-resources/unmanned-aircraft-systems-safety.html" target="_blank" rel="noopener" style="text-decoration:none;"><img src="images/uasss-logo_180x60.png" class="sponsor-logo"/>
+<a href="https://montereybaydart.org/" target="_blank" rel="noopener" style="text-decoration:none;"><img src="images/dart-logo_260x60.png" class="sponsor-logo"/> 
+<a href="https://ucnrs.org/" target="_blank" rel="noopener" style="text-decoration:none;"><img src="images/ucnrs-logo_322x60.png" class="sponsor-logo"/>
+<a href="https://fortordreserve.ucsc.edu/" target="_blank" rel="noopener" style="text-decoration:none;"><img src="images/forn-logo_70x74.png" class="sponsor-logo"/>
+</div>

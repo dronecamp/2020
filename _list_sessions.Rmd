@@ -8,9 +8,14 @@ ws_today <- ws_all %>% filter(session_date == this_day) %>% arrange(dt_fmt)
 
 for (i in 1:nrow(ws_today)) {
   
+  print(HTML("<hr class=\"quarter\" style=\"height:2px;\"/>"))
+  
   time_only <- str_trim(str_split(ws_today$dt_readable[i], pattern = "\\|")[[1]][2])
+  
   cat("## <span class='time'>", time_only, ".</span> ", ws_today$title[i], "\n", sep="")
+  
   if (!is.na(ws_today$desc[i])) print(HTML(paste0("<p>", ws_today$desc[i], "</p>")))
+  
   print(p(strong("Format: "), ws_today$format[i]))
   
   ## Get the instructor initials which will be used for the internal links

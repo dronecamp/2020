@@ -27,8 +27,6 @@ if (params$download_wrkshp) {
   load("subst_tbl.RData")
 }
 
-
-
 cols_core <- c("title" = "Workshop Title", 
               "blurb" = "Workshop Short Blurb", 
               "desc" = "Workshop Description", 

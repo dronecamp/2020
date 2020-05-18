@@ -7,7 +7,7 @@ params:
   chapter_body: "Chapter body missing"
 ---
 
-# Participating
+# Participating in DroneCamp
 
 ## Zoom Registration
 
