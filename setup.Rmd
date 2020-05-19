@@ -4,39 +4,35 @@
 
 Try to find a spot which is **comfortable** and **relatively free from distractions** and background noise. A little background noise is not a problem as you can mute yourself, but consider a pair of headphones to minimize distractions. 
 
-**Ergonomics** are important! If you've ever tried to work on a laptop while sitting on a couch for 4 hours, it isn't ideal. We will of course take breaks.
-
-A **second screen** is very helpful, especially for hands-on workshops where you'll be working through a software tutorial. With a second screen, you can view the instructor / slides in one window, and work on RStudio in the other. 
-
-If you have an **external monitor** for your laptop / computer, you're all set. You can put Zoom on one monitor and RStudio on the other. If you don't have a second monitor, a **tablet** can be used to watch the slides / presentation as you work through the exercise on your laptop. Zoom is  available as an app for all major tablets and phones. 
+**Ergonomics** are important! If you've ever tried to work on a laptop while sitting on a couch for 4 hours, it isn't ideal. If you plan on multitasking, considering joining the audio via phone and headset so you have the option to move around.
 
 ## Zoom{id='zoom'}
 
-This workshop will be taught entirely online using the Zoom platform (the link will be sent you via email, we'll use the same link for all sessions). 
+This workshop will be taught entirely online using Zoom. The link(s) will be sent you a week or two before DroneCamp starts. 
 
-Please install the **Zoom client** on your laptop, which you can [download here](https://zoom.us/download){target="_blank" rel="noopener"}. If you've used Zoom before, and you see Zoom in the Start Menu (Windows) or Finder (Mac), then you already have the client. Please make sure you have the **latest version**, as some of the buttons and features have changed.
+Please install the [**Zoom Client for Meetings**](https://zoom.us/download){target="_blank" rel="noopener"} on your computer. If you've used Zoom before, and you see Zoom in the Start Menu (Windows) or Finder (Mac), then you already have the client. Please make sure you have the **latest version**, as some of the buttons and features have changed.
 
 A **Zoom account** is *not* required. A **webcam** is not required. 
 
-### Viewing RStudio and Zoom Simultaneously
+### Viewing Zoom and GIS / Photogrammetry Software Simultaneously
 
-*Single Screen Options*
+#### Dual Screens
 
-If a second screen isn't possible, you can also arrange your windows so that you see both RStudio and Zoom (see below for example). You can devote the entire width of the Zoom window to the screen share by going to 'View Options' and making sure side-by-side mode is turned **off**.
+A **second screen** is very helpful, especially for hands-on workshops where you'll be working through a software exercise. With a second screen, you can view the instructor / slides in one window, and work on RStudio in the other. 
 
-<a href="./images/rstudio-zoom_side-by-side_1920x1024x256.png" target="_blank"><img src="./images/rstudio-zoom_side-by-side_600x320x256.png" style="display:block; margin:1em auto; border:1px solid grey;"></a>
+If you have an **external monitor** for your laptop / computer, you're all set. You can put Zoom on one monitor and RStudio on the other. If you don't have a second monitor, a **tablet** can be used to watch the slides / presentation as you work through the exercise on your laptop. Zoom is  available as an app for all major tablets and phones. 
 
-<p style="text-align:center; font-style:italic; font-size:90%;">arranging RStudio and Zoom side-by-side on a single monitor on Windows</p>
+#### Single Screen Options
 
-Zoom unfortunately does not have an 'always on top' mode, but you can keep the Zoom client on top by using a 3rd party utility like [DeskPins](https://efotinis.neocities.org/deskpins/index.html){target="_blank" rel="noopener"}.
+If a second screen isn't possible, you can also arrange your windows so that you see both your GIS program and Zoom side-by-side (see below for example). You can devote the entire width of the Zoom window to the screen share by going to 'View Options' and making sure side-by-side mode is turned **off**.
 
-### Sharing Your Screen
+![](images/zoom-p4d_side-by-side_800x427.jpg){style="display:block; margin:1em auto; border:1px solid grey;"}
 
-You are encouraged to **Share your R application window** (i.e. RStudio or a browser window if you're using RStudio Cloud) during the exercises, so the instructor can see how you're doing and/or answer questions. Click the 'Share Screen' button on Zoom, and select your R window. (Note: please don't share the entire screen to avoid accidentally sharing other windows!)
+<p style="text-align:center; font-style:italic; font-size:90%;">arranging GIS and Zoom side-by-side on a single screen</p>
 
-![](images/zoom_share_screen_900x558.png){style="display:block; margin:1em auto; border:1px solid gray;"}
+<p class="indented2">*Tip*: Zoom unfortunately does not have an 'always on top' mode, but you can keep the Zoom client on top by using a 3rd party utility like [DeskPins](https://efotinis.neocities.org/deskpins/index.html){target="_blank" rel="noopener"}.</p>
 
-### Audio
+### Zoom Audio
 
 If you find the audio is garbled, you can **dial-in** with a phone. In that case, you should disconnect from the the audio on your laptop or tablet (to prevent echo).
 
@@ -46,7 +42,7 @@ If you're using the Zoom app on Windows, click the microphone button. If you're 
 
 If you dial-in on a phone, you can use the 'mute' button on your phone app, or dial `*6` to mute or unmute yourself.
 
-## GIS and Photogrammetry Software
+## Installing GIS and Photogrammetry Software
 
 Please see installation instructions below for the different GIS and photogrammetry programs that will be used at DroneCamp. Note **you probably don't need (or want) to install all these programs**. 
 
@@ -54,15 +50,29 @@ Agisoft Metashape and Pix4Dmapper are both professional quality drone photogramm
 
 ArcGIS Pro and QGIS are both good desktop GIS software. QGIS is open source and hence free. ArcGIS Pro is expensive unless you have access to it through your organization (many colleges and universities provide it to their students and staff). ArcGIS Pro also has the ability to stitch drone images.
 
+QGIS and Agisoft Metashape are available for Mac OS, Linux, and Windows. ArcGIS Pro and Pix4Dmapper are Windows only.
+
 <hr class="full" style=\"height:2px;\"/>
 
 ![](images/metashape-logo_350x60.png){style="display:block; width:198px; padding:5px; float:right;"}
 
 ### Agisoft Metashape{id='metashape'}
 
-To install Agisoft Metashape...
+Agisoft Metashape is a professional photogrammetry program (see [feature list](https://www.agisoft.com/features/professional-edition/){target="_blank" rel="noopener"}). It requires a relatively new computer with at least 16GB RAM, a multi-core CPU (i7 or equivalent recommended), and preferably a compatible GPU. For additional details see [System Requirements](https://www.agisoft.com/downloads/system-requirements/){target="_blank" rel="noopener"}. 
 
+Installing Metashape requires about 500MB of hard drive space. The demo files for the DroneCamp Metashape workshop will be approximately 5GB (see the workshop description for the link).
 
+<p class="indented2">*Unfortunately there is no cloud VM option for Metashape If you are unable to install the software on your own computer, you are welcome to join the workshop anyway and follow the instructor(s) as they go through the exercise.*</p>
+
+Download the latest released version of Agisoft Metashape <u>Professional Edition</u> (currently 1.6.2) from:
+
+<p class="indented2">https://www.agisoft.com/downloads/installer/</p> 
+
+Installation is fairly straight-forward. When you first launch Metashape, you'll be prompted to enter a license code *or* start a 30-day trial. 
+
+<p class="indented2">**<span style="color:crimson;">Caution</span>: don't start your 30-day Metashape trial until May 27, 2020, or later, otherwise it'll expire before DroneCamp!**</p>
+
+If you'd like to familiarize yourself with Metashape before DroneCamp (recommended), there are number of [tutorials](https://www.agisoft.com/support/tutorials/beginner-level/){target="_blank" rel="noopener"} and sampe datasets available from Agisoft.
 
 <hr class="full"/>
 
@@ -84,12 +94,33 @@ To install OpenDroneMap...
 
 <hr class="full"/>
 
-![](images/pix4d-logo_82x60.png){style="display:block; width:92px; padding:5px; float:right;"}
+![](images/pix4d-logo_82x60.png){style="display:block; width:112px; padding:15px; float:right;"}
 
 ### Pix4Dmapper{id='p4d'}
 
+Pix4Dmapper is a professional drone photogrammetry software that creates spatially accurate 2D and 3D models from photos taken by a drone. To run it successfully, it requires a releatively recent computer with a multi-core CPU, 8GB of RAM (preferably more), and a CUDA compatible GPU. Pix4D Desktop runs on Windows only.
 
-To install Pix4Dmapper...
+<p class="indented2">Tip: *Pix4Dmapper* refers to a license that unlocks different features in Pix4D Desktop and Pix4D Cloud.</p>
+
+Installing Pix4D Desktop requires about 500MB. Data for the workshop will be about _GB. 
+
+<p class="indented2">*Unfortunately there is no cloud VM option for Pix4D. If you are unable to install the software on your own computer, you are welcome to join the workshop anyway and follow the instructor(s) as they go through the exercise.*</p>
+
+To install Pix4D Desktop, you need a valid Pix4D account. You can sign-up for Pix4D account and get a free 15-day trial license by going to [https://cloud.pix4d.com](https://cloud.pix4d.com){target="_blank" rel="noopener"}.
+
+<p class="indented2">**<span style="color:crimson;">Caution</span>: don't start your 15-day Pix4D trial until June 11, 2020, or later, otherwise it'll expire before DroneCamp!**</p>
+
+After you have your account, you can download the Pix4D Desktop from the link below. The latest release is *4.5.6*. 
+
+<p class="indented2">https://cloud.pix4d.com/download/</p>
+
+
+Installing Pix4D Desktop is fairly straight-forward. The first time you launch it you'll be prompted to sign-in using your Pix4D account name and password.
+
+If you'd like to familiarize yourself with Pix4D before DroneCamp (recommended), select 'Demo Project' from the splash screen. There is also a [Getting Started](https://support.pix4d.com/hc/en-us/sections/360003718932-Getting-started){target="_blank" rel="noopener"} guide and a number of [Example Projects](https://support.pix4d.com/hc/en-us/articles/360000235126-Example-projects){target="_blank" rel="noopener"} with data you can download from Pix4D.
+
+<p class="indented2">Tip. You may be able to extend your trial license for an additional 10 days. For details see 
+[*How to get a trial of Pix4D Desktop*](https://support.pix4d.com/hc/en-us/articles/202560729-How-to-get-a-trial-of-Pix4D-Desktop){target="_blank" rel="noopener"}.</p>
 
 <hr class="full"/>
 
@@ -110,6 +141,7 @@ Installation is usually very straight-forward. For more detailed instructions, p
 
 QGIS is available on Windows, macOS, Linux and Android. Please note that the workshops in DroneCamp 2020 using QGIS were developed and tested on **Windows**. The software appearance or behavior may differ slightly on other operating systems.
 
+<hr class="full"/>
 
 ## Mission Planning Apps (??)
 
