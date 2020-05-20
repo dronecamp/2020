@@ -59,13 +59,15 @@ cols_core <- c("title" = "Workshop Title",
               "record_release" = "Recorded Video - OK to Release")
 
 cols_wkshp1 <-c("dt_readable" = "Workshop #1 - Date & Time", 
-                "venue" = "Workshop #1 - Venue", 
+                "venue" = "Workshop #1 - Venue",
+                "track_num" = "Workshop #1 - Track number", 
                 "zoom_url" = "Workshop #1 - Zoom URL", 
                 "facilitator" = "Workshop #1 - Zoom Facilitator", 
                 "dt_fmt" = "SortableTimeSlot1")
 
 cols_wkshp2 <-c("dt_readable" = "Workshop #2 - Date & Time", 
                 "venue" = "Workshop #2 - Venue", 
+                "track_num" = "Workshop #2 - Track number", 
                 "zoom_url" = "Workshop #2 - Zoom URL", 
                 "facilitator" = "Workshop #2 - Zoom Facilitator", 
                 "dt_fmt" = "SortableTimeSlot2")
