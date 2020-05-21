@@ -1,6 +1,8 @@
 ---
 title: "Read data"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r read_data, include=FALSE}
@@ -10,21 +12,30 @@ if (params$download_wrkshp) {
   library(googlesheets4)
   sheets_auth(email = "andlyons@ucdavis.edu")
   dc20_wkshps_id <- "1A6DdBJH-ZZbMHb9Y7HFCqJBjPXmWy92C0rVEyYqhRqw"
+  
+  ## Download the 'Workshops - Responses' sheet
   dc20_wkshps_tbl <- googlesheets4::range_read(ss = dc20_wkshps_id, 
                                                sheet = "Workshops - Responses", range = NULL)
+  
+  ## Download the 'Tracks' sheet
+  tracks_tbl <- googlesheets4::range_read(ss = dc20_wkshps_id, sheet = "Tracks", range = NULL)
+
+  ## Download the 'Substitutions' sheet
   subst_tbl <- googlesheets4::range_read(ss = dc20_wkshps_id, sheet = "Substitutions", range = NULL)
  
-  ## Record the time of this download in the Google Sheet
+  ## Write the time of this download in the Google Sheet
   googlesheets4::range_write(ss = dc20_wkshps_id, data = data.frame(val = Sys.time()),
                            sheet = "Options", range = "B2", col_names = FALSE, reformat = FALSE)
 
   save(dc20_wkshps_tbl, file="dc20_wkshps_tbl.RData")
   save(subst_tbl, file="subst_tbl.RData")
- 
+  save(tracks_tbl, file="tracks_tbl.RData")
+  
 } else {
   ## Using cached workshop data
   load("dc20_wkshps_tbl.RData")
   load("subst_tbl.RData")
+  load("tracks_tbl.RData")
 }
 
 cols_core <- c("title" = "Workshop Title", 
@@ -60,22 +71,50 @@ cols_core <- c("title" = "Workshop Title",
 
 cols_wkshp1 <-c("dt_readable" = "Workshop #1 - Date & Time", 
                 "venue" = "Workshop #1 - Venue",
-                "track_num" = "Workshop #1 - Track number", 
+                "track_namedt" = "Workshop #1 - Track", 
                 "zoom_url" = "Workshop #1 - Zoom URL", 
                 "facilitator" = "Workshop #1 - Zoom Facilitator", 
-                "dt_fmt" = "SortableTimeSlot1")
+                "wkshp_dtsort" = "SortableTimeSlot1")
 
 cols_wkshp2 <-c("dt_readable" = "Workshop #2 - Date & Time", 
                 "venue" = "Workshop #2 - Venue", 
-                "track_num" = "Workshop #2 - Track number", 
+                "track_namedt" = "Workshop #2 - Track", 
                 "zoom_url" = "Workshop #2 - Zoom URL", 
                 "facilitator" = "Workshop #2 - Zoom Facilitator", 
-                "dt_fmt" = "SortableTimeSlot2")
+                "wkshp_dtsort" = "SortableTimeSlot2")
 
 
 ws1 <- dc20_wkshps_tbl %>% select(all_of(c(cols_core, cols_wkshp1)))
-ws2 <- dc20_wkshps_tbl %>% select(all_of(c(cols_core, cols_wkshp2))) %>% filter(!is.na(dt_fmt))
-ws_all <- ws1 %>% bind_rows(ws2) %>% mutate(session_date = as.Date(substr(dt_fmt, 1, 10)))
+ws2 <- dc20_wkshps_tbl %>% select(all_of(c(cols_core, cols_wkshp2))) %>% filter(!is.na(wkshp_dtsort))
+ws_all <- ws1 %>% bind_rows(ws2) %>% mutate(session_date = as.Date(substr(wkshp_dtsort, 1, 10)))
+
+## JOIN THE TRACKS
+
+cols_tracks <- c("track_nameonly" = "Track Title", 
+                 "track_namedt" = "TitleTimeSlot",
+                 "track_type" = "Type",
+                 "track_dtsort" = "SortableTimeSlot")
+
+tracks_tbl <- tracks_tbl %>% select(all_of(cols_tracks))
+
+# tracks2_tbl
+# names(ws_all)
+# ws_all$track_namedt
+
+ws_all <- ws_all %>% left_join(tracks_tbl, by = "track_namedt")
+
+# names(ws_all2)
+# View(ws_all2)
+# ws_all2$wkshp_dtsort
+# ws_all2$track_dtsort
+
+## Fill the missing track times with the workshop time
+(track_nodt_idx <- which(is.na(ws_all$track_dtsort)))
+ws_all[track_nodt_idx, "track_dtsort"] <- ws_all[track_nodt_idx, "wkshp_dtsort"]
+  
+# View(ws_all)
+# ws_all2$track_dtsort
+# $track_dtsort[is.na(ws_all2$track_dtsort), ] 
 
 ## DO THE SUBSTITUTIONS
 
@@ -87,11 +126,10 @@ subst_col <- function(char_vals, findreplace_tbl) {
   char_vals
 }
 
-## Define the columns to process
+## Define the columns to process substitutions
 flds <- c("title", "blurb", "desc", "prereqs", "software", "instructions", 
           "prereg", "eval_url", "record_url", "venue", "zoom_url")
 
 ws_all <- ws_all %>% mutate_at(flds, subst_col, findreplace_tbl = subst_tbl)
 
-# save(ws_all, file="ws_all.RData")
 ```

@@ -4,7 +4,7 @@ output: html_document
 ---
 
 ```{r results="asis", echo=FALSE}
-ws_today <- ws_all %>% filter(session_date == this_day) %>% arrange(dt_fmt)
+ws_today <- ws_all %>% filter(session_date == this_day) %>% arrange(track_dtsort, track_nameonly, wkshp_dtsort)
 
 for (i in 1:nrow(ws_today)) {
   

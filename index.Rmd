@@ -49,7 +49,7 @@ for (j in 1:length(dc_dates)) {
   ## Print the date row
   print(HTML(paste0("<tr><td colspan=\"2\" class=\"glance-date\">", format(dc_dt, "%A %B %d"), "</td></tr>")))
   
-  ws_today <- ws_all %>% filter(session_date == dc_dt) %>% arrange(dt_fmt)
+  ws_today <- ws_all %>% filter(session_date == dc_dt) %>% arrange(track_dtsort, wkshp_dtsort)
 
   for (i in 1:nrow(ws_today)) {
     time_only <- str_trim(str_split(ws_today$dt_readable[i], pattern = "\\|")[[1]][2])
