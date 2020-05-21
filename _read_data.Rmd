@@ -111,6 +111,7 @@ ws_all <- ws_all %>% left_join(tracks_tbl, by = "track_namedt")
 ## Fill the missing track times with the workshop time
 (track_nodt_idx <- which(is.na(ws_all$track_dtsort)))
 ws_all[track_nodt_idx, "track_dtsort"] <- ws_all[track_nodt_idx, "wkshp_dtsort"]
+ws_all[track_nodt_idx, "track_nameonly"] <- "none"
   
 # View(ws_all)
 # ws_all2$track_dtsort

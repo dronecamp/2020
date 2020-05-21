@@ -6,10 +6,38 @@ output: html_document
 ```{r results="asis", echo=FALSE}
 ws_today <- ws_all %>% filter(session_date == this_day) %>% arrange(track_dtsort, track_nameonly, wkshp_dtsort)
 
+track_name_last <- "none"
+
 for (i in 1:nrow(ws_today)) {
   
-  print(HTML("<hr class=\"quarter\" style=\"height:2px;\"/>"))
+  track_name_this <- ws_today$track_nameonly[i]
+  hr_next <- TRUE
   
+  if (is.na(track_name_this) || track_name_this == "none") {
+    
+    if (track_name_last != "none") {
+       ## A track just ended, put in a HR
+       print(p(" ", class = "trackend"))
+       hr_next <- FALSE
+    } 
+    
+  } else {
+    if (track_name_this != track_name_last) {
+      ## New track. Put a sub-heading
+      #print(h2(track_name_this))
+      #cat("### ", track_name_this, "\n", sep="")
+      cat("## --- ", track_name_this, " --- {class='track' style='font-size:80%;'}\n", sep="")
+      hr_next <- FALSE
+    }
+    
+  }
+  track_name_last <- track_name_this
+  
+  if (hr_next) print(HTML("<hr class=\"quarter\" style=\"height:2px;\"/>"))
+
+  # print(p("last track ", track_name_last))
+  # print(p("this track ", track_name_this))
+
   time_only <- str_trim(str_split(ws_today$dt_readable[i], pattern = "\\|")[[1]][2])
   
   cat("## <span class='time'>", time_only, ".</span> ", ws_today$title[i], "\n", sep="")

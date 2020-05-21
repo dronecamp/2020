@@ -43,15 +43,37 @@ DroneCamp is a collaborative effort by several [campuses and research programs](
 print(HTML("<table>"))
       
 dc_dates <- as.Date(paste0("2020-06-", 22:25))
+
 for (j in 1:length(dc_dates)) {
   dc_dt <- dc_dates[j]
   
   ## Print the date row
   print(HTML(paste0("<tr><td colspan=\"2\" class=\"glance-date\">", format(dc_dt, "%A %B %d"), "</td></tr>")))
   
-  ws_today <- ws_all %>% filter(session_date == dc_dt) %>% arrange(track_dtsort, wkshp_dtsort)
-
+  ws_today <- ws_all %>% filter(session_date == dc_dt) %>% arrange(track_dtsort, track_nameonly, wkshp_dtsort)
+  track_name_last <- "none"
+  
   for (i in 1:nrow(ws_today)) {
+    
+    track_name_this <- ws_today$track_nameonly[i]
+    
+    if (is.na(track_name_this) || track_name_this == "none") {
+      
+      if (track_name_last != "none") {
+         ## A track just ended, put in a HR
+         ## any visual cue needed?
+        print(HTML(paste0("<tr class=\"glance-track-tr\"><td>&nbsp;</td><td class=\"glance-track-end\">&nbsp;</td></tr>")))
+      } 
+      
+    } else {
+      if (track_name_this != track_name_last) {
+        #print(HTML(paste0("<tr><td colspan=\"2\" class=\"glance-track\">", track_name_this, "</td></tr>")))
+        print(HTML(paste0("<tr><td>&nbsp;</td><td class=\"glance-track-title\">", track_name_this, "</td></tr>")))
+      }
+      
+    }
+    track_name_last <- track_name_this
+    
     time_only <- str_trim(str_split(ws_today$dt_readable[i], pattern = "\\|")[[1]][2])
     workshop_blurb <- ifelse(is.na(ws_today$blurb[i]), "",
                              paste("<br/><span class=\"glance-blurb\">", 

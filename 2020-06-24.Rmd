@@ -4,7 +4,7 @@ this_day <- as.Date("2020-06-24")
 
 # `r format(this_day, "%a. %B %d, %Y")`
 
-*All times are Pacific Daylight Time*
+<p class="timezone">All times are Pacific Daylight Time</p>
 
 ```{r list_sessions2, child='_list_sessions.Rmd', results="asis", echo=FALSE}
 ```

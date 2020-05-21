@@ -1,5 +1,9 @@
+library(bookdown)
+library(htmltools)
+library(tidyverse)
+
 wrkshp_data_old <- function() {
-  ## This will check to see if the workshop data has been updated (via a Google Form Submission)
+  ## This global function will check to see if the workshop data has been updated (via a Google Form Submission)
   ## since the last time the data were retreived. 
   ##
   ## This is done by checking a cell on the "DC20 Workshop Info - Download Status" Google
