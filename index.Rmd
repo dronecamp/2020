@@ -47,6 +47,11 @@ dc_dates <- as.Date(paste0("2020-06-", 22:25))
 for (j in 1:length(dc_dates)) {
   dc_dt <- dc_dates[j]
   
+  if (j > 1) {
+    ## Print a blank row (spacer)
+    print(HTML(paste0("<tr><td colspan=\"2\">&nbsp;</td></tr>")))
+  }
+  
   ## Print the date row
   print(HTML(paste0("<tr><td colspan=\"2\" class=\"glance-date\">", format(dc_dt, "%A %B %d"), "</td></tr>")))
   
@@ -62,13 +67,13 @@ for (j in 1:length(dc_dates)) {
       if (track_name_last != "none") {
          ## A track just ended, put in a HR
          ## any visual cue needed?
-        print(HTML(paste0("<tr class=\"glance-track-tr\"><td>&nbsp;</td><td class=\"glance-track-end\">&nbsp;</td></tr>")))
+        print(HTML(paste0("<tr class=\"glance-track-tr\"><td colspan=\"2\" class=\"glance-track-end\">&nbsp;</td></tr>")))
       } 
       
     } else {
       if (track_name_this != track_name_last) {
         #print(HTML(paste0("<tr><td colspan=\"2\" class=\"glance-track\">", track_name_this, "</td></tr>")))
-        print(HTML(paste0("<tr><td>&nbsp;</td><td class=\"glance-track-title\">", track_name_this, "</td></tr>")))
+        print(HTML(paste0("<tr><td class=\"glance-track-title\">&nbsp;</td><td class=\"glance-track-title\">", track_name_this, "</td></tr>")))
       }
       
     }
