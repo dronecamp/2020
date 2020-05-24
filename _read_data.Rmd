@@ -6,6 +6,13 @@ editor_options:
 ---
 
 ```{r read_data, include=FALSE}
+day_tagln <- list()
+day_tagln[["2020-06-22"]] <- "Things you should know BEFORE going to the field"
+day_tagln[["2020-06-23"]] <- "Things you should know IN the field; Image Processing Part 1"
+day_tagln[["2020-06-24"]] <- "Image Processing Part 2; GIS Analysis Part 1"
+day_tagln[["2020-06-25"]] <- "Participant Talks; Advanced Flight Ops; GIS Analysis Part 2; Deeper Dives by Field"
+
+
 if (params$download_wrkshp) {
   ## (re)Downloading workshop data from Google Sheets
   

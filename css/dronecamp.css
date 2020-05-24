@@ -1,3 +1,7 @@
+:root {
+  --fav-darkgreen: #004d00;
+  --fav-lightgreen: #CADFCE;
+}
 img.sponsor-logo {
   margin: 10px 20px;
 }
@@ -25,11 +29,11 @@ td.glance-time {
 td.glance-track-title {
   font-weight: bold;
   font-style: italic;
-  background-color: #cadfce;
+  background-color: var(--fav-lightgreen);
 }
 
 td.glance-track-end {
-  background-color: #cadfce;
+  background-color: var(--fav-lightgreen);
 }
 
 tr.glance-track-tr {
@@ -37,20 +41,27 @@ tr.glance-track-tr {
 }
 
 .section.level2.track > h2 {
-  background-color: #cadfce;
+  background-color: var(--fav-lightgreen);
   padding: 0.2em;
   text-align: center;
   font-size: 70%;
 }
 
 p.trackend {
-  background-color: #cadfce;
+  background-color: var(--fav-lightgreen);
   height: 18px;
 }
 
 p.timezone {
   font-style: italic;
   font-size: 90%;
+}
+
+p.daytag {
+  font-weight: 600;
+  color: gray;
+  font-style: italic;
+  font-size: 110%;
 }
 
 h2 > span.time {
