@@ -6,6 +6,7 @@ bookdown::gitbook:
   includes:
     in_header: common/gtag.html
     before_body: common/page_header.html
+    after_body: common/page_footer.html
   config:
     toc:
       scroll_highlight: yes
