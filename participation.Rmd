@@ -1,38 +1,36 @@
----
-output:
-  bookdown::gitbook
-params:
-  chapter_subject: "Chapter title missing"
-  chapter_strapline: "Chapter strap line missing"
-  chapter_body: "Chapter body missing"
----
-
 # Participating in DroneCamp
 
-## Zoom Registration
+## Getting the Zoom Links
 
-DroneCamp registration 
+DroneCamp uses several Zoom links. The Zoom info for each session appears in the Online Program. Many sessions require you to use the link that was sent to you in a confirmation email.
 
-Registration is a two-part process - you register on UCANR, and then you also have to register for Zoom.
-
-## Setting Up Zoom and Your Workstation
-
-copy from https://ajlyons.github.io/rspatial_bgs20/setup.html#zoom-setup
-
-Double-screens are sttrongly recommended for the hands-on workshop
+If you are interested in participating in DroneCamp but have not yet registered, registration info can found at [http://ucanr.edu/dronecamp](http://ucanr.edu/dronecamp){target="_blank" rel="noopener"}. 
 
 
+## DroneCamp Email List
+
+All DroneCamp participants and instructors have been added to a **moderated email list**. The primary purpose of the DroneCamp email list is to share information and updates about DroneCamp, but participants are also welcome to use the list to share information, news, and questions related to drone mapping with fellow DroneCampers. 
+
+The DroneCamp email list is moderated and all messages must be approved by an administrator before they go out. The list will be shut down after a few months or whenever it becomes inactive.
 
 ## Community Forum 
 
- - what kind of chat or live feed can we use?
+In addition to the Zoom Chat window, everyone is invited to utilize the DroneCamp [**Community Forum**](https://drive.google.com/open?id=1rO1fGZlTZcD2XL0bmZueBt9VJbmxq1fmsNe1yIXezvY){target="_blank" rel="noopener"} to share information, notes, questions, links, tips and other resources related to drone mapping.
 
-## Principles of Community and Being Safe on Zoom
+The Community Forum is a Google Doc that anyone can add comments to or make edits in Suggesting mode. After your first edit, an Administrator will make you an editor so you edit the document directly after that.
 
-Mutual Respect. Please treat all instructors and other participants with mutual respect. People learn with different styles and at different paces. Everyone is welcome.
+## Being Safe & Principles of Community
 
-Personal information. Be cautious about sharing any personal information during your live stream, as well as in Live Chat. Admin access for your channel should only be provided to those who you trust. YouTube will not ask you for moderation privileges in the stream.
+Virtual courses like DroneCamp remove many of the geographic barriers for participation, but they also involve new ways of interaction. Just like in-person events, we ask all participants to practice the following general guidelines for community.
 
-Reporting Inappropriate Content and Behavior. If you're concerned about chat messages or other inappropriate behavior, first send a private chat message to the session facilitator (co-host). You may also share concerns by sending a message to dronecamp@ucanr.edu.
+**Mutual Respect**  
+Everyone is welcome regardless of their background or skill level. Please treat each other and all instructors with mutual respect. People learn with different styles and at different paces; instrucors will do their best to accommodate everyone.
 
-See also: https://www.youtube.com/about/policies/#community-guidelines
+**Sharing Personal Information**  
+Be cautious about sharing any personal information in chat sessions, Q&A sessions, and the Community Forum. Anything you share online could in theory be saved and shared with others.
+
+**Reporting Inappropriate Content and Behavior**  
+If you're concerned about chat messages or any other kind of inappropriate behavior, first send a private chat message to the session facilitator (host). You may also share concerns by sending a message to dronecamp@ucanr.edu.
+
+
+
