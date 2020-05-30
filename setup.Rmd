@@ -126,7 +126,7 @@ Installing the software is usually pretty straight forward. After you install Ar
 
 ArcGIS Online is ESRI's platform for creating web maps, accessing online data, publishing web data collection forms, etc. 
 
-If you have a working license for ArcGIS Pro, it almost certainly includes access to ESRI's online resources (which ArcGIS Pro uses also). But the reverse is not always true. An online account may or may not activate ArcGIS Pro. Check the details. 
+If you have a working license for ArcGIS Pro, it almost certainly includes access to ESRI's online resources (which ArcGIS Pro requires). But the reverse is not always true. An online account may or may not activate ArcGIS Pro. Check the details of your license. 
 </div>
 
 <hr class="full" style=\"height:2px;\"/>

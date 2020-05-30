@@ -1,6 +1,8 @@
 ---
 title: "List_Sessions"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r results="asis", echo=FALSE}
@@ -16,7 +18,7 @@ for (i in 1:nrow(ws_today)) {
   if (is.na(track_name_this) || track_name_this == "none") {
     
     if (track_name_last != "none") {
-       ## A track just ended, put in a HR
+       ## A track just ended, put in a horizontal bar
        print(p(" ", class = "trackend"))
        hr_next <- FALSE
     } 
@@ -44,12 +46,8 @@ for (i in 1:nrow(ws_today)) {
   
   if (!is.na(ws_today$desc[i])) print(HTML(paste0("<p>", ws_today$desc[i], "</p>")))
   
-  print(p(strong("Format: "), ws_today$format[i]))
+  if (ws_today$format[i] != "NA") print(p(strong("Format: "), ws_today$format[i]))
   
-  ## Get the instructor initials which will be used for the internal links
-  #instr_intlinks <- str_trim(str_split(ws_today$inst_initials[i], pattern = ",")[[1]])
-  #instr_intlinks <- instr_intlinks[!is.na(instr_intlinks)]
-
   ## Construct the instructors HTML text
   instr_html <- ""
 

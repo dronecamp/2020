@@ -92,7 +92,7 @@ for (j in 1:length(dc_dates)) {
     ## Prepare the href link
     href_link <- paste0("<a href=\"", format(dc_dt, "%Y-%m-%d"), ".html#",
                         ws_today$title[i] %>% 
-                          gsub("[&,\\:\\(\\)]", "", .) %>% 
+                          gsub("[&,\\:\\(\\)\\/\\?]", "", .) %>% 
                           gsub("   ", " ", .) %>% 
                           gsub("  ", " ", .) %>% 
                           gsub(" ", "-", .) %>%
