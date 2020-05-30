@@ -48,7 +48,7 @@ If you dial-in on a phone, you can use the 'mute' button on your phone app, or d
 
 <hr class="full"/>
 
-## Installing GIS and Photogrammetry Software
+## GIS and Photogrammetry Software
 
 Below are installation instructions for the different GIS and photogrammetry programs that will be used at DroneCamp. **Note you probably don't need to (or want to) install all these programs**. 
 

@@ -80,12 +80,13 @@ for (i in 1:nrow(ws_today)) {
       if (toupper(this_instr) != "NA") {
         
         id_find <- tolower(gsub(" ", "-", this_instr))
+        
         if (id_find %in% dc20_instr_tbl$id) {
           a1 <- paste0( "<a href=\"instructors.html#", id_find, "\">")
-          a2 <- "</a>\n"
+          a2 <- "</a>"
         } else {
           a1 <- ""
-          a2 <- "\n"
+          a2 <- ""
         }
         
         instr_html <- paste0(instr_html, ifelse(j==1, "", ", "), a1, this_instr, a2)
