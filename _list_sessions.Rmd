@@ -19,16 +19,23 @@ for (i in 1:nrow(ws_today)) {
     
     if (track_name_last != "none") {
        ## A track just ended, put in a horizontal bar
-       print(p(" ", class = "trackend"))
+       print(HTML("<div class='trackend'> </div>"))
        hr_next <- FALSE
     } 
     
   } else {
+    
     if (track_name_this != track_name_last) {
-      ## New track. Put a sub-heading
-      #print(h2(track_name_this))
-      #cat("### ", track_name_this, "\n", sep="")
-      cat("## --- ", track_name_this, " --- {class='track' style='font-size:80%;'}\n", sep="")
+      ## Change in track 
+      
+      if (track_name_last != "none") {
+         ## A track just ended, put in a horizontal bar
+         print(HTML("<div class='trackend'> </div>"))
+         hr_next <- FALSE
+      } 
+
+      ## Put a sub-heading for the new track
+      cat("## --- ", track_name_this, " --- {class='track'}\n", sep="")
       hr_next <- FALSE
     }
     
@@ -37,9 +44,25 @@ for (i in 1:nrow(ws_today)) {
   
   if (hr_next) print(HTML("<hr class=\"quarter\" style=\"height:2px;\"/>"))
 
-  # print(p("last track ", track_name_last))
-  # print(p("this track ", track_name_this))
-
+  ## Generate any tags
+  weekday_name <- format(this_day, "%A")
+  tags_html <- paste0("<span class='dayofweek' style='background-color:", 
+                      day_col[[weekday_name]], ";'>", weekday_name, "</span>")
+  
+  
+  if (!is.na(ws_today$tags[i])) {
+    
+    tags_split <- unlist(strsplit(ws_today$tags[i], ","))
+    for (tag_one in tags_split) {
+      tags_html <- paste0(tags_html, "<span class='", tag_one, "'></span>")  
+    }
+    
+  }
+  
+  
+  
+  print(HTML(paste0("<div class='tags'>", tags_html, "</div>")))
+  
   time_only <- str_trim(str_split(ws_today$dt_readable[i], pattern = "\\|")[[1]][2])
   
   cat("## <span class='time'>", time_only, ".</span> ", ws_today$title[i], "\n", sep="")

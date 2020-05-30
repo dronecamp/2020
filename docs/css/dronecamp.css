@@ -49,10 +49,46 @@ tr.glance-track-tr {
   text-align: center;
   font-size: 70%;
 }
+div.tags {
+  color: white; 
+  font-size: 80%;   /* 0.9rem */
+  font-family:Verdana, Geneva, sans-serif;
+  margin-bottom: -2.7em;
+  
+}
+span.dayofweek {
+  border-radius: 3px;
+  padding: 4px;
+  margin-right: 1em;
+}
+span.open {
+  border-radius: 3px;
+  padding: 4px;
+  margin-right: 1em;
+  background-color: #800080;  /* dark purple */
+}
 
-p.trackend {
+span.open:after {
+  content: 'Open Session';
+}
+
+
+span.hands-on {
+  border-radius: 3px;
+  padding: 4px;
+  margin-right: 1em;
+  background-color: #006600;  /* dark green */
+}
+
+span.hands-on:after {
+  content: 'Hands-on';
+}
+
+
+div.trackend {
   background-color: var(--fav-lightgreen);
-  height: 18px;
+  height: 14px;
+  margin-bottom: 3em;
 }
 
 p.timezone {

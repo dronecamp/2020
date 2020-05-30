@@ -12,6 +12,14 @@ day_tagln[["2020-06-23"]] <- "Things you should know IN the field; Image Process
 day_tagln[["2020-06-24"]] <- "Image Processing Part 2; GIS Analysis Part 1"
 day_tagln[["2020-06-25"]] <- "Participant Talks; Advanced Flight Ops; GIS Analysis Part 2; Deeper Dives by Field"
 
+day_col <- list()
+day_col[["Sunday"]] <- "#6a3d9a"
+day_col[["Monday"]] <- "#a65628"
+day_col[["Tuesday"]] <- "#377eb8"
+day_col[["Wednesday"]] <- "#984ea3"
+day_col[["Thursday"]] <- "#008080"
+day_col[["Friday"]] <- "#cab2d6"
+day_col[["Saturday"]] <- "#ff7f00"
 
 if (params$download_wrkshp) {
   ## (re)Downloading workshop data from Google Sheets
