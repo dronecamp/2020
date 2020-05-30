@@ -6,7 +6,8 @@ if (params$download_instr) {
   gs4_auth(email = "andlyons@ucdavis.edu")
   dc20_instr_id <- "1h7ZY_iuB17Jx238E4_t-4fmGys9Fdn7UlgNFvu8fhnc"
   dc20_instr_tbl <- googlesheets4::range_read(ss = dc20_instr_id, 
-                                              sheet = "Instructors", range = NULL)
+                                              sheet = "Instructors", range = NULL) %>% 
+    mutate(id = tolower(gsub(" ", "-", name)))
   save(dc20_instr_tbl, file="instructors.RData")
   
 } else {
@@ -23,7 +24,8 @@ for (i in 1:nrow(dc20_instr_tbl)) {
   ## If we wanted the name to appeari in the TOC, add the name as markup
   ## cat("## ", instr_name, "\n")
 
-  print(h2(instr_name, id = dc20_instr_tbl$initials[i], style="clear:both;"))
+  #print(h2(instr_name, id = dc20_instr_tbl$initials[i], style="clear:both;"))
+  print(h2(instr_name, id = dc20_instr_tbl$id[i], style="clear:both;"))
   
   instr_bio <- dc20_instr_tbl$bio[i]
   instr_profile_url <- dc20_instr_tbl$profile_url[i]

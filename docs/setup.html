@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/dc-logo_touch-icon_152x152.png" />
-  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="prev" href="instructors.html"/>
 <link rel="next" href="participation.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -141,14 +141,16 @@ DroneCamp 2020</a></li>
 <li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#p4d"><i class="fa fa-check"></i>Pix4Dmapper</a></li>
 <li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#qgis"><i class="fa fa-check"></i>QGIS</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#mission-planning-apps"><i class="fa fa-check"></i>Mission Planning Apps (??)</a><ul>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#pix4dcapture"><i class="fa fa-check"></i>Pix4Dcapture</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#mission-planning-apps"><i class="fa fa-check"></i>Mission Planning Apps</a><ul>
 <li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#drone-deploy"><i class="fa fa-check"></i>Drone Deploy</a></li>
 <li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#dji-pilot"><i class="fa fa-check"></i>DJI Pilot</a></li>
 <li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#emotion"><i class="fa fa-check"></i>eMotion</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#pix4dcapture"><i class="fa fa-check"></i>Pix4Dcapture</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#precisionflight-for-dji-drones"><i class="fa fa-check"></i>PrecisionFlight for DJI Drones</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="participation.html"><a href="participation.html"><i class="fa fa-check"></i>Participating in DroneCamp</a><ul>
+<li class="chapter" data-level="" data-path="participation.html"><a href="participation.html#registration"><i class="fa fa-check"></i>Registration</a></li>
 <li class="chapter" data-level="" data-path="participation.html"><a href="participation.html#getting-the-zoom-links"><i class="fa fa-check"></i>Getting the Zoom Links</a></li>
 <li class="chapter" data-level="" data-path="participation.html"><a href="participation.html#dronecamp-email-list"><i class="fa fa-check"></i>DroneCamp Email List</a></li>
 <li class="chapter" data-level="" data-path="participation.html"><a href="participation.html#community-forum"><i class="fa fa-check"></i>Community Forum</a></li>
@@ -181,8 +183,11 @@ DroneCamp 2020</a></li>
 </div>
 <div id="zoom" class="section level2">
 <h2>Zoom</h2>
-<p>This workshop will be taught entirely online using Zoom. The link(s) will be sent you a week or two before DroneCamp starts.</p>
+<p>This workshop will be taught entirely online using Zoom. The link(s) will be sent you a week or two before DroneCamp starts (see also <a href="participation.html#getting-the-zoom-links"><em>Getting the Zoom Links</em></a>) .</p>
 <p>Please install the <a href="https://zoom.us/download" target="_blank" rel="noopener"><strong>Zoom Client for Meetings</strong></a> on your computer. If you’ve used Zoom before, and you see Zoom in the Start Menu (Windows) or Finder (Mac), then you already have the client. Please make sure you have the <strong>latest version</strong>, as some of the buttons and features have changed.</p>
+<div class="indented2">
+<p><strong>Note</strong>: After May 30, 2020 Zoom will only allow version 5.0 of the Zoom client or higher to connect to meetings.</p>
+</div>
 <p>A <strong>Zoom account</strong> is <em>not</em> required. A <strong>webcam</strong> is not required.</p>
 <div id="viewing-zoom-and-gis-photogrammetry-software-simultaneously" class="section level3">
 <h3>Viewing Zoom and GIS / Photogrammetry Software Simultaneously</h3>
@@ -216,7 +221,7 @@ arranging GIS and Zoom side-by-side on a single screen
 <h2>Installing GIS and Photogrammetry Software</h2>
 <p>Below are installation instructions for the different GIS and photogrammetry programs that will be used at DroneCamp. <strong>Note you probably don’t need to (or want to) install all these programs</strong>.</p>
 <p>Agisoft Metashape and Pix4Dmapper are both professional quality drone photogrammetry programs. They have similar features and both offer trial licenses. You’re welcome to install them both if you want to take both workshops and compare them. If you have to pick one, Pix4Dmapper is slightly easier to use but also more expensive after the trial period.</p>
-<p>WebODM Lighting is a lightweight GUI for Windows. It also stitches images into 2D and 3D products, but the data crunching occurs elsewhere (a server running in the cloud, your network, or your computer).</p>
+<p>WebODM Lightning is a lightweight GUI for Windows. It also stitches images into 2D and 3D products, but the data crunching occurs elsewhere (a server running in the cloud, your network, or your computer).</p>
 <p>ArcGIS Pro and QGIS are both good desktop GIS software. QGIS is open source and hence free. ArcGIS Pro is expensive unless you have access to it through your organization (many colleges and universities provide it to their students and staff). ArcGIS Pro also has the ability to stitch drone images.</p>
 <p>QGIS and Agisoft Metashape are available for Mac OS, Linux, and Windows. ArcGIS Pro and Pix4Dmapper are Windows only.</p>
 <hr class="full">
@@ -242,14 +247,42 @@ arranging GIS and Zoom side-by-side on a single screen
 </div>
 <div id="pro" class="section level3">
 <h3>ArcGIS Pro</h3>
-<p>To install ArcGIS Pro…</p>
+<div style="margin:2em 3em; border:2px solid crimson; padding:5px 10px;">
+<p><strong>ArcGIS Pro vs. ArcMap</strong></p>
+<p>ArcGIS Pro is the latest destkop GIS software from ESRI. It is not the same as the venerable ArcMap (aka <em>ArcGIS Desktop</em>), which is on its way out. If you’ve used ArcMap, it will help you pick up ArcGIS Pro, but they are not the same. All ArcGIS workshops at DroneCamp are using ArcGIS Pro.</p>
+</div>
+<p><strong>Step 1: Get a License</strong></p>
+<p>Step one for installing ArcGIS Pro is getting a license. For a long time ESRI has had a 21-day <a href="https://links.esri.com/pro/trial" target="_blank" rel="noopener">ArcGIS Trial</a> program, however at the current time this program is limited to organizations responding to the COVID-19 pandemic.</p>
+<p>ESRI is currently giving out free software licenses to all students, including ArcGIS Pro desktop software, through August 31, 2020 through <a href="https://community.esri.com/community/education/blog/2020/03/31/free-student-licenses-via-learn-arcgis-until-august-31" target="_blank" rel="noopener">Learn ArcGIS</a>. Many colleges and universities also provide licenses to ArcGIS software.</p>
+<p>For non-students, a <a href="https://www.esri.com/en-us/arcgis/products/arcgis-for-personal-use/overview" target="_blank" rel="noopener">personal-use license</a> for ArcGIS Pro costs $100 a year. ESRI also has programs for employees of <a href="https://www.esri.com/en-us/solutions/industries/sustainability/nonprofit-program/overview" target="_blank" rel="noopener">Nonprofit Organizations</a> and <a href="https://www.esri.com/en-us/solutions/industries/sustainability/conservation/conservation-application" target="_blank" rel="noopener">Conservation Organizations</a>.</p>
+<p>If none of these options work, we can provide temporary 14-day ArcGIS Pro licenses to registered DroneCamp participants. Look for a welcome email with more info.</p>
+<p><strong>Step 2. Download the software</strong></p>
+<p>After you have a license, you can download the desktop software by logging into <a href="https://arcgis.com/" target="_blank" rel="noopener">ArcGIS.com</a>.</p>
+<p><img src="images/my_esri_250x206x256.png" style="display:block; padding:10px; float:right;" /></p>
+<p>After you log-in, click on your name and go to ‘My Esri’. Once you’re arrived at ‘My Ersi’ , go to the ‘My Organizations’ tab, then ‘Downloads’. You should see the download files for ArcGIS Pro. If you don’t see a download link for ArcGIS Pro, then your license may not include the desktop software. Go back to Step 1.</p>
+<p>The current version of ArcGIS is 2.5. It is a big program - the installation file by itself is almost 1.8 GB. Give yourself enough time to download and install it.</p>
+<p><strong>Step 3. Install the software</strong></p>
+<p>Installing the software is usually pretty straight forward. After you install ArcGIS 2.5, there is at least one patch or update. You can download the patch and run it, or use the ‘update’ option within ArcGIS Pro.</p>
+<div style="margin:2em 3em; border:2px solid crimson; padding:5px 10px;">
+<p><strong>ArcGIS Pro vs. ArcGIS Online</strong></p>
+<p>ArcGIS Online is ESRI’s platform for creating web maps, accessing online data, publishing web data collection forms, etc.</p>
+<p>If you have a working license for ArcGIS Pro, it almost certainly includes access to ESRI’s online resources (which ArcGIS Pro uses also). But the reverse is not always true. An online account may or may not activate ArcGIS Pro. Check the details.</p>
+</div>
 <hr class="full" style=\"height:2px;\"/>
 <p><img src="images/odm-logo_244x60.png" style="display:block; width:198px; padding:5px; float:right;" /></p>
 </div>
 <div id="odm" class="section level3">
 <h3>OpenDroneMap</h3>
-<p>To install WebODM Lighting…</p>
-<p>To install ODM…</p>
+<p>OpenDroneMap normally runs on a server, which could be on your local computer or could be somewhere on the cloud. Once you have a server going, you typically access OpenDroneMap through a browser (or Python).</p>
+<p>For DroneCamp, we’ll be using <strong>WebODM Lightning</strong>. WebODM Lightning has two parts. The <strong>Desktop App for Windows</strong> is a modest program you can install and provides a user-friendly interface to submit your images for processing, select processing options, view results, etc. However the destkop app by itself is useless - it doesn’t actually process any data! For that you need to connect it to a processing engine or ‘node’, which could on your computer or could be in the cloud.</p>
+<p>For the DroneCamp <a href="2020-06-24.html#open-source-data-processing-with-opendronemap">WebODM workshop</a>, we would like everyone to:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>install the <strong>WebODM Lightning client for Windows</strong>, and</p></li>
+<li><p>sign-up for a free <strong>WebODM Lightning</strong> account</p></li>
+</ol>
+<p>This combo will give you a user-friendly interface and access to a good server on the cloud to stitch your images. The WebODM Lightning server is not free, but your WebODM Lightning account includes a generous <strong>150 free credits</strong> which will be plenty for the DroneCamp exercise (don’t use them up before then!)</p>
+<p>To download the WebODM Lightning app for Windows, as well as create your <em>WebODM Lightning</em> account, please visit <a href="https://webodm.net/" target="_blank" rel="noopener"><strong>webodm.net</strong></a>. You’ll be all set for DroneCamp.</p>
+<p>If you’d like to install OpenDroneMap your own hardware (and access it through a browser), you’re welcome to try that also. See <a href="https://www.opendronemap.org/webodm/" target="_blank" rel="noopener">OpenDroneMap.org</a> for details.</p>
 <hr class="full"/>
 <p><img src="images/pix4d-logo_82x60.png" style="display:block; width:112px; padding:15px; float:right;" /></p>
 </div>
@@ -296,18 +329,34 @@ Tip. You may be able to extend your trial license for an additional 10 days. For
 </div>
 </div>
 <div id="mission-planning-apps" class="section level2">
-<h2>Mission Planning Apps (??)</h2>
-<div id="pix4dcapture" class="section level3">
-<h3>Pix4Dcapture</h3>
-</div>
+<h2>Mission Planning Apps</h2>
+<p>Mission Planning apps (also referred to as <em>Flight Management</em>, <em>Autonomous Flight</em>, or <em>Ground Station</em> apps) help you design and execute a flight to capture images for mapping. The DroneCamp <a href="docs/2020-06-22.html#mission-planning"><strong>Mission Planning workshop</strong></a> will include breakout sessions in which an instructor will demo how to plan a drone mission (flight) using one of the following common apps. If you’d like to follow along or complete the exercise on your own, you are encouraged to install one of the apps below.</p>
+<p>Note: With one exception (<em>eMotion</em>), the mission planning apps below are designed for <strong>mobile devices</strong> (Android and iOS). They work ok on phones, but are much easier to use on <strong>tablets</strong>. Professional drone mappers generally use tablets to design and execute drone missions due primarily to their larger screen size.</p>
 <div id="drone-deploy" class="section level3">
 <h3>Drone Deploy</h3>
+<p><img src="images/drone-deploy-logo_100x100.png" style="display:block; height:100px; width:100px; padding:10px; float:right;" /></p>
+<p><strong>DroneDeploy</strong> is the mission planning app from DroneDeploy. It supports a wide range of drones and cameras, and is free to install and use. If you have a DroneDeploy subscription, you can also use it to upload images for processing.</p>
+<p>DroneDeploy is available for both <a href="https://www.dronedeploy.com/product/mobile/" target="_blank" rel="noopener">Android and iOS</a>.</p>
 </div>
 <div id="dji-pilot" class="section level3">
 <h3>DJI Pilot</h3>
+<p><img src="images/dji-pilot-logo_100x100.png" style="display:block; width:100px; padding:10px; float:right;" /></p>
+<p><a href="https://www.dji.com/downloads/djiapp/dji-pilot" target="_blank" rel="noopener"><strong>DJI Pilot</strong></a> is a mission planning app for DJI’s higher-end drones, including the Matrice 200 series, Phantom 4 RTK, and Mavic 2 Enterprise drones. Available for both Android and iOS.</p>
 </div>
 <div id="emotion" class="section level3">
 <h3>eMotion</h3>
+<p><img src="images/emotion-logo_402x100.png" style="display:block; height:100px; padding:10px; float:right;" /></p>
+<p><a href="https://www.sensefly.com/software/emotion/" target="_blank" rel="noopener"><strong>eMotion</strong></a> is flight management software from Sensefly designed specifically for their <strong>eBee</strong> fixed wing drones. Unlike the other apps in the workshop, eMotion is <strong>Windows software</strong> and only available to people with a Sensefly account (i.e., who own an eBee). Therefore, installing it is not an option and the breakout session will be a demo of the features.</p>
+</div>
+<div id="pix4dcapture" class="section level3">
+<h3>Pix4Dcapture</h3>
+<p><img src="images/pix4dcapture_100x100.png" style="display:block; height:100px; width:100px; padding:10px; float:right;" /></p>
+<p>Pix4Dcapture is the mission planning app from Pix4D. It supports a wide range of drones and cameras, and is free to install and use. If you have a Pix4D subscription, you can also use it to upload images for processing. Available for <a href="https://play.google.com/store/apps/details?id=com.pix4d.pix4dmapper&amp;hl=en_US" target="_blank" rel="noopener">Android</a> and <a href="https://apps.apple.com/us/app/pix4dcapture/id953486050" target="_blank" rel="noopener">iOS</a>.</p>
+</div>
+<div id="precisionflight-for-dji-drones" class="section level3">
+<h3>PrecisionFlight for DJI Drones</h3>
+<p><img src="images/precision_flight_100x100.png" style="display:block; height:100px; width:100px; padding:10px; float:right;" /></p>
+<p>PrecisionHawk’s PrecisionFlight mobile app is a full-featured flight planning app. It is free to install and use. If you have a PrecisionHawk subscription, you can also use it to upload images for processing. Available for <a href="https://play.google.com/store/apps/details?id=com.precisionhawk.inflightmobile&amp;hl=en_US" target="_blank" rel="noopener">Android</a> only.</p>
 
 </div>
 </div>

@@ -1,17 +1,20 @@
 # Participating in DroneCamp
 
-## Getting the Zoom Links
-
-DroneCamp uses several Zoom links. The Zoom info for each session appears in the Online Program. Many sessions require you to use the link that was sent to you in a confirmation email.
+## Registration
 
 If you are interested in participating in DroneCamp but have not yet registered, registration info can found at [http://ucanr.edu/dronecamp](http://ucanr.edu/dronecamp){target="_blank" rel="noopener"}. 
 
+## Getting the Zoom Links
+
+DroneCamp will use several Zoom links. With a couple of exceptions, all sessions are limited to registered participants only. A Zoom account is not needed. 
+
+Individualized Zoom connection links will be sent to you in a confirmation email(s). When you get a Zoom confirmation email, **please save it!** The connection link is unique to you, and you'll need it to join the session(s). The confirmation email will also have links you can use to add the session to your Google Calendar, Yahoo, or Outlook. 
+
+A small number of sessions may be open to all. These will be flagged accordingly in the Online Program.
 
 ## DroneCamp Email List
 
-All DroneCamp participants and instructors have been added to a **moderated email list**. The primary purpose of the DroneCamp email list is to share information and updates about DroneCamp, but participants are also welcome to use the list to share information, news, and questions related to drone mapping with fellow DroneCampers. 
-
-The DroneCamp email list is moderated and all messages must be approved by an administrator before they go out. The list will be shut down after a few months or whenever it becomes inactive.
+All DroneCamp participants and instructors have been added to a **moderated email list**. The primary purpose of the DroneCamp email list is to share information and updates about DroneCamp. Participants are also welcome to use the list to share information, news, and questions related to drone mapping with fellow DroneCampers. The list is moderated and all messages must be approved by an administrator before they go out. The list will be shut down by the end of 2020 or whenever it becomes inactive.
 
 ## Community Forum 
 

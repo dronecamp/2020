@@ -9,8 +9,11 @@ img.sponsor-logo {
 h2 {
   clear: both;
 }
+h3 {
+  clear: both;
+}
 span.glance-blurb {
-  color: dimgray;
+  color: darkolivegreen;
   font-size: 90%;
   font-style: italic;
   font-weight: normal;
@@ -59,7 +62,7 @@ p.timezone {
 
 p.daytag {
   font-weight: 600;
-  color: gray;
+  color: darkolivegreen;
   font-style: italic;
   font-size: 110%;
 }

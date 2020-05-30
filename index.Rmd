@@ -9,7 +9,7 @@ github-repo: "dronecamp/2020"
 cover-image: images/dc-logo_og_1200x630x256.png
 apple-touch-icon: images/dc-logo_touch-icon_152x152.png
 apple-touch-icon-size: 152
-# favicon: "favicon.ico"
+favicon: favicon.ico
 params:
   download_wrkshp: FALSE
   download_instr: FALSE
@@ -77,15 +77,39 @@ for (j in 1:length(dc_dates)) {
       }
       
     }
+    
+    ## Save this track name for the next loop
     track_name_last <- track_name_this
     
+    ## Construct the time string
     time_only <- str_trim(str_split(ws_today$dt_readable[i], pattern = "\\|")[[1]][2])
+    
+    ## Prepare the blurb
     workshop_blurb <- ifelse(is.na(ws_today$blurb[i]), "",
                              paste("<br/><span class=\"glance-blurb\">", 
                                    ws_today$blurb[i], "</span>"))
+    
+    ## Prepare the href link
+    href_link <- paste0("<a href=\"", format(dc_dt, "%Y-%m-%d"), ".html#",
+                        ws_today$title[i] %>% 
+                          gsub("[&,\\:\\(\\)]", "", .) %>% 
+                          gsub("   ", " ", .) %>% 
+                          gsub("  ", " ", .) %>% 
+                          gsub(" ", "-", .) %>%
+                          tolower(),
+                        "\">")
+
+    
+#preview-of-the-monterey-bay-dart-uas-online-symposium-innovation-recovery
+#preview-of-the-monterey-bay-dart-uas-online-symposium-innovation-&-recovery   
+     
     print(HTML(paste0("<tr><td class=\"glance-time\">", time_only, 
-                      "</td><td class=\"glance-title\">", ws_today$title[i], 
+                      "</td><td class=\"glance-title\">", 
+                      href_link,
+                      ws_today$title[i], 
+                      "</a>",
                       workshop_blurb, "</td></tr>")))
+    
   }
   
 }
