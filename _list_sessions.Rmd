@@ -66,6 +66,8 @@ for (i in 1:nrow(ws_today)) {
   time_only <- str_trim(str_split(ws_today$dt_readable[i], pattern = "\\|")[[1]][2])
   
   cat("## <span class='time'>", time_only, ".</span> ", ws_today$title[i], "\n", sep="")
+
+  if (!is.na(ws_today$thumb_url[i])) print(HTML(paste0("<img src='", ws_today$thumb_url[i], "' style='float:right; padding:5px;'/>")))
   
   if (!is.na(ws_today$desc[i])) print(HTML(paste0("<p>", ws_today$desc[i], "</p>")))
   
