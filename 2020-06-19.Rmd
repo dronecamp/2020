@@ -1,0 +1,13 @@
+```{r set_params_pre, include = FALSE}
+this_day <- as.Date("2020-06-19")
+```
+
+# `r format(this_day, "%a. %B %d, %Y")`
+
+<p class="daytag">`r day_tagln[[format(this_day, "%Y-%m-%d")]]`</p>
+
+<p class="timezone">All times are Pacific Daylight Time</p>
+
+```{r list_sessions_pre, child='_list_sessions.Rmd', results="asis", echo=FALSE}
+```
+

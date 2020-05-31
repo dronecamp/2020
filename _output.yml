@@ -10,7 +10,7 @@ bookdown::gitbook:
   config:
     toc:
       scroll_highlight: yes
-      collapse: subsection
+      collapse: none
       before: |
         <li><a href="https://dronecamp.github.io/2020/" style="font-weight:bold;">
         DroneCamp 2020</a></li>

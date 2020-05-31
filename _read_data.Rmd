@@ -14,12 +14,15 @@ day_tagln[["2020-06-25"]] <- "Participant Talks; Advanced Flight Ops; GIS Analys
 
 day_col <- list()
 day_col[["Sunday"]] <- "#6a3d9a"
-day_col[["Monday"]] <- "#a65628"
-day_col[["Tuesday"]] <- "#377eb8"
-day_col[["Wednesday"]] <- "#984ea3"
-day_col[["Thursday"]] <- "#008080"
-day_col[["Friday"]] <- "#cab2d6"
+day_col[["Monday"]] <- "#a65628"     # brown
+day_col[["Tuesday"]] <- "#377eb8"    # medium blue
+day_col[["Wednesday"]] <- "#984ea3"  # purple
+day_col[["Thursday"]] <- "#008080"   # teal
+day_col[["Friday"]] <- "#953C3C"     # dark pastel red
 day_col[["Saturday"]] <- "#ff7f00"
+
+# open session is dark purple
+# hands-on tag is darkgreen
 
 if (params$download_wrkshp) {
   ## (re)Downloading workshop data from Google Sheets
@@ -37,14 +40,27 @@ if (params$download_wrkshp) {
 
   ## Download the 'Substitutions' sheet
   subst_tbl <- googlesheets4::range_read(ss = dc20_wkshps_id, sheet = "Substitutions", range = NULL)
- 
+
   ## Write the time of this download in the Google Sheet
   googlesheets4::range_write(ss = dc20_wkshps_id, data = data.frame(val = Sys.time()),
                            sheet = "Options", range = "B2", col_names = FALSE, reformat = FALSE)
 
+
+  ## Download the 'Zoom Links' sheet
+  dc20_zoomlinks_id <- "1nvsvSnV2vrvFv0VWZzTgzI9te-LTBLzLynvVwcefnpM"
+  zoomlinks_tbl <- googlesheets4::range_read(ss = dc20_zoomlinks_id, sheet = "Zoom Links", range = NULL) %>% 
+    select("use" = "Use Me", "abbrev" = "Abbrev", "name" = "Name", 
+           "mtg_url" = "Meeting URL", 
+           "reg_req" = "Reg Required",
+           "reg_url" = "Reg URL",
+           "txt" = "Online Program Text") %>% 
+    mutate(use = as.character(use)) %>% 
+    filter(use == '1', !is.na(abbrev))
+
   save(dc20_wkshps_tbl, file="dc20_wkshps_tbl.RData")
   save(subst_tbl, file="subst_tbl.RData")
   save(tracks_tbl, file="tracks_tbl.RData")
+  save(zoomlinks_tbl, file="zoomlinks_tbl.RData")
   
 } else {
   ## Using cached workshop data

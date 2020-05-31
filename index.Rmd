@@ -14,6 +14,7 @@ params:
   download_wrkshp: FALSE
   download_instr: FALSE
   render_links: FALSE
+  render_zoom: FALSE
 ---
 
 <div style="float:right; padding:5px; width:220px; text-align:center;"><img src="images/dc-logo_250x182.png" style="width:200px; height:146px;"/><br/><span style="letter-spacing: 0.1em; font-weight:800; font-size:110%; color:#836758; font-family:OCR A Std, Andale Mono, monospace;">ONLINE</span></div>
@@ -42,7 +43,7 @@ DroneCamp is a collaborative effort by several [campuses and research programs](
 ```{r results="asis", echo=FALSE}
 print(HTML("<table>"))
       
-dc_dates <- as.Date(paste0("2020-06-", 22:25))
+dc_dates <- as.Date(paste0("2020-06-", c(19, 22:25)))
 
 for (j in 1:length(dc_dates)) {
   dc_dt <- dc_dates[j]

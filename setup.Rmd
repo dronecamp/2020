@@ -2,7 +2,7 @@
 
 ## Setting Up Your Workspace 
 
-Try to find a spot which is **comfortable** and **relatively free from distractions** and background noise. A little background noise is not a problem as you can mute yourself, but consider a pair of headphones to minimize distractions. 
+Try to find a spot which is **comfortable** and **relatively free from distractions** and background noise. A little background noise is not a problem as you'll be on mute most of the time, but consider a pair of headphones to minimize distractions. 
 
 **Ergonomics** are important! If you've ever tried to work on a laptop while sitting on a couch for 4 hours, it isn't ideal. If you plan on multitasking, considering joining the audio via phone and headset so you have the option to move around.
 
@@ -52,14 +52,13 @@ If you dial-in on a phone, you can use the 'mute' button on your phone app, or d
 
 Below are installation instructions for the different GIS and photogrammetry programs that will be used at DroneCamp. **Note you probably don't need to (or want to) install all these programs**. 
 
-Agisoft Metashape and Pix4Dmapper are both professional quality drone photogrammetry programs. They have similar features and both offer trial licenses. You're welcome to install them both if you want to take both workshops and compare them. If you have to pick one, Pix4Dmapper is slightly easier to use but also more expensive after the trial period.
+**Agisoft Metashape** and **Pix4Dmapper** are both professional quality drone photogrammetry programs. They have similar features and both offer trial licenses. You're welcome to install them both if you want to take both workshops (Tues & Wed) to compare them. If you have to pick just one, Pix4Dmapper is slightly easier to use but also more expensive after the trial period.
 
-WebODM Lightning is a lightweight GUI for Windows. It also stitches images into 2D and 3D products, but the data crunching occurs elsewhere (a server running in the cloud, your network, or your computer).
+**ArcGIS Pro** and **QGIS** are desktop GIS software. They're both well-developed and supported. QGIS is open source and therefore free to install and use. ArcGIS Pro requires a subscription which can be expensive unless you have access to it through your organization (many colleges and universities provide it to their students and staff). ArcGIS Pro also has the ability to stitch drone images.
 
-ArcGIS Pro and QGIS are both good desktop GIS software. QGIS is open source and hence free. ArcGIS Pro is expensive unless you have access to it through your organization (many colleges and universities provide it to their students and staff). ArcGIS Pro also has the ability to stitch drone images.
+**WebODM Lightning** is a lightweight GUI for Windows (free). When connected to an OpenDroneMap processing engine, you can use it to stitch images into 2D and 3D products. The processing engine that does all the number crunching can be in the cloud, your network, or your computer.
 
-
-QGIS and Agisoft Metashape are available for Mac OS, Linux, and Windows. ArcGIS Pro and Pix4Dmapper are Windows only.
+QGIS and Agisoft Metashape are available for **Mac OS**, **Linux**, and **Windows.** ArcGIS Pro and Pix4Dmapper are Windows only.
 
 <hr class="full">
 
@@ -138,7 +137,7 @@ If you have a working license for ArcGIS Pro, it almost certainly includes acces
 
 OpenDroneMap normally runs on a server, which could be on your local computer or could be somewhere on the cloud. Once you have a server going, you typically access OpenDroneMap through a browser (or Python).
 
-For DroneCamp, we'll be using **WebODM Lightning**. WebODM Lightning has two parts. The **Desktop App for Windows** is a modest program you can install and provides a user-friendly interface to submit your images for processing, select processing options, view results, etc. However the destkop app by itself is useless - it doesn't actually process any data! For that you need to connect it to a processing engine or 'node', which could on your computer or could be in the cloud.
+For DroneCamp, we'll be using **WebODM Lightning**. WebODM Lightning has two parts. The **Desktop App for Windows** is a modest program you can install and provides a user-friendly interface to submit your images for processing, select processing options, view results, etc. However the destkop app by itself is useless - it doesn't actually process any data! For that you need to connect it to a processing engine or 'node', which again could be running on your local computer or in the cloud.
 
 For the DroneCamp [WebODM workshop](2020-06-24.html#open-source-data-processing-with-opendronemap), we would like everyone to:
 
@@ -148,9 +147,9 @@ ii) sign-up for a free **WebODM Lightning** account
 
 This combo will give you a user-friendly interface and access to a good server on the cloud to stitch your images. The WebODM Lightning server is not free, but your WebODM Lightning account includes a generous **150 free credits** which will be plenty for the DroneCamp exercise (don't use them up before then!)
 
-To download the WebODM Lightning app for Windows, as well as create your *WebODM Lightning* account, please visit [**webodm.net**](https://webodm.net/){target="_blank" rel="noopener"}. You'll be all set for DroneCamp.
+To get started, please visit [**webodm.net**](https://webodm.net){target="_blank" rel="noopener"}. Look for the blue "Sign Up" button to create your **WebODM Lightning** account. Use the blue <span style="color:steelblue;">"Download For Windows 64bit"</span> button to download and install the WebODM Lightning client. Once you've done both of these, you’ll be all set for DroneCamp.
 
-If you'd like to install OpenDroneMap your own hardware (and access it through a browser), you're welcome to try that also. See [OpenDroneMap.org](https://www.opendronemap.org/webodm/){target="_blank" rel="noopener"} for details.
+If you’d like to install OpenDroneMap your own hardware (and access it through a browser), you’re welcome to try that also. A Windows 10 or Ubuntu Linux computer with at least 16 GB RAM is recommended. (Manual installation instructions are [here](https://github.com/OpenDroneMap/WebODM/#getting-started){target="_blank" rel="noopener"}). This process has more steps and may require some fiddling. We won't be able to address any installation or configuration issues during the presentation, so if it gives you trouble please use the Lightning method above.
 
 <hr class="full"/>
 
@@ -217,11 +216,15 @@ Note: With one exception (*eMotion*), the mission planning apps below are design
 
 DroneDeploy is available for both [Android and iOS](https://www.dronedeploy.com/product/mobile/){target="_blank" rel="noopener"}.
 
+<hr class="quarter" style="height:2px; clear:both;"/>
+
 ### DJI Pilot
 
 ![](images/dji-pilot-logo_100x100.png){style="display:block; width:100px; padding:10px; float:right;"}
 
 [**DJI Pilot**](https://www.dji.com/downloads/djiapp/dji-pilot){target="_blank" rel="noopener"} is a mission planning app for DJI's higher-end drones, including the Matrice 200 series, Phantom 4 RTK, and Mavic 2 Enterprise drones. Available for both Android and iOS.
+
+<hr class="quarter" style="height:2px; clear:both;"/>
 
 ### eMotion
 
@@ -229,11 +232,15 @@ DroneDeploy is available for both [Android and iOS](https://www.dronedeploy.com/
 
 [**eMotion**](https://www.sensefly.com/software/emotion/){target="_blank" rel="noopener"} is flight management software from Sensefly designed specifically for their **eBee** fixed wing drones. Unlike the other apps in the  workshop, eMotion is **Windows software** and only available to people with a Sensefly account (i.e., who own an eBee). Therefore, installing it is not an option and the breakout session will be a demo of the features.
 
+<hr class="quarter" style="height:2px; clear:both;"/>
+
 ### Pix4Dcapture
 
 ![](images/pix4dcapture_100x100.png){style="display:block; height:100px; width:100px; padding:10px; float:right;"}
 
 Pix4Dcapture is the mission planning app from Pix4D. It supports a wide range of drones and cameras, and is free to install and use. If you have a Pix4D subscription, you can also use it to upload images for processing. Available for [Android](https://play.google.com/store/apps/details?id=com.pix4d.pix4dmapper&hl=en_US){target="_blank" rel="noopener"} and [iOS](https://apps.apple.com/us/app/pix4dcapture/id953486050){target="_blank" rel="noopener"}.
+
+<hr class="quarter" style="height:2px; clear:both;"/>
 
 ### PrecisionFlight for DJI Drones
 
