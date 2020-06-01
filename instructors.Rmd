@@ -1,22 +1,7 @@
 # Meet the Instructors
 
-```{r read_instructors, include=FALSE}
-if (params$download_instr) {
-  library(googlesheets4)
-  gs4_auth(email = "andlyons@ucdavis.edu")
-  dc20_instr_id <- "1h7ZY_iuB17Jx238E4_t-4fmGys9Fdn7UlgNFvu8fhnc"
-  dc20_instr_tbl <- googlesheets4::range_read(ss = dc20_instr_id, 
-                                              sheet = "Instructors", range = NULL) %>% 
-    mutate(id = tolower(gsub(" ", "-", name)))
-  save(dc20_instr_tbl, file="instructors.RData")
-  
-} else {
-  load("instructors.RData")
-}
-```
-
 ```{r instructors_print, results="asis", echo=FALSE}
-library(htmltools)
+## dc20_instr_tbl should already be loaded (in index.Rmd)
 
 for (i in 1:nrow(dc20_instr_tbl)) {
   instr_name <- dc20_instr_tbl$name[i]

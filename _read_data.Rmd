@@ -142,4 +142,21 @@ flds <- c("title", "blurb", "desc", "prereqs", "software", "instructions",
 
 ws_all <- ws_all %>% mutate_at(flds, subst_col, findreplace_tbl = subst_tbl)
 
+## Download the instructors table
+if (params$download_instr) {
+  library(googlesheets4)
+  gs4_auth(email = "andlyons@ucdavis.edu")
+  dc20_instr_id <- "1h7ZY_iuB17Jx238E4_t-4fmGys9Fdn7UlgNFvu8fhnc"
+  dc20_instr_tbl <- googlesheets4::range_read(ss = dc20_instr_id, 
+                                              sheet = "Instructors", range = NULL) %>% 
+    mutate(id = tolower(gsub(" ", "-", name)))
+  save(dc20_instr_tbl, file="instructors.RData")
+  
+} else {
+  load("instructors.RData")
+}
+
 ```
+
+
+

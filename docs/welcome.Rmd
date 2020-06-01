@@ -1,0 +1,49 @@
+---
+title: "DroneCamp Welcome Emails"
+output: 
+  html_document: 
+    self_contained: no
+    lib_dir: libs
+---
+
+```{css echo = FALSE}
+h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+h1.title {
+  font-size: 20px;
+}
+p {
+  color: grey;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-size: 14px;
+}
+```
+
+<div style="float:right; padding:5px; width:220px; text-align:center;"><img src="images/dc-logo_250x182.png" style="width:200px; height:146px;"/><br/><span style="letter-spacing: 0.1em; font-weight:800; font-size:110%; color:#836758; font-family:OCR A Std, Andale Mono, monospace;">ONLINE</span></div>
+ 
+\
+\
+
+Welcome to DroneCamp! If you missed any of the welcome emails, you can catch up below.
+
+For the complete schedule and latest updates, see the [DroneCamp Program](https://dronecamp.github.io/2020/).
+
+<hr/>
+
+# Welcome Email #1
+
+June 1, 2020
+
+\
+
+Hi all,
+
+Thank you for signing up for DroneCamp! We're super excited to meet everyone and start the course – in just 3 weeks!
+
+This is the first of 3 welcome emails with information about the upcoming program. Please take a quick look as there are a couple of action items and some important details on preparation.
+
+**Online Program**. We're pleased to share the [DroneCamp Online Program](https://dronecamp.github.io/2020/). Although still being built, the Online Program has session descriptions, instructor profiles, and software installation instructions. As we get closer, links for slides, exercises, and other workshop materials will be added.  
+
+**DroneCamp Email List**. You've been added to the DroneCamp2020 email list (which is how you're receiving this email). This email list is moderated and primarily intended to share info and updates about the program. If you’d like to switch your registered email address, send an email to dronecamp@ucanr.edu. 

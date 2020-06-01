@@ -85,6 +85,29 @@ span.hands-on:after {
 }
 
 
+span.marine {
+  border-radius: 3px;
+  padding: 4px;
+  margin-right: 1em;
+  background-color: royalblue;  /* royal blue */
+}
+
+span.marine:after {
+  content: 'Marine & Coastal';
+}
+
+span.higher-ed {
+  border-radius: 3px;
+  padding: 4px;
+  margin-right: 1em;
+  background-color: sienna;  /* sienna (brown) */
+}
+
+span.higher-ed:after {
+  content: 'Higher Ed';
+}
+
+
 div.trackend {
   background-color: var(--fav-lightgreen);
   height: 14px;
