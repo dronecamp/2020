@@ -95,6 +95,8 @@ If you'd like to familiarize yourself with Metashape before DroneCamp (recommend
 ArcGIS Pro is the latest destkop GIS software from ESRI. It is not the same as the venerable ArcMap (aka *ArcGIS Desktop*), which is on its way out. If you've used ArcMap, it will help you pick up ArcGIS Pro, but they are not the same. All ArcGIS workshops at DroneCamp are using ArcGIS Pro. 
 </div>
 
+**Note**: ArcGIS Pro runs on Windows only.
+
 **Step 1: Get a License**
 
 Step one for installing ArcGIS Pro is getting a license. For a long time ESRI has had a 21-day [ArcGIS Trial](https://links.esri.com/pro/trial){target="_blank" rel="noopener"} program, however at the current time this program is limited to organizations responding to the COVID-19 pandemic. 
