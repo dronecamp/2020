@@ -21,6 +21,15 @@ day_col[["Thursday"]] <- "#008080"   # teal
 day_col[["Friday"]] <- "#953C3C"     # dark pastel red
 day_col[["Saturday"]] <- "#ff7f00"
 
+format_out <- list()
+format_out[["presentation (instructional)"]] <- c("presentation", "Instructor(s)")
+format_out[["presentation (research or other)"]] <- c("presentation", "Presenter(s)")
+format_out[["hands on"]] <- c("hands-on", "Instructor(s)")
+format_out[["panel"]] <- c("panel", "Presenter(s)")
+format_out[["hybrid"]] <- c("hybrid", "Presenter(s)")
+format_out[["NA"]] <- c("", "")
+format_out[["other"]] <- c("other", "Presenter(s)")
+
 # open session is dark purple
 # hands-on tag is darkgreen
 
@@ -28,7 +37,10 @@ if (params$download_wrkshp) {
   ## (re)Downloading workshop data from Google Sheets
   
   library(googlesheets4)
-  sheets_auth(email = "andlyons@ucdavis.edu")
+  #options(gargle_oauth_email = "andlyons@ucdavis.edu")
+  #googlesheets4::gs4_auth(email = "andlyons@ucdavis.edu", cache = "~/My Keys")
+  
+  googlesheets4::gs4_auth(email = "andlyons@ucdavis.edu")
   dc20_wkshps_id <- "1A6DdBJH-ZZbMHb9Y7HFCqJBjPXmWy92C0rVEyYqhRqw"
   
   ## Download the 'Workshops - Responses' sheet
@@ -49,7 +61,7 @@ if (params$download_wrkshp) {
   ## Download the 'Zoom Links' sheet
   dc20_zoomlinks_id <- "1nvsvSnV2vrvFv0VWZzTgzI9te-LTBLzLynvVwcefnpM"
   zoomlinks_tbl <- googlesheets4::range_read(ss = dc20_zoomlinks_id, sheet = "Zoom Links", range = NULL) %>% 
-    select("use" = "Use Me", "abbrev" = "Abbrev", "name" = "Name", 
+    select("use" = "Use Me", "abbrev" = "Abbrev", "name" = "Meeting Name", 
            "mtg_url" = "Meeting URL", 
            "reg_req" = "Reg Required",
            "reg_url" = "Reg URL",
@@ -92,7 +104,10 @@ cols_core <- c("title" = "Workshop Title",
               "res03_name" = "Resource #3 - Name", 
               "res03_url" = "Resource #3 - URL", 
               "res04_name" = "Resource #4 - Name", 
-              "res04_url" = "Resource #4 - URL", 
+              "res04_url" = "Resource #4 - URL",
+              "res_md" = "Additional Resources (markdown)", 
+              "assignment_name" = "Assignment for Students - Name",
+              "assignment_url" = "Assignment for Students - URL", 
               "prereg" = "Pre-Registration Required", 
               "dt_readable" = "Date & Time", 
               "track_namedt" = "Track", 
@@ -117,7 +132,10 @@ cols_tracks <- c("track_nameonly" = "Track Title",
                  "track_type" = "Type",
                  "track_dtsort" = "SortableTimeSlot")
 
-tracks_tbl <- tracks_tbl %>% select(all_of(cols_tracks))
+tracks_tbl <- tracks_tbl %>% select(all_of(cols_tracks)) 
+
+# View(ws_all)
+# View(tracks_tbl)
 
 ws_all <- ws_all %>% left_join(tracks_tbl, by = "track_namedt")
 
