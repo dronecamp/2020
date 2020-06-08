@@ -16,6 +16,7 @@ params:
   render_links: FALSE
   render_zoom: FALSE
   render_assignments: FALSE
+  show_reg_link: FALSE
 ---
 
 <div style="float:right; padding:5px; width:220px; text-align:center;"><img src="images/dc-logo_250x182.png" style="width:200px; height:146px;"/><br/><span style="letter-spacing: 0.1em; font-weight:800; font-size:110%; color:#836758; font-family:OCR A Std, Andale Mono, monospace;">ONLINE</span></div>

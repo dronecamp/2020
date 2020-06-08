@@ -1,0 +1,148 @@
+---
+title: "DroneCamp 2020 Participants"
+date:  "as of `r format(params$xls_mtime, '%A %B %d, %H:%M')`" 
+output:
+  html_document:
+    self_contained: no
+    smart: no
+    toc: yes
+    toc_float: yes
+params:
+   reg_tbl: NA
+   xls_mtime: NA
+---
+```{css echo=FALSE}
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #4c4c4c;
+}
+h1.title {
+  color: Black;
+}
+p.total {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  font-style: italic;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr); library(readxl); library(zipcode); library(sf)
+library(kableExtra); library(htmltools); library(leaflet)
+```
+
+<div style="float:right; padding:5px; width:220px; text-align:center;"><img src="images/dc-logo_250x182.png" style="width:200px; height:146px;"/><br/><span style="letter-spacing: 0.1em; font-weight:800; font-size:110%; color:#836758; font-family:OCR A Std, Andale Mono, monospace;">ONLINE</span></div>
+
+# Summary
+
+```{r show_total, echo = FALSE, results='asis', cache = FALSE}
+htmltools::p("Total: ", nrow(params$reg_tbl), class = "total")
+htmltools::p(em("estimate based on unique email addresses"))
+```
+
+# Map
+
+```{r map, cache=FALSE, echo = FALSE, results = 'asis'}
+## For the map, just keep those that have a lon value
+## TEST: country == "Japan"
+# reg_with_coords_tbl <- reg_tbl %>% filter(!is.na(lon), country == "Japan")
+
+reg_with_coords_tbl <- params$reg_tbl %>% filter(!is.na(lon))
+
+## Add a jiggle to the coordinates go get multiple locations away from the cluster icon
+# lat_jiggle <- sample(0:99, nrow(reg_with_coords_tbl), replace = TRUE) / 1000000
+# lon_jiggle <- sample(0:99, nrow(reg_with_coords_tbl), replace = TRUE) / 1000000
+# reg_with_coords_tbl <- reg_with_coords_tbl %>% mutate(lat = lat + lat_jiggle,
+#                                                       lon = lon + lon_jiggle)
+
+my_popups <- paste0(reg_with_coords_tbl$title, "<br/>",
+                   reg_with_coords_tbl$affiliation)
+
+## The distance of the icons from the cluster marker must be 
+## greater than the radius of the cluster marker icon, otherwise
+## they won't get the 'click' event to show the pop-up window
+clust_opts <- markerClusterOptions(spiderfyDistanceMultiplier = 1.5)
+
+reg_leaf <- leaflet(reg_with_coords_tbl) %>% addTiles() %>% 
+ addCircleMarkers(~lon, ~lat, popup = my_popups, clusterOptions = clust_opts)
+
+## Show the map
+reg_leaf
+```
+
+# Titles
+
+```{r titles_wordcloud, cache=FALSE, echo = FALSE}
+library(wordcloud2)
+load("titles_wordcloud.RData")
+titles_wordcloud
+```
+
+
+# Top Level Domain
+
+```{r email_domains, cache=FALSE, echo = FALSE, results = 'asis'}
+email_domain <- tolower(sapply(strsplit(params$reg_tbl$email, "\\."), function(x) x[[ length(x) ]]))
+domain_freq_df <- as.data.frame(sort(table(email_domain), decreasing = TRUE))
+names(domain_freq_df) <- c("domain", "n")
+total_n <- sum(domain_freq_df$n)
+domain_freq_df <- domain_freq_df %>% mutate(percent = paste0(round(100 * n / total_n, 1), "%"))
+knitr::kable(domain_freq_df) %>% kable_styling(full_width = F, position = "left")
+```
+
+# EDU Domains
+
+```{r edu_domains, cache=FALSE, echo = FALSE, results = 'asis'}
+edu_idx <- grep(".edu$", params$reg_tbl$email)
+edu_domain <- sapply(strsplit(params$reg_tbl$email[edu_idx], "@"), function(x) x[[length(x)]])
+edudomain_freq_df <- as.data.frame(sort(table(edu_domain), decreasing = TRUE))
+names(edudomain_freq_df) <- c("school", "n")
+edudomain_freq_df <- edudomain_freq_df %>% mutate(school = cell_spec(school, "html", link = paste0("http://", school)))
+htmltools::p(em("Number of academic institutions = ", nrow(edudomain_freq_df)))
+edudomain_freq_df %>% 
+  kable("html", escape = FALSE) %>% 
+  kable_styling(full_width = F, position = "left")
+
+# edudomain_freq_df$school <- paste0("<a href='", edudomain_freq_df$school, "'>",
+#                                    edudomain_freq_df$school, "</a>")
+# knitr::kable(edudomain_freq_df) %>% kable_styling(full_width = F, position = "left")
+
+```
+
+# Other Affiliations
+
+```{r affiliations_tbl, cache=FALSE, echo = FALSE, results = 'asis'}
+aff_count <- reg_tbl %>% slice(-edu_idx) %>% 
+  group_by(affiliation) %>% count() %>% as_tibble() %>% arrange(desc(n))
+knitr::kable(aff_count) %>% kable_styling(full_width = F, position = "left")
+```
+
+```{r regfee_tbl, cache=FALSE, echo = FALSE, results = 'asis', eval = FALSE}
+cat('# By Registration Fee \n')
+
+# payment_amts <- reg_tbl %>% group_by(payment_amount) %>% count() %>% as_tibble() %>% arrange(payment_amount)
+payment_amts <- reg_tbl %>% 
+  group_by(payment_amount) %>% count() %>% 
+  as_tibble() %>% arrange(payment_amount) %>% 
+  mutate(pay_val = gsub("^\\$", "", payment_amount)) %>% 
+  mutate(tot_val = n * as.numeric(pay_val)) %>%
+  mutate(Total = format(tot_val, big.mark = ",") ) %>% 
+  select(`Payment Amount` = payment_amount, n, Total)
+
+knitr::kable(payment_amts) %>% kable_styling(full_width = F, position = "left")
+```
+
+# Registrations Per Day
+
+```{r reg_per_day, cache=FALSE, echo = FALSE}
+reg_per_day <- params$reg_tbl %>% group_by(dt) %>% count() %>% as_tibble() %>% arrange(dt)
+barplot(reg_per_day$n, names.arg = substr(reg_per_day$dt, 6, 10), ylab = "n")
+```
+
