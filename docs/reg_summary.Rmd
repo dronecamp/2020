@@ -1,0 +1,41 @@
+---
+title: "DroneCamp 2020 Participants"
+output:
+  html_document:
+    self_contained: no
+    lib_dir: libs
+    smart: no
+---
+```{css echo=FALSE}
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #4c4c4c;
+}
+h1.title {
+  color: Black;
+}
+p.total {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  font-style: italic;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+<div style="float:right; padding:5px; width:220px; text-align:center;"><img src="images/dc-logo_250x182.png" style="width:200px; height:146px;"/><br/><span style="letter-spacing: 0.1em; font-weight:800; font-size:110%; color:#836758; font-family:OCR A Std, Andale Mono, monospace;">ONLINE</span></div>
+
+\
+\
+\
+
+### This page has been renamed: **[participants.html](participants.html)**
+
