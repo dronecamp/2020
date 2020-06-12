@@ -12,7 +12,6 @@ apple-touch-icon-size: 152
 favicon: favicon.ico
 params:
   download_wrkshp: FALSE
-  download_instr: FALSE
   render_links: FALSE
   render_zoom: FALSE
   render_assignments: FALSE
