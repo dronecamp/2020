@@ -63,7 +63,21 @@ for (i in 1:nrow(ws_today)) {
 
   if (!is.na(ws_today$thumb_url[i])) print(HTML(paste0("<img src='", ws_today$thumb_url[i], "' style='float:right; padding:5px;'/>")))
   
-  if (!is.na(ws_today$desc[i])) print(HTML(paste0("<p>", ws_today$desc[i], "</p>")))
+  if (!is.na(ws_today$desc[i])) {
+    if (substr(ws_today$desc[i], 1, 5) == "file:") {
+      fn <- stringr::str_trim(substr(ws_today$desc[i], 6, nchar(ws_today$desc[i])))
+      if (!file.exists(fn)) stop(paste0("cant find file ", fn))
+      
+      in_con <- file(fn, open = "r")
+      in_lines_all <-readLines(in_con)
+      close(in_con)
+
+      print(HTML(paste(in_lines_all, collapse = "\n")))
+
+    } else {
+      print(HTML(paste0("<p>", ws_today$desc[i], "</p>")))
+    }
+  }
   
   if (ws_today$format[i] != "NA") print(p(strong("Format: "), format_out[[ws_today$format[i]]][1]))
 
