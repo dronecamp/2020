@@ -22,7 +22,7 @@ p {
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   font-size: 16px;
 }
-span.lead {
+h2, span.lead {
   font-size: 18px;
   font-weight: bold;
   color: black;
@@ -89,4 +89,46 @@ Thanks!
 DroneCamp Planning Team
 
 \
+
+<hr/>
+
+# Email #2: Sign-up for Concurrent Sessions (Required); Software Setup
+
+*June 14, 2020*
+
+Hi all,
+
+DroneCamp starts in just over a week! Please read through this 2nd welcome email as there are a couple of important action items. If you didn’t catch the first welcome email, you can find a copy [here](https://dronecamp.github.io/2020/welcome.html).
+
+## Background Survey
+
+If you didn’t complete the short Background Survey, you may still do so [here](https://forms.gle/Ar4HBZdWUWcYhC697). As a reminder, you need to complete the Background Survey if you plan to take any of the ArcGIS Pro workshops and need a temporary license. The deadline is **Tuesday June 16**.
+
+## Important Action Item: Sign-Up for Concurrent Sessions
+
+There are five concurrent sessions you need to sign-up for (including all the hands-on software workshops). Please complete [this form](https://forms.gle/frSkdNV9SCyoViRK9) to sign-up for your preferred sessions.
+
+To help you decide which sessions to sign-up for, please review the session descriptions on the [Program](https://dronecamp.github.io/2020/), as well as the discussion of [GIS and Photogrammetry Software](https://dronecamp.github.io/2020/setup.html#gis-and-photogrammetry-software). If you have any questions please let us know.
+
+Signing-up for a concurrent session does not lock you in. You can change your mind up until the day before the workshop by simply completing the form again. But remember you must sign-up for the concurrent sessions using <https://forms.gle/frSkdNV9SCyoViRK9>this form in order to get the link to join the Zoom session.
+
+## New: “Step Zero” Assignments for GIS and Photogrammetry Workshops
+
+To avoid snafus with software installation and downloading data during the hands-on photogrammetry and GIS workshops, we’d like everyone who plans to do the exercises in the software workshops to complete a “Step Zero” (Setup) assignment for each piece of software.
+
+These short assignments require you to install the software, download some data, and bring the data into the program. Step Zero assignments can be found in the [GIS and Photogrammetry Software](https://dronecamp.github.io/2020/setup.html#gis-and-photogrammetry-software) section of the Program.
+
+Additional links for downloading workshop data will be posted next week (be ready - some of the datasets are somewhat large).
+
+## Drop-in Tech Support Sessions June 18 & 19
+
+We are holding four drop-in Tech Support sessions next Thursday and Friday (June 18 & 19) for anyone who would like some help installing software, or just wants to test your Zoom connection. The Zoom link will be posted on the Program the day before. Sign-up is not necessary.
+
+## Questions?
+
+Please contact us at dronecamp@ucanr.edu, or come to one of the drop-in Tech Support Zoom sessions.
+
+Thanks!
+
+DroneCamp Planning Team
 
