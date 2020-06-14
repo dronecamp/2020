@@ -6,8 +6,11 @@ editor_options:
 ---
 
 ```{r results="asis", echo=FALSE}
-ws_today <- ws_all %>% filter(session_date == this_day) %>% arrange(track_dtsort, track_nameonly, wkshp_dtsort)
+ws_today <- ws_all %>% 
+  filter(session_date == this_day) %>% 
+  arrange(track_dtsort, track_nameonly, wkshp_dtsort)
 
+today_str <- format(this_day, "%Y-%m-%d")
 track_name_last <- "none"
 
 for (i in 1:nrow(ws_today)) {
@@ -105,7 +108,9 @@ for (i in 1:nrow(ws_today)) {
     }
   }
   
-  if (instr_html != "") print(HTML(paste0("<p><strong>", format_out[[ws_today$format[i]]][2], ":</strong> ", instr_html)))
+  if (instr_html != "") print(HTML(paste0("<p><strong>", 
+                                          format_out[[ws_today$format[i]]][2], 
+                                          ":</strong> ", instr_html)))
   
   if (!is.na(ws_today$prereqs[i])) {
     print(HTML(paste0("<p><strong>Pre-requisites</strong>: ", ws_today$prereqs[i], "</p>")))
@@ -115,45 +120,60 @@ for (i in 1:nrow(ws_today)) {
     print(HTML(paste0("<p><strong>Additional instructions</strong>: ", ws_today$instructions[i], "</p>")))
   }
 
+  #####################################################
   ## Construct the Zoom link
   zoom_url_val <- ws_today$zoom_url[i]
-  if (params$render_zoom && !is.na(zoom_url_val)) {
+  
+  show_zoom <- (params$render_zoom[[today_str]] != FALSE)
+  zoom_html <- ""
+  
+  if (is.na(zoom_url_val)) zoom_url_val <- "coming soon"
+    
+  if ((toupper(zoom_url_val) == "NA")) {
+    show_zoom <- FALSE
+    
+  } else {
+    ## Construct zoom_html
+    if (params$render_zoom[[today_str]] == 'coming soon') {
+      zoom_html <- "coming soon"  
+    
+    } else {
 
-    if (zoom_url_val %in% zoomlinks_tbl$abbrev) {
-      
-      zoom_lkp <- zoomlinks_tbl %>% filter(abbrev == zoom_url_val) %>% as.list()
-      
-      #zoom_url_txt <- zoomlinks_tbl %>% filter(abbrev == zoom_url_val) %>% pull(txt)  
-        
-      if (toupper(zoom_lkp$txt) == "SEE EMAIL") {
-        
-        ## If there's a registration link, provide it
-        if (show_reg_link && zoom_lkp$reg_req && !is.na(zoom_lkp$reg_url)) {
-          reg_html <- paste0(" (<a href='", zoom_lkp$reg_url, 
-                             "' target='_blank' rel='noopener'>Register</a>)")
+      if (zoom_url_val %in% zoomlinks_tbl$abbrev) {
+        zoom_lkp <- zoomlinks_tbl %>% filter(abbrev == zoom_url_val) %>% as.list()
+        if (toupper(zoom_lkp$txt) == "SEE EMAIL") {
+          
+          ## If there's a registration link, provide it
+          if (show_reg_link && zoom_lkp$reg_req && !is.na(zoom_lkp$reg_url)) {
+            reg_html <- paste0(" (<a href='", zoom_lkp$reg_url, 
+                               "' target='_blank' rel='noopener'>Register</a>)")
+          } else {
+            reg_html <- ""
+          }
+          
+          zoom_html <- paste0("see your confirmation email", reg_html)
+          
+        } else if (toupper(zoom_lkp$txt) == "URL") {
+          
+          zoom_html <- paste0("<a href='", zoom_lkp$mtg_url, 
+                              "' target='_blank' rel='noopener'>", 
+                              zoom_lkp$name, "</a>") 
+          
         } else {
-          reg_html <- ""
+          zoom_html <- zoom_lkp$txt
         }
         
-        zoom_html <- paste0("see your confirmation email", reg_html)
-        
-      } else if (toupper(zoom_lkp$txt) == "URL") {
-        
-        zoom_html <- paste0("<a href='", zoom_lkp$mtg_url, 
-                                "' target='_blank' rel='noopener'>", zoom_lkp$name, "</a>") 
-        
       } else {
-        zoom_html <- zoom_lkp$txt
+        zoom_html <- zoom_url_val
       }
-      
-    } else {
-      zoom_html <- zoom_url_val
     }
-      
-    print(HTML(paste0("<p><strong>Zoom</strong>: <em>", zoom_html, "</em></p>")))
+  }
   
+  if (show_zoom) {
+    print(HTML(paste0("<p><strong>Zoom</strong>: <em>", zoom_html, "</em></p>")))
   }
 
+  ####################################################
   ## Construct the resources list HTML text
   res_html <- ""
   for (j in 1:4) {

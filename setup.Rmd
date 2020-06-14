@@ -88,7 +88,7 @@ If you'd like to familiarize yourself with Metashape before DroneCamp (recommend
 
 ### ArcGIS Pro{id='pro'}
 
-<div style="margin:2em 3em; border:2px solid crimson; padding:5px 10px;">
+<div style="margin:2em 3em; border:2px solid lightgrey; padding:5px 10px;">
 
 **ArcGIS Pro vs. ArcMap**
 
@@ -97,9 +97,9 @@ ArcGIS Pro is the latest destkop GIS software from ESRI. It is not the same as t
 
 **Note**: ArcGIS Pro runs on Windows only.
 
-**Step 1: Get a License**
+**a) Get a License**
 
-Step one for installing ArcGIS Pro is getting a license. For a long time ESRI has had a 21-day [ArcGIS Trial](https://links.esri.com/pro/trial){target="_blank" rel="noopener"} program, however at the current time this program is limited to organizations responding to the COVID-19 pandemic. 
+THe first step for installing ArcGIS Pro is getting a license. For a long time ESRI has had a 21-day [ArcGIS Trial](https://links.esri.com/pro/trial){target="_blank" rel="noopener"} program, however at the current time this program is limited to organizations responding to the COVID-19 pandemic. 
 
 ESRI is currently giving out free software licenses to all students, including ArcGIS Pro desktop software, through August 31, 2020 through [Learn ArcGIS](https://community.esri.com/community/education/blog/2020/03/31/free-student-licenses-via-learn-arcgis-until-august-31){target="_blank" rel="noopener"}. Many colleges and universities also provide licenses to ArcGIS software. 
 
@@ -107,7 +107,7 @@ For non-students, a [personal-use license](https://www.esri.com/en-us/arcgis/pro
 
 If none of these options work, we can provide temporary 14-day ArcGIS Pro licenses to registered DroneCamp participants. Look for a welcome email with more info.
 
-**Step 2. Download the software**
+**b) Download the Software**
 
 After you have a license, you can download the desktop software by logging into [ArcGIS.com](https://arcgis.com/){target="_blank" rel="noopener"}. 
 
@@ -117,11 +117,11 @@ After you log-in, click on your name and go to 'My Esri'. Once you're arrived at
 
 The current version of ArcGIS is 2.5. It is a big program - the installation file by itself is almost 1.8 GB. Give yourself enough time to download and install it. 
 
-**Step 3. Install the software**
+**c) Install the software**
 
 Installing the software is usually pretty straight forward. After you install ArcGIS 2.5, there is at least one patch or update. You can download the patch and run it, or use the 'update' option within ArcGIS Pro.
 
-<div style="margin:2em 3em; border:2px solid crimson; padding:5px 10px;">
+<div style="margin:2em 3em; border:2px solid lightgrey; padding:5px 10px;">
 
 **ArcGIS Pro vs. ArcGIS Online**
 
@@ -130,10 +130,13 @@ ArcGIS Online is ESRI's platform for creating web maps, accessing online data, p
 If you have a working license for ArcGIS Pro, it almost certainly includes access to ESRI's online resources (which ArcGIS Pro requires). But the reverse is not always true. An online account may or may not activate ArcGIS Pro. Check the details of your license. 
 </div>
 
+**ArcGIS Pro 'Step Zero' Assignment**
+
+Please complete the [**ArcGIS Pro Step Zero**](https://docs.google.com/document/d/1FGf40upEt2oW3eFdzmI3rYxBpjLT8LCHGLifwOD2T2U/edit?usp=sharing){target="_blank" rel="noopener"} assignment prior to DroneCamp. 
+
 <hr class="full" style=\"height:2px;\"/>
 
 ![](images/odm-logo_244x60.png){style="display:block; width:198px; padding:5px; float:right;"}
-
 
 ### OpenDroneMap{id='odm'}
 
@@ -152,6 +155,10 @@ This combo will give you a user-friendly interface and access to a good server o
 To get started, please visit [**webodm.net**](https://webodm.net){target="_blank" rel="noopener"}. Look for the blue "Sign Up" button to create your **WebODM Lightning** account. Use the blue <span style="color:steelblue;">"Download For Windows 64bit"</span> button to download and install the WebODM Lightning client. Once you've done both of these, you’ll be all set for DroneCamp.
 
 If you’d like to install OpenDroneMap your own hardware (and access it through a browser), you’re welcome to try that also. A Windows 10 or Ubuntu Linux computer with at least 16 GB RAM is recommended. (Manual installation instructions are [here](https://github.com/OpenDroneMap/WebODM/#getting-started){target="_blank" rel="noopener"}). This process has more steps and may require some fiddling. We won't be able to address any installation or configuration issues during the presentation, so if it gives you trouble please use the Lightning method above.
+
+**ODM 'Step Zero' Assignment**
+
+Install the **WebODM Lightning** client and create your *WebODM Lightning* online account as described above.
 
 <hr class="full"/>
 
@@ -183,9 +190,14 @@ If you'd like to familiarize yourself with Pix4D before DroneCamp (recommended),
 <p class="indented2">Tip. You may be able to extend your trial license for an additional 10 days. For details see 
 [*How to get a trial of Pix4D Desktop*](https://support.pix4d.com/hc/en-us/articles/202560729-How-to-get-a-trial-of-Pix4D-Desktop){target="_blank" rel="noopener"}.</p>
 
+**Pix4D 'Step Zero' Assignment**
+
+Please complete the [**Pix4Dmapper Step Zero**](https://docs.google.com/document/d/1VcPUeDqSBHgn70w-Tx0kXD2-UCq2z6yKoX84Xsfzjzc/edit?usp=sharing){target="_blank" rel="noopener"} assignment prior to DroneCamp.
+
 <hr class="full"/>
 
 ![](images/qgis-logo_196x60.png){style="display:block; width:164px; padding:5px; float:right;"}
+
 
 ### QGIS{id='qgis'}
 
@@ -201,6 +213,10 @@ Installation is usually very straight-forward. For more detailed instructions, p
 <p class="indented2">https://qgis.org/en/site/forusers/alldownloads.html</p>
 
 QGIS is available on Windows, macOS, Linux and Android. Please note that the workshops in DroneCamp 2020 using QGIS were developed and tested on **Windows**. The software appearance or behavior may differ slightly on other operating systems.
+
+**QGIS 'Step Zero' Assignment**
+
+Please complete the [**QGIS Step Zero**](https://github.com/dronecamp/exercises/blob/master/qgis_step_zero.md){target="_blank" rel="noopener"} assignment prior to DroneCamp. 
 
 <hr class="full"/>
 

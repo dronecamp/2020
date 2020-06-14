@@ -27,7 +27,7 @@ format_out[["presentation (research or other)"]] <- c("presentation", "Presenter
 format_out[["hands on"]] <- c("hands-on", "Instructor(s)")
 format_out[["panel"]] <- c("panel", "Presenter(s)")
 format_out[["hybrid"]] <- c("hybrid", "Presenter(s)")
-format_out[["NA"]] <- c("", "")
+format_out[["NA"]] <- c("", "Presenter(s)")
 format_out[["other"]] <- c("other", "Presenter(s)")
 
 # open session is dark purple
