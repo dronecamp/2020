@@ -79,6 +79,7 @@ if (params$download_wrkshp) {
   load("dc20_wkshps_tbl.RData")
   load("subst_tbl.RData")
   load("tracks_tbl.RData")
+  load("zoomlinks_tbl.RData")
 }
 
 cols_core <- c("title" = "Workshop Title", 
