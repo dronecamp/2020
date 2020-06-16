@@ -5,8 +5,6 @@ bookdown::gitbook:
   css: css/dronecamp.css
   includes:
     in_header: common/gtag.html
-    before_body: common/page_header.html
-    after_body: common/page_footer.html
   config:
     toc:
       scroll_highlight: yes
@@ -14,6 +12,9 @@ bookdown::gitbook:
       before: |
         <li><a href="https://dronecamp.github.io/2020/" style="font-weight:bold;">
         DroneCamp 2020</a></li>
+
+# before_body: common/page_header.html
+# after_body: common/page_footer.html
 
 # collapse: subsection | section | none
 #      after: |
