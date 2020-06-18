@@ -1,4 +1,4 @@
-# Sample Data
+# Additional Sample Data
 
 ```{css echo=FALSE}
 h3 {
