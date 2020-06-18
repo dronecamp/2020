@@ -170,7 +170,7 @@ Pix4Dmapper is a professional drone photogrammetry software that creates spatial
 
 <p class="indented2">Tip: *Pix4Dmapper* refers to a license that unlocks different features in Pix4D Desktop and Pix4D Cloud.</p>
 
-Installing Pix4D Desktop requires about 500MB. Data for the workshop will be about _GB. 
+Installing Pix4D Desktop requires about 500MB. Data for the workshop will be about 3.6GB. 
 
 <p class="indented2">*Unfortunately there is no cloud VM option for Pix4D. If you are unable to install the software on your own computer, you are welcome to join the workshop anyway and follow the instructor(s) as they go through the exercise.*</p>
 

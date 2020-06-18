@@ -101,13 +101,34 @@ span.higher-ed {
   border-radius: 3px;
   padding: 4px;
   margin-right: 1em;
-  background-color: sienna;  /* sienna (brown) */
+  background-color: #1836B0;  /* medium blue */
 }
 
 span.higher-ed:after {
   content: 'Higher Ed';
 }
 
+span.ag {
+  border-radius: 3px;
+  padding: 4px;
+  margin-right: 1em;
+  background-color: #939953;  /* tan */
+}
+
+span.ag:after {
+  content: 'Ag Research';
+}
+
+span.photogrammetry {
+  border-radius: 3px;
+  padding: 4px;
+  margin-right: 1em;
+  background-color: #D67C02;  /* orange */
+}
+
+span.photogrammetry:after {
+  content: 'Photogrammetry';
+}
 
 div.trackend {
   background-color: var(--fav-lightgreen);
