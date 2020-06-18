@@ -1,0 +1,56 @@
+# Sample Data
+
+```{css echo=FALSE}
+h3 {
+  clear:none;
+}
+```
+
+Feel free to use these additional sample datasets if you'd like more practice.
+
+```{r list_data_pages, echo=FALSE, results='asis', message=FALSE}
+library(htmltools); library(tidyverse)
+
+data_dir <- "./docs/data"
+#list.files(data_dir, pattern="_report.html$")
+
+toc_fn <- file.path(data_dir, "data_catalog.csv")
+#file.exists(toc_fn)
+
+toc_tbl <- read_csv(toc_fn) %>% 
+  arrange(desc(report_date)) %>% 
+  group_by(html_fn) %>% 
+  summarise_all(first) %>% 
+  as_tibble()
+
+# nrow(toc_tbl)
+# glimpse(toc_tbl)
+# View(toc_tbl)
+
+for (i in 1:nrow(toc_tbl)) {
+  
+  dir_rel <- "data/"
+  
+  print(HTML(paste0("<div style='float:right;'><a href='", dir_rel, toc_tbl$html_fn[i], 
+                    "'><img src='", dir_rel, toc_tbl$png_fn[i], 
+                    "' style='width:220px; padding:10px;'/></a></div>")))
+
+  print(HTML(paste0("<h3><a href='", dir_rel, toc_tbl$html_fn[i], "'>",
+                    toc_tbl$collection_name[i], "</a></h3>")))
+  
+
+  print(HTML(paste0("<p><strong>Date captured:</strong> ", toc_tbl$date_flown[i], "</p>")))
+  print(HTML(paste0("<p><strong>Num images:</strong> ", toc_tbl$num_img[i], "</p>")))
+  print(HTML(paste0("<p><strong>Area:</strong> ", round(toc_tbl$area_m2[i] / 4046.86, 1), " acres</p>")))
+  print(HTML(paste0("<p><strong>Data size:</strong> ", toc_tbl$size_mb[i], " MB</p>")))
+
+  print(HTML("<hr style='clear:both;'></hr>"))
+
+  #    """, toc_tbl$collection_name[i])))))
+  
+}
+
+```
+
+
+

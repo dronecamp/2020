@@ -141,26 +141,31 @@ for (i in 1:nrow(ws_today)) {
 
       if (zoom_url_val %in% zoomlinks_tbl$abbrev) {
         zoom_lkp <- zoomlinks_tbl %>% filter(abbrev == zoom_url_val) %>% as.list()
-        if (toupper(zoom_lkp$txt) == "SEE EMAIL") {
-          
-          ## If there's a registration link, provide it
-          if (show_reg_link && zoom_lkp$reg_req && !is.na(zoom_lkp$reg_url)) {
-            reg_html <- paste0(" (<a href='", zoom_lkp$reg_url, 
-                               "' target='_blank' rel='noopener'>Register</a>)")
-          } else {
-            reg_html <- ""
-          }
-          
-          zoom_html <- paste0("see your confirmation email", reg_html)
-          
-        } else if (toupper(zoom_lkp$txt) == "URL") {
-          
-          zoom_html <- paste0("<a href='", zoom_lkp$mtg_url, 
-                              "' target='_blank' rel='noopener'>", 
-                              zoom_lkp$name, "</a>") 
-          
+        
+        if (is.na(zoom_lkp$txt)) {
+          zoom_html <- ""
         } else {
-          zoom_html <- zoom_lkp$txt
+          if (toupper(zoom_lkp$txt) == "SEE EMAIL") {
+            
+            ## If there's a registration link, provide it
+            if (show_reg_link && zoom_lkp$reg_req && !is.na(zoom_lkp$reg_url)) {
+              reg_html <- paste0(" (<a href='", zoom_lkp$reg_url, 
+                                 "' target='_blank' rel='noopener'>Register</a>)")
+            } else {
+              reg_html <- ""
+            }
+            
+            zoom_html <- paste0("see your confirmation email", reg_html)
+            
+          } else if (toupper(zoom_lkp$txt) == "URL") {
+            
+            zoom_html <- paste0("<a href='", zoom_lkp$mtg_url, 
+                                "' target='_blank' rel='noopener'>", 
+                                zoom_lkp$name, "</a>") 
+            
+          } else {
+            zoom_html <- zoom_lkp$txt
+          }
         }
         
       } else {
