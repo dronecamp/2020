@@ -32,11 +32,13 @@ library(stringr)
 
 *Friday June 19*
 
-- Everyone who's registered should have received **three welcome emails** by now (June 1, June 14, and June 18). If you haven't, please check your spam folder. If you can't find them please contact [ANR Program Support](mailto:ANRProgramSupport@ucanr.edu).
+- Everyone who's registered should have received **three welcome emails** by now (June 1, June 14, and June 18). If you haven't, please **check your spam folder**. If you can't find them please contact [ANR Program Support](mailto:ANRProgramSupport@ucanr.edu).
 
-- Links for Zoom sessions will be emailed. If you have gotten a Zoom link for the opening day by 2pm Friday June 19, please contact [ANR Program Support](mailto:ANRProgramSupport@ucanr.edu).
+- All participants are requested to complete the **Concurrent Session Sign-up Form** (see Welcome emails for the link). This is the *only* way you'll get Zoom link for the concurrent sessions.
 
-- All participants are requested to complete the Concurrent Session Sign-up Form (see Welcome emails for the link). This is the *only* way you'll get the Zoom link for the concurrent sessions.
+- Links for Zoom sessions are unique for each person and being sent by email. If you have not gotten a Zoom link for the opening day by <u>2pm Friday June 19</u>, please check your **spam folder** first, then contact [ANR Program Support](mailto:ANRProgramSupport@ucanr.edu).
+
+- For opening session on Monday June 22, use the connection link you got in an email with subject line *"DroneCamp Mon, Jun 22 9:00-15:50 Confirmation"*
 
 - Hands-on software workshops start on **Tuesday**. Between now and then, you should i) install required software, ii) complete a "Step Zero" exercise, and iii) download data (as needed). See session descriptions for details.
 
