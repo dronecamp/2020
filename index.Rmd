@@ -18,8 +18,6 @@ params:
   show_reg_link: FALSE
 ---
 
-<div style="float:right; padding:5px; width:220px; text-align:center;"><img src="images/dc-logo_250x182.png" style="width:200px; height:146px;"/><br/><span style="letter-spacing: 0.1em; font-weight:800; font-size:110%; color:#836758; font-family:OCR A Std, Andale Mono, monospace;">ONLINE</span></div>
-
 ```{r setup, include=FALSE}
 library(dplyr)
 library(htmltools)
@@ -29,13 +27,35 @@ library(stringr)
 ```{r read_data, child='_read_data.Rmd', include=FALSE}
 ```
 
+<div class="infobox">
+<p style="text-align:center;">**Updates and Reminders**</p>
+
+*Friday June 19*
+
+- Everyone who's registered should have received **three welcome emails** by now (June 1, June 14, and June 18). If you haven't, please check your spam folder. If you can't find them please contact [ANR Program Support](mailto:ANRProgramSupport@ucanr.edu).
+
+- Links for Zoom sessions will be emailed. If you have gotten a Zoom link for the opening day by 2pm Friday June 19, please contact [ANR Program Support](mailto:ANRProgramSupport@ucanr.edu).
+
+- All participants are requested to complete the Concurrent Session Sign-up Form (see Welcome emails for the link). This is the *only* way you'll get the Zoom link for the concurrent sessions.
+
+- Hands-on software workshops start on **Tuesday**. Between now and then, you should i) install required software, ii) complete a "Step Zero" exercise, and iii) download data (as needed). See session descriptions for details.
+
+- Titles for  the [Thursday speed talks](2020-06-25.html#participant-speed-talks) have now been posted. Check it out!
+
+</div>
+
+<div style="float:right; padding:5px; width:220px; text-align:center;"><img src="images/dc-logo_250x182.png" style="width:200px; height:146px;"/><br/><span style="letter-spacing: 0.1em; font-weight:800; font-size:110%; color:#836758; font-family:OCR A Std, Andale Mono, monospace;">ONLINE</span></div>
+
 # DroneCamp 2020 Online
+
+
 
 **Welcome to DroneCamp!**
 
 DroneCamp is a short course on using drones for mapping and data collection. Now in its 4th year, the program is designed to cover a broad suite of knowledge and skills needed to use drones for mapping.
 
 DroneCamp is a collaborative effort by several [campuses and research programs](#collaborators) within the University of California and California State University systems. Normally an in-person event at [CSU Monterey Bay](https://csumb.edu/){target="_blank" rel="noopener"}, DroneCamp 2020 is being held online due to the COVID-19 pandemic. For additional info, see [http://ucanr.edu/dronecamp](http://ucanr.edu/dronecamp){target="_blank" rel="noopener"}. 
+
 
 ## Schedule at a Glance
 

@@ -183,6 +183,13 @@ td.appdesc {
   border-style:none;
 }
 
+div.infobox {
+  border: 4px solid OliveDrab; 
+  margin: 1.5em 2em; 
+  padding: 6px 10px; 
+  background-color: #edf2e1; 
+}
+
 /* NOT USED BUT GENERALLY USEFUL */
 
 .goright {
