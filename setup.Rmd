@@ -109,17 +109,11 @@ If none of these options work, we can provide temporary 14-day ArcGIS Pro licens
 
 **b) Download the Software**
 
-After you have a license, you can download the desktop software by logging into [ArcGIS.com](https://arcgis.com/){target="_blank" rel="noopener"}. 
-
-![](images/my_esri_250x206x256.png){style="display:block; padding:10px; float:right;"}
-
-After you log-in, click on your name and go to 'My Esri'. Once you're arrived at 'My Ersi' , go to the 'My Organizations' tab, then 'Downloads'. You should see the download files for ArcGIS Pro. If you don't see a download link for ArcGIS Pro, then your license may not include the desktop software. Go back to Step 1.
-
-The current version of ArcGIS is 2.5. It is a big program - the installation file by itself is almost 1.8 GB. Give yourself enough time to download and install it. 
+The current version of ArcGIS Pro is 2.5. You can download the setup file [here](https://drive.google.com/file/d/1r99YulxkF03i9YszNxTvqW_7E5pgWbIo/view?usp=sharing). It is a big program - the installation file by itself is almost 1.8 GB. Give yourself enough time to download and install it. 
 
 **c) Install the software**
 
-Installing the software is usually pretty straight forward. After you install ArcGIS 2.5, there is at least one patch or update. You can download the patch and run it, or use the 'update' option within ArcGIS Pro.
+Installing the software is usually pretty straight forward, just double-click the setup file. The first time you run it, you'll be prompted to update the software. That will take a few minutes as well. You'll also be asked to log-in with a valid ArcGIS.com account to activate the software.
 
 <div style="margin:2em 3em; border:2px solid lightgrey; padding:5px 10px;">
 

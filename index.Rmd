@@ -40,6 +40,8 @@ library(stringr)
 
 - Hands-on software workshops start on **Tuesday**. Between now and then, you should i) install required software, ii) complete a "Step Zero" exercise, and iii) download data (as needed). See session descriptions for details.
 
+- Looking for the setup file for ArcGIS Pro? A direct link is now available under [Computer Setup](setup.html#pro).
+
 - Titles for  the [Thursday speed talks](2020-06-25.html#participant-speed-talks) have now been posted. Check it out!
 
 </div>
