@@ -6,7 +6,7 @@ h3 {
 }
 ```
 
-Feel free to use these additional sample datasets if you'd like more practice.
+Feel free to use these additional sample datasets if you'd like more practice. 
 
 ```{r list_data_pages, echo=FALSE, results='asis', message=FALSE}
 library(htmltools); library(tidyverse)
@@ -38,12 +38,21 @@ for (i in 1:nrow(toc_tbl)) {
   print(HTML(paste0("<h3><a href='", dir_rel, toc_tbl$html_fn[i], "'>",
                     toc_tbl$collection_name[i], "</a></h3>")))
   
+  if (toc_tbl$description[i] != "") {
+    print(HTML(paste0("<p><em>", toc_tbl$description[i], "</em></p>")))
+  }
 
   print(HTML(paste0("<p><strong>Date captured:</strong> ", toc_tbl$date_flown[i], "</p>")))
   print(HTML(paste0("<p><strong>Num images:</strong> ", toc_tbl$num_img[i], "</p>")))
   print(HTML(paste0("<p><strong>Area:</strong> ", round(toc_tbl$area_m2[i] / 4046.86, 1), " acres</p>")))
-  print(HTML(paste0("<p><strong>Data size:</strong> ", toc_tbl$size_mb[i], " MB</p>")))
+  print(HTML(paste0("<p><strong>Data size:</strong> ", format(toc_tbl$size_mb[i], big.mark = ","), " MB</p>")))
 
+  if (!is.null(toc_tbl$contact)) {
+    if (!is.na(toc_tbl$contact[i])) {
+      print(HTML(paste0("<p><strong>Contact:</strong> ", toc_tbl$contact[i], "</p>")))
+    }
+  }
+  
   print(HTML("<hr style='clear:both;'></hr>"))
 
   #    """, toc_tbl$collection_name[i])))))
@@ -52,5 +61,5 @@ for (i in 1:nrow(toc_tbl)) {
 
 ```
 
-
+Have a set of drone images you'd like to contribute to this catalog? Please complete [this form](https://forms.gle/MozEAYDFmRUu7eyA8){target="_blank" rel="noopener"}. Images must be available online to anyone with the link. 
 
