@@ -3,6 +3,7 @@
 ```{css echo=FALSE}
 h3 {
   clear:none;
+  margin-bottom: 0.2 em;
 }
 ```
 

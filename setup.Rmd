@@ -1,53 +1,5 @@
 # Computer Setup
 
-## Setting Up Your Workspace 
-
-Try to find a spot which is **comfortable** and **relatively free from distractions** and background noise. A little background noise is not a problem as you'll be on mute most of the time, but consider a pair of headphones to minimize distractions. 
-
-**Ergonomics** are important! If you've ever tried to work on a laptop while sitting on a couch for 4 hours, it isn't ideal. If you plan on multitasking, considering joining the audio via phone and headset so you have the option to move around.
-
-## Zoom{id='zoom'}
-
-This workshop will be taught entirely online using Zoom. The link(s) will be sent you a week or two before DroneCamp starts (see also [*Getting the Zoom Links*](participation.html#getting-the-zoom-links)) . 
-
-Please install the [**Zoom Client for Meetings**](https://zoom.us/download){target="_blank" rel="noopener"} on your computer. If you've used Zoom before, and you see Zoom in the Start Menu (Windows) or Finder (Mac), then you already have the client. Please make sure you have the **latest version**, as some of the buttons and features have changed.
-
-<div class="indented2">
-**Note**: After May 30, 2020 Zoom will only allow version 5.0 of the Zoom client or higher to connect to meetings.
-</div>
-
-A **Zoom account** is *not* required. A **webcam** is not required. 
-
-### Viewing Zoom and GIS / Photogrammetry Software Simultaneously
-
-#### Dual Screens
-
-A **second screen** is very helpful, especially for hands-on workshops where you'll be working through a software exercise. With a second screen, you can view the instructor / slides in one window, and work on RStudio in the other. 
-
-If you have an **external monitor** for your laptop / computer, you're all set. You can put Zoom on one monitor and RStudio on the other. If you don't have a second monitor, a **tablet** can be used to watch the slides / presentation as you work through the exercise on your laptop. Zoom is  available as an app for all major tablets and phones. 
-
-#### Single Screen Options
-
-If a second screen isn't possible, you can also arrange your windows so that you see both your GIS program and Zoom side-by-side (see below for example). You can devote the entire width of the Zoom window to the screen share by going to 'View Options' and making sure side-by-side mode is turned **off**.
-
-![](images/zoom-p4d_side-by-side_800x427.jpg){style="display:block; margin:1em auto; border:1px solid grey;"}
-
-<p style="text-align:center; font-style:italic; font-size:90%;">arranging GIS and Zoom side-by-side on a single screen</p>
-
-<p class="indented2">*Tip*: Zoom unfortunately does not have an 'always on top' mode, but you can keep the Zoom client on top by using a 3rd party utility like [DeskPins](https://efotinis.neocities.org/deskpins/index.html){target="_blank" rel="noopener"}.</p>
-
-### Zoom Audio
-
-If you find the audio is garbled, you can **dial-in** with a phone. In that case, you should disconnect from the the audio on your laptop or tablet (to prevent echo).
-
-**Muting** and **unmuting** yourself are essential skills for Zoom. It's generally good practice to stay muted until you have something to say.
-
-If you're using the Zoom app on Windows, click the microphone button. If you're using the Zoom app for phones and tablets, tap the middle of the screen to make the controls visible.
-
-If you dial-in on a phone, you can use the 'mute' button on your phone app, or dial `*6` to mute or unmute yourself.
-
-<hr class="full"/>
-
 ## GIS and Photogrammetry Software
 
 Below are installation instructions for the different GIS and photogrammetry programs that will be used at DroneCamp. **Note you probably don't need to (or want to) install all these programs**. 
