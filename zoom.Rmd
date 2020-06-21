@@ -42,9 +42,9 @@ If you don't have a second monitor, a **tablet** may come in handy. You can only
 
 ### Tips for Using Zoom on a Single Screen
 
-#### Tip 1. Print out Exercises
+#### Tip 1. Print out the Exercise Guide
 
-Most of the software exercises have some kind of guide you can follow. 
+Many of the software workshops have some kind of exercise guide, shared as a PDF or a website, that the instructor will work through as you follow along. Printing the exercise guide might seem old-fashioned, but it will be one less window you have to manage during the workshop. Printing in black and white and on scrap paper will save ink and resources.
 
 #### Tip 2. Turn on 'Dual Monitors'
 
