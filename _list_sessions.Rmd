@@ -5,6 +5,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+`r params$render_assigments`
+
 ```{r results="asis", echo=FALSE}
 ws_today <- ws_all %>% 
   filter(session_date == this_day) %>% 
@@ -199,6 +201,7 @@ for (i in 1:nrow(ws_today)) {
   }
   
   if (!is.na(ws_today$assignment_name[i])) {
+
     if (!params$render_assignments || is.na(ws_today$assignment_url[i])) {
       a1 <- ""
       a2 <- ""
@@ -206,7 +209,7 @@ for (i in 1:nrow(ws_today)) {
       a1 <- paste0("<a href='", ws_today$assignment_url[i], "' target='_blank' rel='noopener'>")
       a2 <- "</a>"
     }
-    print(HTML(paste0("<strong>Assignment for students<span title='Students taking DroneCamp as part of a course should consult with their instructor whether they should complete the assignment'><img src='images/info-icon_green_16x16x256.png' style='width:16px; height:16px; margin-bottom:3px;'/></span>:</strong> ", a1, ws_today$assignment_name[i], a2)))
+    print(HTML(paste0("<p><strong>Assignment for students<span title='Students taking DroneCamp as part of a course should consult with their instructor whether they should complete the assignment'><img src='images/info-icon_green_16x16x256.png' style='width:16px; height:16px; margin-bottom:3px;'/></span>:</strong> ", a1, ws_today$assignment_name[i], a2, "</p>")))
     
   }
 

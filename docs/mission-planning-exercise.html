@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Wed. June 24, 2020 | DroneCamp 2020</title>
+  <title>Mission Planning Exercise | DroneCamp 2020</title>
   <meta name="description" content="Online short course from the University of California on using drones for mapping and data collection" />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Wed. June 24, 2020 | DroneCamp 2020" />
+  <meta property="og:title" content="Mission Planning Exercise | DroneCamp 2020" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://dronecamp.github.io/2020/" />
   <meta property="og:image" content="https://dronecamp.github.io/2020/images/dc-logo_og_1200x630x256.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dronecamp/2020" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Wed. June 24, 2020 | DroneCamp 2020" />
+  <meta name="twitter:title" content="Mission Planning Exercise | DroneCamp 2020" />
   
   <meta name="twitter:description" content="Online short course from the University of California on using drones for mapping and data collection" />
   <meta name="twitter:image" content="https://dronecamp.github.io/2020/images/dc-logo_og_1200x630x256.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/dc-logo_touch-icon_152x152.png" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="prev" href="2020-06-23.html"/>
-<link rel="next" href="2020-06-25.html"/>
+<link rel="prev" href="participation.html"/>
+
 <script src="libs/header-attrs-2.2/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -196,186 +196,51 @@ DroneCamp 2020</a></li>
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="wed.-june-24-2020" class="section level1">
-<h1>Wed. June 24, 2020</h1>
-<p class="daytag">
-Image Processing Part 2; GIS Analysis Part 1
-</p>
-<p class="timezone">
-All times are Pacific Daylight Time
-</p>
-<hr class="quarter" style="height:2px;"/>
-<div class="tags">
-<span class="dayofweek" style="background-color:#984ea3;">Wednesday</span>
+<div id="mission-planning-exercise" class="section level1 unlisted unnumbered">
+<h1>Mission Planning Exercise</h1>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>Your job is to design flights to map 400 acres of a nature reserve using a Phantom 4 Pro for a long-term environmental monitoring program.</p>
 </div>
-<div id="data-management-and-sharing-results" class="section level2">
-<h2><span class="time">9:00 - 9:50.</span> Data Management and Sharing Results</h2>
-<p>
-Data from drone mapping projects are not only huge, but also varied. In addition to the source images, you’re likely to wind up with a far larger volume of intermediate files, a number of 2D and 3D outputs, your metadata, and various GIS/GPS files. How to you manage such an unwieldy collection of data? What do you keep, what can you throw away, and how do you share the results with collaborators?
-</p>
-<p>
-<strong>Format: </strong>
-presentation
-</p>
-<p>
-<strong>Instructor(s):</strong> <a href="instructors.html#sean-hogan">Sean Hogan</a>, <a href="instructors.html#shane-feirer">Shane Feirer</a>, <a href="instructors.html#andy-lyons">Andy Lyons</a>
-<p>
-<strong>Zoom</strong>: <em>see email: “DroneCamp Wed Jun 24, 9:00-15:50 Confirmation”</em>
-</p>
-<p>
-<strong>Materials:</strong>
-</p>
+<div id="project-goals" class="section level2">
+<h2>Project Goals</h2>
+<p>The head research biologist at <a href="http://hastingsreserve.org/" target="_blank" rel="noopener">Hastings Natural History Reservation</a> [<a href="https://goo.gl/maps/67LP1jCErkw" target="_blank" rel="noopener">map</a>] in Monterey County, California has asked you to collect imagery with a drone for a <strong>long-term vegetation monitoring program</strong>. The monitoring program has both management and research goals, including:</p>
 <ul>
-<li>
-Slides
+<li>detecting tree mortality<br />
 </li>
+<li>modeling habitat connectivity<br />
+</li>
+<li>developing hydrological models<br />
+</li>
+<li>modeling wildfire dynamics &amp; plan fire control<br />
+</li>
+<li>tracking feral pig damage<br />
+</li>
+<li>monitoring illegal activities (e.g., unauthorized camping, pot growing, dumping)</li>
 </ul>
 </div>
-<div id="image-processing-pt2" class="section level2 track">
-<h2>— Image Processing Pt2 —</h2>
-<div class="tags">
-<span class="dayofweek" style="background-color:#984ea3;">Wednesday</span><span class="photogrammetry"></span><span class="hands-on"></span>
+<div id="study-area" class="section level2">
+<h2>Study Area</h2>
+<p>The monitoring area is <strong>~400 acres</strong> in the central part of Hastings Reserve, to the east of Big Creek and north of Robertson Creek (see red outline below, also links to web maps). The area is <strong>hilly</strong> and there are <strong>two peaks</strong> in the monitoring zone. The vegetation is dominated by oak woodland with open grassy areas (and a lot of poison oak). There are roads along the southern and western boundaries, and an access road to the Robertson House on the eastern side.</p>
+<p><a href="images/mplan_aoi_1840x1340.jpg" target="_blank" rel="noopener"><img src='images/mplan_aoi_800x580.jpg' style="width:800px; height:580px; padding:10px;"/></a></p>
+<p><strong>KMLs</strong>: <a href="https://drive.google.com/uc?export=download&amp;id=1HVheVTzkTGANYieBJDUDSkCqL_3tFQoY" target="_blank" rel="noopener">study area</a> • <a href="https://drive.google.com/uc?export=download&amp;id=1oKs7T7H1z5rpN1qXZp1qYzyOGcJsE67v" target="_blank" rel="noopener">hastings boundary</a></p>
+<p><strong>Maps</strong>: <a href="https://drive.google.com/open?id=1ktE5yOBf6xpCxFZj-08JrSKS2rnr66KH&amp;usp=sharing" target="_blank" rel="noopener">Google map</a> • <a href="https://caltopo.com/m/VL64" target="_blank" rel="noopener">CalTopo map</a> • <a href="https://drive.google.com/open?id=1_b1xzOBfhnpu6OgB-j5UViny40-WLODR" target="_blank" rel="noopener">Hastings topo map</a></p>
 </div>
+<div id="assignment" class="section level2">
+<h2>Assignment</h2>
+<ol style="list-style-type: decimal">
+<li><p>Explore the study area using the web map links above.</p></li>
+<li><p>Download the <a href="https://drive.google.com/uc?export=download&amp;id=1HVheVTzkTGANYieBJDUDSkCqL_3tFQoY" target="_blank" rel="noopener">KML of the study area</a> and load it into your flight planning app.</p></li>
+<li><p>Select your drone in the app settings (e.g., Matrice 100, Phantom IV Pro).</p></li>
+<li><p>Plan Select your launch point(s) and area for each flight with your app. Save the project.</p></li>
+</ol>
+<p>Tip: remember that the estimated flight time in flight apps generally does not include the time to get to the first way point.</p>
 </div>
-<div id="drone-imagery-processing-with-agisoft-metashape" class="section level2">
-<h2><span class="time">10:00 - 11:50.</span> Drone Imagery Processing with Agisoft Metashape</h2>
-<p>
-Agisoft Metashape is one of the top processing platforms for drone imagery. This workshop will introduce you to the Metashape GUI and workflow, with hands-on exercises using both RGB and multispectral data. Radiometric calibration and quality checking will be covered, and advanced features including scripting with Python introduced.
-</p>
-<p>
-<strong>Format: </strong>
-hands-on
-</p>
-<p>
-<strong>Instructor(s):</strong> <a href="instructors.html#mallika-nocco">Mallika Nocco</a>, <a href="instructors.html#logan-ebert">Logan Ebert</a>
-<p>
-<strong>Pre-requisites</strong>: Participants should attend or view the recording of the ‘Intro to Photogrammetry and Data Processing’ session
-</p>
-<p>
-<strong>Additional instructions</strong>: To complete this hands-on workshop, you need to have Metashape Professional 1.6.2 installed on your computer, and a working license (a trial license is fine). See <a href="setup.html#metashape">Agisoft Metashape</a> on the Computer Setup page for details. You should also download the data (6.7 GB) prior to the workshop.
-</p>
-<p>
-<strong>Zoom</strong>: <em>see your confirmation email</em>
-</p>
-<p>
-<strong>Materials:</strong>
-</p>
-<ul>
-<li>
-<a href="https://ucdavis.app.box.com/s/uc5lly5dx9yym1h8lia0mf1cil8cvizh/folder/115984435859" target="_blank" rel="noopener">All materials (6.7 GB)</a>
-</li>
-</ul>
-<hr class="quarter" style="height:2px;"/>
-<div class="tags">
-<span class="dayofweek" style="background-color:#984ea3;">Wednesday</span><span class="photogrammetry"></span><span class="hands-on"></span>
-</div>
-</div>
-<div id="open-source-data-processing-with-opendronemap" class="section level2">
-<h2><span class="time">10:00 - 11:50.</span> Open Source Data Processing with OpenDroneMap</h2>
-<img src='images/odm_300x210.png' style='float:right; padding:5px;'/>
-<p>
-<a href="https://www.opendronemap.org/" target="_blank" rel="noopener">OpenDroneMap</a> (ODM) is a well-developed open-source platform for converting drone images into 2D and 3D outputs. This workshop will explain how to setup and run ODM, modify processing parameters for different types of data and projects, and view the results. During the hands-on section, participants can try running ODM themselves.
-</p>
-<p>
-<strong>Format: </strong>
-hands-on
-</p>
-<p>
-<strong>Instructor(s):</strong> <a href="instructors.html#corey-snipes">Corey Snipes</a>
-<p>
-<strong>Additional instructions</strong>: To participate in the hands-on section, install the free Windows program called “WebODM Lightning Client”, and also create a free account with WebODM Lightning prior to the workshop. See <a href="setup.html#odm">OpenDroneMap</a> on the <a href="setup.html">Computer Setup</a> page for details.
-</p>
-<p>
-<strong>Zoom</strong>: <em>see your confirmation email</em>
-</p>
-<p>
-<strong>Materials:</strong>
-</p>
-<ul>
-<li>
-Slides
-</li>
-</ul>
-<div class="trackend">
-
-</div>
-</div>
-<div id="working-with-drone-outputs-in-gis-pt1" class="section level2 track">
-<h2>— Working with Drone Outputs in GIS Pt1 —</h2>
-<div class="tags">
-<span class="dayofweek" style="background-color:#984ea3;">Wednesday</span><span class="ag"></span><span class="hands-on"></span>
-</div>
-</div>
-<div id="multispectral-data-visualization-and-extraction-with-qgis" class="section level2">
-<h2><span class="time">14:00 - 15:50.</span> Multispectral Data Visualization and Extraction with QGIS</h2>
-<p>
-A common task for using drone data in research is to extract the pixels for specific plots or plants, so you can then analyze them using zonal statistics and other methods. In this workshop, you’ll learn how to use QGIS, a well-developed open source desktop GIS program, to visualize and analyze processed drone data. The final portion of the workshop will include a demonstration on how to integrate R scripts into QGIS for high-throughput phenotyping.
-</p>
-<p>
-<strong>Format: </strong>
-hands-on
-</p>
-<p>
-<strong>Instructor(s):</strong> <a href="instructors.html#taylor-nelsen">Taylor Nelsen</a>
-<p>
-<strong>Pre-requisites</strong>: This workshop is for beginners and requires no background with QGIS
-</p>
-<p>
-<strong>Additional instructions</strong>: To complete this hands-on workshop, you need to have QGIS installed on your computer. See <a href="setup.html">Computer Setup</a> for details. You should also download the data prior to the workshop.
-</p>
-<p>
-<strong>Zoom</strong>: <em>see your confirmation email</em>
-</p>
-<p>
-<strong>Materials:</strong>
-</p>
-<ul>
-<li>
-Slides
-</li>
-<li>
-Exercise
-</li>
-<li>
-Data
-</li>
-</ul>
-<hr class="quarter" style="height:2px;"/>
-<div class="tags">
-<span class="dayofweek" style="background-color:#984ea3;">Wednesday</span><span class="hands-on"></span>
-</div>
-</div>
-<div id="mapping-and-analyzing-drone-data-in-arcgis-pro" class="section level2">
-<h2><span class="time">14:00 - 15:50.</span> Mapping and Analyzing Drone Data in ArcGIS Pro</h2>
-<p>
-After you’ve stitched your images together, you’ll probably want to analyze them further or add them to maps for better visualization. The session will introduce you to one of the leading desktop GIS platforms, ArcGIS Pro, and show you how to work with orthomosaics and DSM surfaces. No experience with ArcGIS Pro is needed, but new-comers are encouraged to work through an online getting started tutorial. This workshop is a pre-requisite for the ‘Analyzing Vegetation with ArcGIS Pro’ workshop on Thursday June 25.
-</p>
-<p>
-<strong>Format: </strong>
-hands-on
-</p>
-<p>
-<strong>Instructor(s):</strong> <a href="instructors.html#shane-feirer">Shane Feirer</a>, <a href="instructors.html#robert-johnson">Robert Johnson</a>, <a href="instructors.html#chippie-kislik">Chippie Kislik</a>
-<p>
-<strong>Additional instructions</strong>: To complete this hands-on workshop, you need to have ArcGIS Pro installed on your computer, and a working license. See <a href="setup.html#pro">ArcGIS Pro</a> on the Computer Setup page for details. You should also download the data prior to the workshop.
-</p>
-<p>
-<strong>Zoom</strong>: <em>see your confirmation email</em>
-</p>
-<p>
-<strong>Materials:</strong>
-</p>
-<ul>
-<li>
-Slides
-</li>
-<li>
-<a href="https://drive.google.com/file/d/1rFtS1GrFRWdaj54oet4xbaSb_A7IDpXV/view?usp=sharing" target="_blank" rel="noopener">Data</a>
-</li>
-<li>
-<a href="https://docs.google.com/document/d/13_Uynst-wXTH3CdYDHLh-MBvQRJ7uTma95zvBy3HGxM/edit?usp=sharing" target="_blank" rel="noopener">Exercise</a>
-</li>
-</ul>
+<div id="worksheet" class="section level2">
+<h2>Worksheet</h2>
+<ol style="list-style-type: decimal">
+<li>Complete the <a href="https://docs.google.com/document/d/1RBYgOuvLWeKXAtBq6aYl0fNFaKPUqI__MLKYORGyynI/copy" target="_blank" rel="noopener">exercise worksheet</a>.</li>
+</ol>
 
 </div>
 </div>
@@ -384,8 +249,8 @@ Slides
           </div>
         </div>
       </div>
-<a href="2020-06-23.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="2020-06-25.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="participation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

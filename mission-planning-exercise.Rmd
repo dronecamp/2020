@@ -1,0 +1,48 @@
+# Mission Planning Exercise {.unlisted .unnumbered}
+
+## Summary
+
+Your job is to design flights to map 400 acres of a nature reserve using a Phantom 4 Pro for a long-term environmental monitoring program.
+
+## Project Goals
+
+The head research biologist at [Hastings Natural History Reservation](http://hastingsreserve.org/){target="_blank" rel="noopener"} [[map](https://goo.gl/maps/67LP1jCErkw){target="_blank" rel="noopener"}] in Monterey County, California has asked you to collect imagery with a drone for a **long-term vegetation monitoring program**. The monitoring program has both management and research goals, including:
+
+- detecting tree mortality  
+- modeling habitat connectivity  
+- developing hydrological models  
+- modeling wildfire dynamics & plan fire control  
+- tracking feral pig damage  
+- monitoring illegal activities (e.g., unauthorized camping, pot growing, dumping)
+
+## Study Area
+
+The monitoring area is **~400 acres** in the central part of Hastings Reserve, to the east of Big Creek and north of Robertson Creek (see red outline below, also links to web maps). The area is **hilly** and there are **two peaks** in the monitoring zone. The vegetation is dominated by oak woodland with open grassy areas (and a lot of poison oak). There are roads along the southern and western boundaries, and an access road to the Robertson House on the eastern side. 
+
+<a href="images/mplan_aoi_1840x1340.jpg" target="_blank" rel="noopener"><img src='images/mplan_aoi_800x580.jpg' style="width:800px; height:580px; padding:10px;"/></a>
+
+
+**KMLs**:	[study area](https://drive.google.com/uc?export=download&id=1HVheVTzkTGANYieBJDUDSkCqL_3tFQoY){target="_blank" rel="noopener"} &bull; [hastings boundary](https://drive.google.com/uc?export=download&id=1oKs7T7H1z5rpN1qXZp1qYzyOGcJsE67v){target="_blank" rel="noopener"}
+
+**Maps**:	[Google map](https://drive.google.com/open?id=1ktE5yOBf6xpCxFZj-08JrSKS2rnr66KH&usp=sharing){target="_blank" rel="noopener"} &bull; [CalTopo map](https://caltopo.com/m/VL64){target="_blank" rel="noopener"} &bull; [Hastings topo map](https://drive.google.com/open?id=1_b1xzOBfhnpu6OgB-j5UViny40-WLODR){target="_blank" rel="noopener"}
+
+## Assignment
+
+1. Explore the study area using the web map links above.
+
+1. Download the [KML of the study area](https://drive.google.com/uc?export=download&id=1HVheVTzkTGANYieBJDUDSkCqL_3tFQoY){target="_blank" rel="noopener"} and load it into your flight planning app.
+
+1. Select your drone in the app settings (e.g., Matrice 100, Phantom IV Pro).
+
+1. How many flights do you need to cover this area?
+
+1. Where will you launch from?
+
+1. Use the app to design the flights. Save the project so you'll be ready when you get to the site.
+
+Tip: remember that the estimated flight time in flight apps generally does not include the time to get to the first way point.
+
+## Worksheet
+
+1. Complete the [exercise worksheet](https://docs.google.com/document/d/1RBYgOuvLWeKXAtBq6aYl0fNFaKPUqI__MLKYORGyynI/copy){target="_blank" rel="noopener"}.
+
