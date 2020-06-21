@@ -21,6 +21,12 @@ Although you can join Zoom meetings through a browser, we recommend installing t
 
 A **Zoom account** is *not* required. A **webcam** is *not* required. 
 
+## Managing Zoom Audio
+
+If you find your Zoom audio is garbled, perhaps due to poor bandwidth, you can **dial-in** with a phone. Click the microphone button on Zoom for details. In that case, you should disconnect from the the audio on your laptop or tablet (to prevent echo).
+
+**Muting** and **unmuting** yourself are essential skills for Zoom. It's generally good practice to stay muted until you have something to say. If you're using the Zoom app on Windows, click the microphone button. If you're using the Zoom app for phones and tablets, tap the middle of the screen to make the controls visible. If you dial-in on a phone, you can use the 'mute' button on your phone app, or dial `*6` to mute or unmute yourself.
+
 ## Viewing Zoom and GIS Software Simultaneously
 
 ### Best Option: Dual Monitors
@@ -36,7 +42,11 @@ If you don't have a second monitor, a **tablet** may come in handy. You can only
 
 ### Tips for Using Zoom on a Single Screen
 
-#### Tip 1. Turn on 'Dual Monitors'
+#### Tip 1. Print out Exercises
+
+Most of the software exercises have some kind of guide you can follow. 
+
+#### Tip 2. Turn on 'Dual Monitors'
 
 The Zoom client for Windows has a 'Dual Monitors' option that will open up screen shares in a **separate window**. You don't actually need two monitors. This option is really useful on a single monitor, because you can move and resize the screen share window anywhere you'd like (and even 'pin' it to stay on top, see below).
 
@@ -46,7 +56,7 @@ To turn on Dual Monitors, click the gear icon (Settings) in the Zoom client, the
 
 ![](images/zoom-client_dual-monitors_800x500x256.png){style="display:block; margin:1em auto; border:1px solid grey;"}
 
-#### Tip 2. Place Windows Side-by-Side
+#### Tip 3. Place Windows Side-by-Side
 
 You can arrange your windows so that you see both your GIS program and Zoom side-by-side (see below for example). You can devote the entire width of the Zoom window to the screen share by going to 'View Options' and making sure side-by-side mode is turned **off**.
 
@@ -55,11 +65,11 @@ A keyboard shortcut to move windows to the left or right is *windows key* + *lef
 ![](images/zoom-p4d_side-by-side_800x427.jpg){style="display:block; margin:1em auto; border:1px solid grey;"}
 <p style="text-align:center; font-style:italic; font-size:90%;">Arranging GIS and Zoom side-by-side on a single screen</p>
 
-#### Tip 3. Use Sticky Notes
+#### Tip 4. Use Sticky Notes
 
 If you like to take notes during Zoom meetings, a Sticky Notes utility can help. Almost all sticky notes programs have an option to stay on top, so you don't have to worry about your notes disappearing. Windows has a built-in 'Sticky Notes' app, but an even better one is [Stickies](https://www.zhornsoftware.co.uk/){target="_blank" rel="noopener"} from Zhorn Software.
 
-#### Tip 4. Keep Windows on Top with DeskPins
+#### Tip 5. Keep Windows on Top with DeskPins
 
 Surprisingly Zoom does not have an 'always on top' mode, but you can keep the Zoom client on top by using a 3rd party utility like [DeskPins](https://efotinis.neocities.org/deskpins/index.html){target="_blank" rel="noopener"} (Windows). 
 
@@ -68,12 +78,6 @@ In conjunction with Zoom's Dual Monitor options, DeskPins lets you 'pin' the scr
 ![](images/deskpins_pinned-window_800x430.jpg){style="display:block; margin:1em auto; border:1px solid grey;"}
 
 To 'pin' a window, right-click on the DeskPins icon in the system tray, and select 'Enter Pin Mode'. To 'unpin' a window, simply click the little 'x' button that appears when you hover over the pushpin icon.
-
-## Managing Zoom Audio
-
-If you find your Zoom audio is garbled, perhaps due to poor bandwidth, you can **dial-in** with a phone. Click the microphone button on Zoom for details. In that case, you should disconnect from the the audio on your laptop or tablet (to prevent echo).
-
-**Muting** and **unmuting** yourself are essential skills for Zoom. It's generally good practice to stay muted until you have something to say. If you're using the Zoom app on Windows, click the microphone button. If you're using the Zoom app for phones and tablets, tap the middle of the screen to make the controls visible. If you dial-in on a phone, you can use the 'mute' button on your phone app, or dial `*6` to mute or unmute yourself.
 
 \
 
