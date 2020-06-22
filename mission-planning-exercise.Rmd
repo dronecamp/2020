@@ -25,7 +25,7 @@ The monitoring area is **~400 acres** in the central part of Hastings Reserve, t
 <a href="images/mplan_aoi_1840x1340.jpg" target="_blank" rel="noopener"><img src='images/mplan_aoi_800x580.jpg' style="width:800px; height:580px; padding:10px;"/></a>
 
 
-**KMLs**:	[study area](https://drive.google.com/uc?export=download&id=1HVheVTzkTGANYieBJDUDSkCqL_3tFQoY){target="_blank" rel="noopener"} &bull; [hastings boundary](https://drive.google.com/uc?export=download&id=1oKs7T7H1z5rpN1qXZp1qYzyOGcJsE67v){target="_blank" rel="noopener"}
+**KMLs**:	[study area](https://drive.google.com/uc?export=download&id=1HVheVTzkTGANYieBJDUDSkCqL_3tFQoY){target="_blank" rel="noopener"} ([ver 2 for DJI Pilot](hastings-mission-dji-pilot.kml){target="_blank" rel="noopener"}) &bull; [hastings boundary](https://drive.google.com/uc?export=download&id=1oKs7T7H1z5rpN1qXZp1qYzyOGcJsE67v){target="_blank" rel="noopener"}
 
 **Maps**:	[Google map](https://drive.google.com/open?id=1ktE5yOBf6xpCxFZj-08JrSKS2rnr66KH&usp=sharing){target="_blank" rel="noopener"} &bull; [CalTopo map](https://caltopo.com/m/VL64){target="_blank" rel="noopener"} &bull; [Hastings topo map](https://drive.google.com/open?id=1_b1xzOBfhnpu6OgB-j5UViny40-WLODR){target="_blank" rel="noopener"}
 
@@ -33,7 +33,7 @@ The monitoring area is **~400 acres** in the central part of Hastings Reserve, t
 
 1. Explore the study area using the web map links above.
 
-1. Download the [KML of the study area](https://drive.google.com/uc?export=download&id=1HVheVTzkTGANYieBJDUDSkCqL_3tFQoY){target="_blank" rel="noopener"} and load it into your flight planning app.
+1. Download the [KML of the study area](https://drive.google.com/uc?export=download&id=1HVheVTzkTGANYieBJDUDSkCqL_3tFQoY){target="_blank" rel="noopener"} ([ver 2 for DJI Pilot](hastings-mission-dji-pilot.kml){target="_blank" rel="noopener"}) and load it into your flight planning app.
 
 1. Select your drone in the app settings (e.g., Phantom 4 Pro).
 
