@@ -195,6 +195,11 @@ for (i in 1:nrow(ws_today)) {
     }
   }
   
+  if (!is.na(ws_today$res_md[i])) {
+    res_html <- paste0(res_html, ws_today$res_md[i])
+  }
+  
+  
   if (nchar(res_html) > 0) {
     print(p(strong("Materials:")))
     print(HTML(paste0("<ul>", res_html, "</ul>")))

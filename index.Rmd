@@ -32,7 +32,7 @@ library(stringr)
 
 __*Tuesday June 23 <u>webinars</u>:*__
 
-Use the Zoom link that was emailed to you with the subject line *DroneCamp Tues Jun 23, 9:00-15:50 Confirmation* to attend: 
+Use the Zoom link that was emailed to you with the subject line, '*DroneCamp Tues Jun 23, 9:00-15:50 Confirmation*' to attend: 
 
 * 9:00 - 9:50. Introduction to Drone Photogrammetry and Data Processing  
 * 14:00 - 14:50. How to be a Good Visual Observer  
