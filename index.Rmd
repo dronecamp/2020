@@ -30,21 +30,24 @@ library(stringr)
 <div class="infobox">
 <p style="text-align:center;">**Updates and Reminders**</p>
 
-*Friday June 19*
+__*Tuesday June 23 <u>webinars</u>:*__
 
-- Everyone who's registered should have received **three welcome emails** by now (June 1, June 14, and June 18). If you haven't, please **check your spam folder**. If you can't find them please contact [ANR Program Support](mailto:ANRProgramSupport@ucanr.edu).
+Use the Zoom link that was emailed to you with the subject line *DroneCamp Tues Jun 23, 9:00-15:50 Confirmation* to attend: 
 
-- All participants are requested to complete the **Concurrent Session Sign-up Form** (see Welcome emails for the link). This is the *only* way you'll get Zoom link for the concurrent sessions.
+* 9:00 - 9:50. Introduction to Drone Photogrammetry and Data Processing  
+* 14:00 - 14:50. How to be a Good Visual Observer  
+* 15:00 - 15:50. High Precision Mapping  
 
-- Links for Zoom sessions are unique for each person and being sent by email. If you have not gotten a Zoom link for the opening day by <u>2pm Friday June 19</u>, please check your **spam folder** first, then contact [ANR Program Support](mailto:ANRProgramSupport@ucanr.edu).
+__*Tuesday June 23 <u>concurrent sessions</u>:*__
 
-- For opening session on Monday June 22, use the connection link you got in an email with subject line *"DroneCamp Mon, Jun 22 9:00-15:50 Confirmation"*
+Use the Zoom link that was emailed to you for your session.
 
-- Hands-on software workshops start on **Tuesday**. Between now and then, you should i) install required software, ii) complete a "Step Zero" exercise, and iii) download data (as needed). See session descriptions for details.
+* 10:00 - 11:50. Processing UAV Images with ArcGIS Pro
+* 10:00 - 11:50. Introduction to Multispectral Image Processing with Pix4Dmapper
 
-- Looking for the setup file for ArcGIS Pro? A direct link is now available under [Computer Setup](setup.html#pro).
+Want to try processing some additional data? See the **[More Data](data.html)** page below.
 
-- Titles for  the [Thursday speed talks](2020-06-25.html#participant-speed-talks) have now been posted. Check it out!
+Trying to view Zoom and GIS software on a single screen? View our **[Zoom Tips](zoom.html)**.
 
 </div>
 
