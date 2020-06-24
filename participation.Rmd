@@ -18,7 +18,7 @@ All DroneCamp participants and instructors have been added to a **moderated emai
 
 ## Community Forum 
 
-In addition to the Zoom Chat window, everyone is invited to utilize the DroneCamp [**Community Forum**](https://drive.google.com/open?id=1rO1fGZlTZcD2XL0bmZueBt9VJbmxq1fmsNe1yIXezvY){target="_blank" rel="noopener"} to share information, notes, questions, links, tips and other resources related to drone mapping.
+In addition to the Zoom Chat window, everyone is invited to utilize the DroneCamp [**Community Forum**](https://drive.google.com/open?id=1z5kSSGPEIzgr3osU7gB4tEzgcwO4xJOwFOUEnG9VhSo){target="_blank" rel="noopener"} to share information, notes, questions, links, tips and other resources related to drone mapping.
 
 The Community Forum is a Google Doc that anyone with the link can add comments to or make edits in Suggesting mode. After your first edit, an Administrator will make you an editor so you edit the document directly after that.
 
