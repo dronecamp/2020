@@ -31,7 +31,7 @@ library(stringr)
 
 <p style="text-align:center;">**Thanks to everyone for making DroneCamp 2020 a  success!!**</p>
 
-Thanks to all the participants, instructors, collaborators, and support people who came together to make this unique collaborative training program available. See the final email for details on:
+Thanks to all the participants, instructors, collaborators, and support people who came together to make this unique collaborative training program possible. See the final email for details on:
 
 - the course evaluation  
 - accessing session recordings  
