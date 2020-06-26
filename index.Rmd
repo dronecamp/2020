@@ -28,29 +28,16 @@ library(stringr)
 ```
 
 <div class="infobox">
-<p style="text-align:center;">**Updates and Reminders**</p>
 
-__*Wednesday June 24*__
+<p style="text-align:center;">**Thanks to everyone for making DroneCamp 2020 a  success!!**</p>
 
-__*9:00 - 9:50am. Data Management and Sharing Results*__
+Thanks to all the participants, instructors, collaborators, and support people who came together to make this unique collaborative training program available. See the final email for details on:
 
-- use the Zoom link that was emailed to you with the subject line, '*NEW LINK! DroneCamp Wed Jun 24, 9:00-15:50 Updated Confirmation*' 
+- the course evaluation  
+- accessing session recordings  
+- joining a "circle" of drone mappers in your field  
 
-__*10:00 - 11:50.	Image Processing Pt2*__.  *Use the individual link emailed to you*
-
-* Drone Imagery Processing with Agisoft Metashape    
-* Open Source Data Processing with OpenDroneMap
-
-__*14:00 - 15:50.	Working with Drone Outputs in GIS Part 1*__.  *Use the individual link emailed to you*
-
-* Multispectral Data Visualization and Extraction with QGIS  
-* Mapping and Analyzing Drone Data in ArcGIS Pro  
-
-**Zoom links for Thursday** have been added to the session descriptions 
-
-Links to **recordings** are being posted in the [**Community Forum**](https://docs.google.com/document/d/1z5kSSGPEIzgr3osU7gB4tEzgcwO4xJOwFOUEnG9VhSo/edit#bookmark=id.koqduufd88wf){target="_blank" rel="noopener"} as we get them.
-
-Want to try __processing some additional data__ on your own? See the **[More Data](data.html)** page below.
+The majority of session recordings will be posted on this site in the coming weeks / months, as we complete the editing process. Check back every couple of weeks for updates.
 
 </div>
 
