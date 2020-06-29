@@ -49,7 +49,11 @@ ArcGIS Pro is the latest destkop GIS software from ESRI. It is not the same as t
 
 **Note**: ArcGIS Pro runs on Windows only.
 
-**a) Get a License**
+**a) Verify your computer can run ArcGIS Pro**
+
+You may test whether your computer is capable of running ArcGIS Pro 2.5 [here](https://links.esri.com/run-arcgis-pro){target="_blank" rel="noopener"}. For details on system requirements, see [ESRI's website](https://pro.arcgis.com/en/pro-app/get-started/arcgis-pro-system-requirements.htm){target="_blank" rel="noopener"}.
+
+**b) Get a License**
 
 THe first step for installing ArcGIS Pro is getting a license. For a long time ESRI has had a 21-day [ArcGIS Trial](https://links.esri.com/pro/trial){target="_blank" rel="noopener"} program, however at the current time this program is limited to organizations responding to the COVID-19 pandemic. 
 
@@ -59,11 +63,11 @@ For non-students, a [personal-use license](https://www.esri.com/en-us/arcgis/pro
 
 If none of these options work, we can provide temporary 14-day ArcGIS Pro licenses to registered DroneCamp participants. Look for a welcome email with more info.
 
-**b) Download the Software**
+**c) Download the Software**
 
 The current version of ArcGIS Pro is 2.5. You can download the setup file [here](https://drive.google.com/file/d/1r99YulxkF03i9YszNxTvqW_7E5pgWbIo/view?usp=sharing). It is a big program - the installation file by itself is almost 1.8 GB. Give yourself enough time to download and install it. 
 
-**c) Install the software**
+**d) Install the software**
 
 Installing the software is usually pretty straight forward, just double-click the setup file. The first time you run it, you'll be prompted to update the software. That will take a few minutes as well. You'll also be asked to log-in with a valid ArcGIS.com account to activate the software.
 
@@ -76,7 +80,7 @@ ArcGIS Online is ESRI's platform for creating web maps, accessing online data, p
 If you have a working license for ArcGIS Pro, it almost certainly includes access to ESRI's online resources (which ArcGIS Pro requires). But the reverse is not always true. An online account may or may not activate ArcGIS Pro. Check the details of your license. 
 </div>
 
-**ArcGIS Pro 'Step Zero' Assignment**
+**e) Complete the ArcGIS Pro 'Step Zero' Assignment**
 
 Please complete the [**ArcGIS Pro Step Zero**](https://docs.google.com/document/d/1FGf40upEt2oW3eFdzmI3rYxBpjLT8LCHGLifwOD2T2U/edit?usp=sharing){target="_blank" rel="noopener"} assignment prior to DroneCamp. 
 

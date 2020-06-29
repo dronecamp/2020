@@ -9,55 +9,67 @@ h3 {
 
 Feel free to use these additional sample datasets if you'd like more practice. 
 
-```{r list_data_pages, echo=FALSE, results='asis', message=FALSE}
-library(htmltools); library(tidyverse)
+```{r list_data_pages, echo=FALSE, results='asis',  message=FALSE}
+library(htmltools); require(XML)
 
-data_dir <- "./docs/data"
-#list.files(data_dir, pattern="_report.html$")
+## Define the path to the catalog directory relative to this Rmd
+catalog_dir <- "./docs/data"
 
-toc_fn <- file.path(data_dir, "data_catalog.csv")
-#file.exists(toc_fn)
+## Define the path to the catalog directory relative to the HTML output
+cat_dir_rel <- "data/"
 
-toc_tbl <- read_csv(toc_fn) %>% 
-  arrange(desc(report_date)) %>% 
-  group_by(html_fn) %>% 
-  summarise_all(first) %>% 
-  as_tibble()
+href_target <- " target='_blank' rel='noopener'"
 
-# nrow(toc_tbl)
-# glimpse(toc_tbl)
-# View(toc_tbl)
+html_fns <- list.files(catalog_dir, pattern="_report.html$")
 
-for (i in 1:nrow(toc_tbl)) {
+for (i in 1:length(html_fns)) {
   
-  dir_rel <- "data/"
+  ##cat("\n", html_fns[i], "\n")
   
-  print(HTML(paste0("<div style='float:right;'><a href='", dir_rel, toc_tbl$html_fn[i], 
-                    "'><img src='", dir_rel, toc_tbl$png_fn[i], 
-                    "' style='width:220px; padding:10px;'/></a></div>")))
-
-  print(HTML(paste0("<h3><a href='", dir_rel, toc_tbl$html_fn[i], "'>",
-                    toc_tbl$collection_name[i], "</a></h3>")))
+  ## Parse the HTML page
+  html_tree <- htmlTreeParse(readLines(file.path(catalog_dir, html_fns[i])), useInternalNodes = TRUE)
   
-  if (toc_tbl$description[i] != "") {
-    print(HTML(paste0("<p><em>", toc_tbl$description[i], "</em></p>")))
-  }
-
-  print(HTML(paste0("<p><strong>Date captured:</strong> ", toc_tbl$date_flown[i], "</p>")))
-  print(HTML(paste0("<p><strong>Num images:</strong> ", toc_tbl$num_img[i], "</p>")))
-  print(HTML(paste0("<p><strong>Area:</strong> ", round(toc_tbl$area_m2[i] / 4046.86, 1), " acres</p>")))
-  print(HTML(paste0("<p><strong>Data size:</strong> ", format(toc_tbl$size_mb[i], big.mark = ","), " MB</p>")))
-
-  if (!is.null(toc_tbl$contact)) {
-    if (!is.na(toc_tbl$contact[i])) {
-      print(HTML(paste0("<p><strong>Contact:</strong> ", toc_tbl$contact[i], "</p>")))
-    }
+  ## Extract the metadata
+  imgcol <- list()
+  
+  ## Grab content encoded in spans
+  span_ids <- c("collection_name", "description", "contact", "num_img", "size_mb")
+  for (j in 1:length(span_ids)) {
+    id_find_xp <- paste0("//span[@id='", span_ids[j], "']//text()")
+    ##cat(span_ids[i], paste(trimws(xpathSApply(html_tree, id_find_xp, xmlValue)), collapse=" "), "\n")
+    imgcol[[span_ids[j]]] <- paste(trimws(xpathSApply(html_tree, id_find_xp, xmlValue)), collapse=" ")
   }
   
+  ## Grab content encoded in meta tags
+  meta_tags <- c("map_fn", "date_flown", "area_m2")
+  for (j in 1:length(meta_tags)) {
+    metacontent <- html_tree[paste0("//meta[@name='", meta_tags[j], "']/@content")]
+    ##cat(meta_tags[i], unlist(metacontent), "\n")
+    imgcol[[meta_tags[j]]] <- trimws(as.character(unlist(metacontent)))
+  }
+  
+  ## Print the HTML code
+  print(HTML(paste0("<div style='float:right;'><a href='", cat_dir_rel, html_fns[i], 
+                     "'", href_target, "><img src='", cat_dir_rel, imgcol$map_fn, 
+                     "' style='width:220px; padding:10px;'/></a></div>")))
+  
+  print(HTML(paste0("<h3><a href='", cat_dir_rel, html_fns[i], "'", href_target,">",
+                    imgcol$collection_name, "</a></h3>")))
+
+  if (imgcol$description != "") {
+    print(HTML(paste0("<p><em>", imgcol$description, "</em></p>")))
+  }
+
+  print(HTML(paste0("<p><strong>Date captured:</strong> ", imgcol$date_flown, "</p>")))
+  print(HTML(paste0("<p><strong>Num images:</strong> ", imgcol$num_img, "</p>")))
+  print(HTML(paste0("<p><strong>Area:</strong> ", round(as.numeric(imgcol$area_m2) / 4046.86, 1), " acres</p>")))
+  print(HTML(paste0("<p><strong>Data size:</strong> ", format(as.numeric(imgcol$size_mb), big.mark = ","), " MB</p>")))
+
+  if (imgcol$contact != "") {
+    print(HTML(paste0("<p><strong>Contact:</strong> ", imgcol$contact, "</p>")))
+  }
+
   print(HTML("<hr style='clear:both;'></hr>"))
-
-  #    """, toc_tbl$collection_name[i])))))
-  
 }
 
 ```
