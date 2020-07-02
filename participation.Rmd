@@ -18,7 +18,7 @@ All DroneCamp participants and instructors have been added to a **moderated emai
 
 ## Community Forum 
 
-In addition to the Zoom Chat window, everyone is invited to utilize the DroneCamp [**Community Forum**](https://drive.google.com/open?id=1z5kSSGPEIzgr3osU7gB4tEzgcwO4xJOwFOUEnG9VhSo){target="_blank" rel="noopener"} to share information, notes, questions, links, tips and other resources related to drone mapping.
+In addition to the Zoom Chat window, everyone is invited to utilize the DroneCamp **Community Forum** to share information, notes, questions, links, tips and other resources related to drone mapping.
 
 The Community Forum is a Google Doc that anyone with the link can add comments to or make edits in Suggesting mode. After your first edit, an Administrator will make you an editor so you edit the document directly after that.
 
@@ -30,7 +30,7 @@ Virtual courses like DroneCamp remove many of the geographic barriers for partic
 Everyone is welcome regardless of their background or skill level. Please treat each other and all instructors with mutual respect. People learn with different styles and at different paces; instrucors will do their best to accommodate everyone.
 
 **Sharing Personal Information**  
-Be cautious about sharing any personal information in chat sessions, Q&A sessions, and the Community Forum. Anything you share online could in theory be saved and shared with others.
+Be cautious about sharing any personal information in chat sessions, Q&A sessions, and the Community Forum. Anything you share online could in theory be saved and shared with others. Chat history is also captured in session recordings.
 
 **Reporting Inappropriate Content and Behavior**  
 If you're concerned about chat messages or any other kind of inappropriate behavior, first send a private chat message to the session facilitator (host). You may also share concerns by sending a message to dronecamp@ucanr.edu.
