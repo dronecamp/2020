@@ -10,3 +10,6 @@
 /images/instructors_big/*
 *.RData
 *.bak
+/hide_but_keep/*
+.gitignore
+/docs/data_01/*

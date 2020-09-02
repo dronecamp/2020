@@ -16,6 +16,7 @@ params:
   render_zoom: FALSE
   render_assignments: FALSE
   show_reg_link: FALSE
+  render_youtube: FALSE
 ---
 
 ```{r setup, include=FALSE}
