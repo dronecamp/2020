@@ -5,8 +5,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-`r params$render_assigments`
-
 ```{r results="asis", echo=FALSE}
 ws_today <- ws_all %>% 
   filter(session_date == this_day) %>% 
@@ -76,7 +74,7 @@ for (i in 1:nrow(ws_today)) {
       in_con <- file(fn, open = "r")
       in_lines_all <-readLines(in_con)
       close(in_con)
-
+      
       print(HTML(paste(in_lines_all, collapse = "\n")))
 
     } else {
@@ -86,7 +84,6 @@ for (i in 1:nrow(ws_today)) {
   
   if (ws_today$format[i] != "NA") print(p(strong("Format: "), format_out[[ws_today$format[i]]][1]))
 
-  
   ## Construct the instructors HTML text
   instr_html <- ""
 
@@ -182,16 +179,42 @@ for (i in 1:nrow(ws_today)) {
 
   ####################################################
   ## Construct the resources list HTML text
+  ####################################################
   res_html <- ""
   for (j in 1:4) {
-    if (!is.na(ws_today[i, paste0("res0", j, "_name"), drop=TRUE])) {
-      res_html <- paste0(res_html, "<li>",
-                         ifelse(!params$render_links || is.na(ws_today[i, paste0("res0", j, "_url"), drop=TRUE]), "", 
-                                paste0("<a href=\"", ws_today[i, paste0("res0", j, "_url"), drop=TRUE], 
+    if (!is.na(ws_today[i, paste0("res0", j, "_name"), drop = TRUE])) {
+      
+      ## Get the URL for the resources
+      res_url <- ws_today[i, paste0("res0", j, "_url"), drop = TRUE]
+      
+      ## If the first 8 characters are 'YouTube:', this is a flag to create an embedded iframe
+      if (grepl("^YouTube:", res_url, ignore.case = TRUE)) {
+        #browser()
+        
+        youtube_slug <- sub("^YouTube: *", "", res_url, ignore.case = TRUE) %>% 
+          basename() %>% gsub(".*v=", "", .)
+        
+        ## Append rel=0 to the slug
+        if (TRUE) {youtube_slug <- paste0(youtube_slug,
+                                ifelse(grepl("\\?", youtube_slug), "&", "?"),
+                                "rel=0")}
+
+        res_html <- paste0(res_html, "<li>", ws_today[i, paste0("res0", j, "_name"), drop=TRUE], ":<br/>",
+                           "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/",
+                           youtube_slug, 
+                           "\" frameborder=\"1\" allow=\"encrypted-media; picture-in-picture\" allowfullscreen></iframe>",
+                           "</li>")
+
+      } else {
+        res_html <- paste0(res_html, "<li>",
+                         ifelse(!params$render_links || is.na(res_url), "", 
+                                paste0("<a href=\"", res_url, 
                                        "\" target=\"_blank\" rel=\"noopener\">")),
                          ws_today[i, paste0("res0", j, "_name"), drop=TRUE],
-                         ifelse(!params$render_links || is.na(ws_today[i, paste0("res0", j, "_url"), drop=TRUE]), "", "</a>"), 
+                         ifelse(!params$render_links || is.na(res_url), "", "</a>"), 
                          "</li>")
+      }
+
     }
   }
   
@@ -205,6 +228,9 @@ for (i in 1:nrow(ws_today)) {
     print(HTML(paste0("<ul>", res_html, "</ul>")))
   }
   
+  ####################################################
+  ## Construct the Optional Assignment for Students
+  ####################################################
   if (!is.na(ws_today$assignment_name[i])) {
 
     if (!params$render_assignments || is.na(ws_today$assignment_url[i])) {
@@ -218,22 +244,36 @@ for (i in 1:nrow(ws_today)) {
     
   }
   
+  ####################################################
+  ## Construct the Session Recording / YouTube Item
+  ####################################################
   show_youtube <- (params$render_youtube && 
                    !is.na(ws_today$record_url[i]) &&
                    ws_today$record_release[i] == "Yes")
   if (show_youtube) {
-    youtube_url <- ws_today$record_url[i]
-    add_rel_0 <- FALSE
-    if (add_rel_0) {
-      youtube_url <- paste0(ws_today$record_url[i],
-                            ifelse(grepl("\\?", ws_today$record_url[i]), "&", "?"),
+    #youtube_url <- ws_today$record_url[i]
+    youtube_slug <- basename(ws_today$record_url[i]) %>% gsub(".*v=", "", .)
+    
+    ## Append rel=0 to the slug
+    if (TRUE) {
+      youtube_slug <- paste0(youtube_slug,
+                            ifelse(grepl("\\?", youtube_slug), "&", "?"),
                             "rel=0")
     }
 
     print(HTML(paste0("<p><strong>Recording</strong>:</p>",
-                      "<iframe width=\"560\" height=\"315\" src=\"",
-                      youtube_url, "\" frameborder=\"0\" allow=\"encrypted-media; picture-in-picture\" allowfullscreen></iframe>")))
+                      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/",
+                      youtube_slug, 
+                      "\" frameborder=\"1\" allow=\"encrypted-media; picture-in-picture\" allowfullscreen></iframe>")))
+   
+    # 
+    # <iframe width="560" height="315" src="https://www.youtube.com/embed/aA1EvD35RJo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
+    # x <- "https://youtu.be/aA1EvD35RJo?rel=0&t=300"
+    # grep("[^/]$", x, value = TRUE)
+    # str_extract(x, "[^/]$")
+    # grep("300$", x, value = TRUE)
+     
   }
 
 

@@ -30,15 +30,9 @@ library(stringr)
 
 <div class="infobox">
 
-<p style="text-align:center;">**Thanks to everyone for making DroneCamp 2020 a  success!!**</p>
+<p style="text-align:center;">**Thanks to everyone for making DroneCamp 2020 a grand success!!**</p>
 
-Thanks to all the participants, instructors, collaborators, and support people who came together to make this unique collaborative training program possible. See the final email for details on:
-
-- the course evaluation  
-- accessing session recordings  
-- joining a "circle" of drone mappers in your field  
-
-The majority of session recordings will be posted on this site in the coming weeks / months, as we complete the editing process. Check back every couple of weeks for updates.
+Thanks to all the participants, instructors, collaborators, and support people who came together to make this unique collaborative training program possible. Recordings for most sessions are now available - see the session descriptions for links. 
 
 </div>
 
@@ -60,9 +54,12 @@ DroneCamp is a collaborative effort by several [campuses and research programs](
 *All times are Pacific Daylight Time!*
 
 ```{r results="asis", echo=FALSE}
+## Create the schedule at a glance
+
 print(HTML("<table>"))
-      
-dc_dates <- as.Date(paste0("2020-06-", c(18:19, 22:25)))
+
+#dc_dates <- as.Date(paste0("2020-06-", c(18:19, 22:25)))
+dc_dates <- as.Date(paste0("2020-06-", c(22:25)))
 
 for (j in 1:length(dc_dates)) {
   dc_dt <- dc_dates[j]
