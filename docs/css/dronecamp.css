@@ -204,6 +204,14 @@ div.infobox {
   background-color: #edf2e1; 
 }
 
+div.infobox_yellow_brown {
+  border: 4px solid #ac7339; 
+  margin: 1.5em 2em; 
+  padding: 6px 10px; 
+  background-color: #ffffcc; 
+}
+
+
 /* NOT USED BUT GENERALLY USEFUL */
 
 .goright {

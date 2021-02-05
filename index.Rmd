@@ -28,10 +28,13 @@ library(stringr)
 ```{r read_data, child='_read_data.Rmd', include=FALSE}
 ```
 
+<div class="infobox_yellow_brown">
+<p style="text-align:center;">**Save the date!**</p>
+DroneCamp 2021 will be held virtually **July 26-30, 2021**. Check back here in April 2021 for more info.
+</div>
+
 <div class="infobox">
-
 <p style="text-align:center;">**Thanks to everyone for making DroneCamp 2020 a grand success!!**</p>
-
 Thanks to all the participants, instructors, collaborators, and support people who came together to make this unique collaborative training program possible. Recordings for most sessions are now available - see the session descriptions for links. 
 
 </div>
