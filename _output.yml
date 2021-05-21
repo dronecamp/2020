@@ -5,6 +5,7 @@ bookdown::gitbook:
   css: css/dronecamp.css
   includes:
     in_header: common/gtag.html
+    before_body: common/page_header_dc21.html
   config:
     toc:
       scroll_highlight: yes

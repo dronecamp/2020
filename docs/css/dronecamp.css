@@ -82,11 +82,9 @@ span.open {
   margin-right: 1em;
   background-color: #800080;  /* dark purple */
 }
-
 span.open:after {
   content: 'Open Session';
 }
-
 
 span.hands-on {
   border-radius: 3px;
