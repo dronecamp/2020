@@ -1,5 +1,8 @@
 # Mission Planning Exercise {.unlisted .unnumbered}
 
+
+<div style="margin:1em auto; max-width:500px; border:3px solid #555; background-color:#ddd; padding:5px; text-align:center;">**Tip**: A video solution for this exercise is available at<br/><a href="https://youtu.be/szjUf4UW6vY" target="_blank" rel="noopener">https://youtu.be/szjUf4UW6vY</a></div>
+
 In this exercise, your job is to design flights to map **400 acres** of a nature reserve using a Phantom 4 Pro for a long-term environmental monitoring program. Challenges to overcome include :
 
 - You have to think about what GSD (resolution) is needed to meet the project goals  
